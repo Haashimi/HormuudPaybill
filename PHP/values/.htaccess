@@ -1,0 +1,4 @@
+RewriteEngine On    # Turn on the rewriting engine
+RewriteRule ^payBillNotification$ payBillNotification.php [NC,L]
+RewriteRule ^QueryBillInfo$ QueryBillInfo.php [NC,L]
+ 
