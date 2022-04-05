@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "03240c1d-a557-41bf-9bcb-60f2f26d4b36",
+		"name": "HORMUUD PAYBILL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "QueryBillInfo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n \"requestId\": \"123\", \r\n \"schemaVersion\": \"1.0\", \r\n \"requestHeader\": { \r\n \"timestamp\": \"202002230231032\", \r\n \"apikey\": \"Hormuud@@\", \r\n \"apiPassword\": \"c32afc0e2860d8e5970ebdcb7113aaaa\" \r\n }, \r\n \"requestBody\": { \r\n \"invoiceId\": \"C113033\" \r\n } \r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:80/api/values/QueryBillInfo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"api",
+						"values",
+						"QueryBillInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "payBillNotification",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n \"requestId\": \"123\", \r\n \"schemaVersion\": \"1.0\", \r\n \"requestHeader\": { \r\n \"timestamp\": \"202002230231032\", \r\n \"apikey\": \"Hormuud@@\", \r\n \"apiPassword\": \"c32afc0e2860d8e5970ebdcb7113aaaa\"\r\n }, \r\n \"requestBody\": { \r\n \"billInfo\": { \r\n \"invoiceId\": \"C113033\", \r\n \"paidBy\": \"252614755670\", \r\n \"paidAt\": \"BANK\", \r\n \"paidDate\": \"2020-02-30T15:40:55\" \r\n }, \r\n \"transacionInfo\": { \r\n \"tansactionId\": \"23475489104\", \r\n \"amount\": \"0.3\", \r\n \"currency\": \"USD\" \r\n } \r\n } \r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:80/api/values/payBillNotification",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"api",
+						"values",
+						"payBillNotification"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
