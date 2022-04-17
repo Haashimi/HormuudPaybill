@@ -1,0 +1,1629 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{055F2397-F499-4DF0-9E02-8A4A53D37D48}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HSAPI</RootNamespace>
+    <AssemblyName>HSAPI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.0</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <IncludeIisSettings>false</IncludeIisSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.4.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.8.1\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.8.1\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.8.1\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.8.1\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.8.1\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.8.1\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.2\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.2\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation, Version=1.0.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.4\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.0.0\lib\net451\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.0.0\lib\net451\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.0.0\lib\net451\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.0.0\lib\net451\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.4.0.0\lib\net451\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.4.0.0\lib\net451\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.4.0.0\lib\net451\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.0.0\lib\net451\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.4.0.0\lib\net451\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLCrypto, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d4421c8a4786956c, processorArchitecture=MSIL">
+      <HintPath>..\packages\PCLCrypto.2.0.147\lib\net45\PCLCrypto.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.BCrypt, Version=0.5.0.0, Culture=neutral, PublicKeyToken=9e300f9f87f04a7a, processorArchitecture=MSIL">
+      <HintPath>..\packages\PInvoke.BCrypt.0.5.155\lib\net45\PInvoke.BCrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.Kernel32, Version=0.5.0.0, Culture=neutral, PublicKeyToken=9e300f9f87f04a7a, processorArchitecture=MSIL">
+      <HintPath>..\packages\PInvoke.Kernel32.0.5.155\lib\net45\PInvoke.Kernel32.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.NCrypt, Version=0.5.0.0, Culture=neutral, PublicKeyToken=9e300f9f87f04a7a, processorArchitecture=MSIL">
+      <HintPath>..\packages\PInvoke.NCrypt.0.5.155\lib\net45\PInvoke.NCrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.Windows.Core, Version=0.5.0.0, Culture=neutral, PublicKeyToken=9e300f9f87f04a7a, processorArchitecture=MSIL">
+      <HintPath>..\packages\PInvoke.Windows.Core.0.5.155\lib\net35\PInvoke.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.5.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.7\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.7\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.7\lib\net45\System.Web.Http.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Validation, Version=2.4.0.0, Culture=neutral, PublicKeyToken=2fc06f0d701809a7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Validation.2.4.18\lib\net45\Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
+    <Compile Include="Areas\HelpPage\App_Start\HelpPageConfig.cs" />
+    <Compile Include="Areas\HelpPage\Controllers\HelpController.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageAreaRegistration.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageConfigurationExtensions.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\CollectionModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ComplexTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\DictionaryModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumValueDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\IModelDocumentationProvider.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\KeyValuePairModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescriptionGenerator.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameAttribute.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameHelper.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterAnnotation.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\SimpleTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\Models\HelpPageApiModel.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleKey.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ImageSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\InvalidSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ObjectGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
+    <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Connected Services\AAAInterface\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\AcctcreditMgrService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\AdjustAccountMgrService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\AR4BMPInterfaceService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ArServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\CardRechargeMgrService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\CashRechargeMgrServiceByRecharge\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\CashRechargeMgrService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ChangePrimaryOfferMgrService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\DelSubscriberMgrService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\NewSubscriberMgrService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\PasswordMgrService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\QueryMgrService11\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\QueryMgrService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\StatemgrtMgrService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\SubmgrtMgrService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\TransferAccountMgrService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BillersController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\ApplicationRoleManager.cs" />
+    <Compile Include="Models\AccountBindingModels.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ResultSet.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Providers\ApplicationOAuthProvider.cs" />
+    <Compile Include="Results\ChallengeResult.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="Web References\WebReferences\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Areas\HelpPage\Views\Web.config" />
+    <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\ResourceModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Index.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\SimpleTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Samples.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Parameters.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ModelDescriptionLink.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\KeyValuePairModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\InvalidSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ImageSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\EnumTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\DictionaryModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ComplexTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <None Include="Connected Services\AAAInterface\AAAInterfaceBusinessMgrService.wsdl" />
+    <None Include="Connected Services\AAAInterface\xsd0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AAAInterface\xsd1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AcctcreditMgrService\AcctcreditMgrService.wsdl" />
+    <None Include="Connected Services\AcctcreditMgrService\AcctcreditMgrService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AcctcreditMgrService\AcctcreditMgrService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AAAInterface\configuration91.svcinfo" />
+    <None Include="Connected Services\AAAInterface\configuration.svcinfo" />
+    <None Include="Connected Services\AAAInterface\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\AcctcreditMgrService\HSAPI.AcctcreditMgrService.batchModifyInitCreditResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AcctcreditMgrService\HSAPI.AcctcreditMgrService.BatchModifyInitCreditResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AcctcreditMgrService\HSAPI.AcctcreditMgrService.manAcctCreditResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AcctcreditMgrService\HSAPI.AcctcreditMgrService.ManAcctCreditResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AcctcreditMgrService\HSAPI.AcctcreditMgrService.ManAcctSubCreditSwitchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AcctcreditMgrService\HSAPI.AcctcreditMgrService.ManAcctSubCreditSwitchResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AcctcreditMgrService\HSAPI.AcctcreditMgrService.ManSubCreditResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AcctcreditMgrService\HSAPI.AcctcreditMgrService.ManSubCreditResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AcctcreditMgrService\HSAPI.AcctcreditMgrService.queryAcctCreditResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AcctcreditMgrService\HSAPI.AcctcreditMgrService.QueryAcctCreditResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AcctcreditMgrService\HSAPI.AcctcreditMgrService.QueryAcctSubCreditResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AcctcreditMgrService\HSAPI.AcctcreditMgrService.QueryAcctSubCreditResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\AdjustAccountMgrService\AdjustAccountMgrService.wsdl" />
+    <None Include="Connected Services\AdjustAccountMgrService\AdjustAccountMgrService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AdjustAccountMgrService\AdjustAccountMgrService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\AdjustAccountMgrService\HSAPI.AdjustAccountMgrService.AdjustAccountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AdjustAccountMgrService\HSAPI.AdjustAccountMgrService.AdjustAccountResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AdjustAccountMgrService\HSAPI.AdjustAccountMgrService.BatchAdjustAccountAmtResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AdjustAccountMgrService\HSAPI.AdjustAccountMgrService.BatchAdjustAccountAmtResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AdjustAccountMgrService\HSAPI.AdjustAccountMgrService.batchAdjustAccountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AdjustAccountMgrService\HSAPI.AdjustAccountMgrService.BatchAdjustAccountResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AdjustAccountMgrService\HSAPI.AdjustAccountMgrService.ExchangeAccountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AdjustAccountMgrService\HSAPI.AdjustAccountMgrService.ExchangeAccountResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AdjustAccountMgrService\HSAPI.AdjustAccountMgrService.QueryAdjustmentLogResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AdjustAccountMgrService\HSAPI.AdjustAccountMgrService.QueryAdjustmentLogResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AdjustAccountMgrService\HSAPI.AdjustAccountMgrService.SyncBalance4POSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AdjustAccountMgrService\HSAPI.AdjustAccountMgrService.SyncBalance4POSResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\AR4BMPInterfaceService\AR4BMPInterfaceService.wsdl" />
+    <None Include="Connected Services\AR4BMPInterfaceService\AR4BMPInterfaceService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AR4BMPInterfaceService\ARCommon.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\AR4BMPInterfaceService\HSAPI.AR4BMPInterfaceService.adjustmentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AR4BMPInterfaceService\HSAPI.AR4BMPInterfaceService.AdjustmentResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AR4BMPInterfaceService\HSAPI.AR4BMPInterfaceService.batchPaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AR4BMPInterfaceService\HSAPI.AR4BMPInterfaceService.BatchPaymentResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AR4BMPInterfaceService\HSAPI.AR4BMPInterfaceService.billing2arResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AR4BMPInterfaceService\HSAPI.AR4BMPInterfaceService.Billing2arResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AR4BMPInterfaceService\HSAPI.AR4BMPInterfaceService.forfeitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AR4BMPInterfaceService\HSAPI.AR4BMPInterfaceService.ForfeitResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AR4BMPInterfaceService\HSAPI.AR4BMPInterfaceService.paymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AR4BMPInterfaceService\HSAPI.AR4BMPInterfaceService.PaymentResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AR4BMPInterfaceService\HSAPI.AR4BMPInterfaceService.queryBalanceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AR4BMPInterfaceService\HSAPI.AR4BMPInterfaceService.QueryBalanceResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AR4BMPInterfaceService\HSAPI.AR4BMPInterfaceService.queryInvoiceInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AR4BMPInterfaceService\HSAPI.AR4BMPInterfaceService.QueryInvoiceInfoResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AR4BMPInterfaceService\HSAPI.AR4BMPInterfaceService.queryTranDenominationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AR4BMPInterfaceService\HSAPI.AR4BMPInterfaceService.QueryTranDenominationResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AR4BMPInterfaceService\HSAPI.AR4BMPInterfaceService.voidPaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\AR4BMPInterfaceService\HSAPI.AR4BMPInterfaceService.VoidResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ArServices\ArServices.wsdl" />
+    <None Include="Connected Services\ArServices\ArServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices15.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices16.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices17.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices18.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices19.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices20.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices23.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices24.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices25.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices26.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices27.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices28.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices29.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices30.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices33.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices34.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices35.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices36.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices37.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices38.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices39.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices40.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ArServices\ArServices9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CardRechargeMgrService\CardRechargeMgrService.wsdl" />
+    <None Include="Connected Services\CardRechargeMgrService\CBSInterface_CardRecharge.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CardRechargeMgrService\CBSInterface_Common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CardRechargeMgrService\CBSInterface_Subscribe.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AcctcreditMgrService\configuration91.svcinfo" />
+    <None Include="Connected Services\AcctcreditMgrService\configuration.svcinfo" />
+    <None Include="Connected Services\AcctcreditMgrService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\AdjustAccountMgrService\configuration91.svcinfo" />
+    <None Include="Connected Services\AdjustAccountMgrService\configuration.svcinfo" />
+    <None Include="Connected Services\AdjustAccountMgrService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\AR4BMPInterfaceService\configuration91.svcinfo" />
+    <None Include="Connected Services\AR4BMPInterfaceService\configuration.svcinfo" />
+    <None Include="Connected Services\AR4BMPInterfaceService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ArServices\configuration91.svcinfo" />
+    <None Include="Connected Services\ArServices\configuration.svcinfo" />
+    <None Include="Connected Services\ArServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\CardRechargeMgrService\HSAPI.CardRechargeMgrService.BatchDeleteRechageBlackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CardRechargeMgrService\HSAPI.CardRechargeMgrService.BatchDeleteRechageBlackResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CardRechargeMgrService\HSAPI.CardRechargeMgrService.DeleteRechageBlackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CardRechargeMgrService\HSAPI.CardRechargeMgrService.DeleteRechageBlackResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CardRechargeMgrService\HSAPI.CardRechargeMgrService.ModifyVoucherStateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CardRechargeMgrService\HSAPI.CardRechargeMgrService.ModifyVoucherStateResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CardRechargeMgrService\HSAPI.CardRechargeMgrService.QueryRechargeBlackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CardRechargeMgrService\HSAPI.CardRechargeMgrService.QueryRechargeBlackResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CardRechargeMgrService\HSAPI.CardRechargeMgrService.VoucherEnquiryByPINResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CardRechargeMgrService\HSAPI.CardRechargeMgrService.VoucherEnquiryByPINResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CardRechargeMgrService\HSAPI.CardRechargeMgrService.VoucherEnquiryBySeqResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CardRechargeMgrService\HSAPI.CardRechargeMgrService.VoucherEnquiryBySeqResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CardRechargeMgrService\HSAPI.CardRechargeMgrService.VoucherRechargeBySeqResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CardRechargeMgrService\HSAPI.CardRechargeMgrService.VoucherRechargeBySeqResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CardRechargeMgrService\HSAPI.CardRechargeMgrService.VoucherRechargeEnquiryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CardRechargeMgrService\HSAPI.CardRechargeMgrService.VoucherRechargeEnquiryResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CardRechargeMgrService\HSAPI.CardRechargeMgrService.VoucherRechargeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CardRechargeMgrService\HSAPI.CardRechargeMgrService.VoucherRechargeResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\CashRechargeMgrServiceByRecharge\CashRechargeMgrService.wsdl" />
+    <None Include="Connected Services\CashRechargeMgrServiceByRecharge\CashRechargeMgrService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CashRechargeMgrServiceByRecharge\CashRechargeMgrService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\CashRechargeMgrServiceByRecharge\HSAPI.CashRechargeMgrServiceByRecharge.ActiveFirstResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CashRechargeMgrServiceByRecharge\HSAPI.CashRechargeMgrServiceByRecharge.ActiveFirstResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CashRechargeMgrServiceByRecharge\HSAPI.CashRechargeMgrServiceByRecharge.BatchActiveFirstResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CashRechargeMgrServiceByRecharge\HSAPI.CashRechargeMgrServiceByRecharge.BatchActiveFirstResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CashRechargeMgrServiceByRecharge\HSAPI.CashRechargeMgrServiceByRecharge.BatchCashRechargeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CashRechargeMgrServiceByRecharge\HSAPI.CashRechargeMgrServiceByRecharge.BatchCashRechargeResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CashRechargeMgrServiceByRecharge\HSAPI.CashRechargeMgrServiceByRecharge.cashRechargeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CashRechargeMgrServiceByRecharge\HSAPI.CashRechargeMgrServiceByRecharge.CashRechargeResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CashRechargeMgrServiceByRecharge\HSAPI.CashRechargeMgrServiceByRecharge.PaymentEnquiryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CashRechargeMgrServiceByRecharge\HSAPI.CashRechargeMgrServiceByRecharge.PaymentEnquiryResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CashRechargeMgrServiceByRecharge\HSAPI.CashRechargeMgrServiceByRecharge.PaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CashRechargeMgrServiceByRecharge\HSAPI.CashRechargeMgrServiceByRecharge.PaymentResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CashRechargeMgrServiceByRecharge\HSAPI.CashRechargeMgrServiceByRecharge.ReversePaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CashRechargeMgrServiceByRecharge\HSAPI.CashRechargeMgrServiceByRecharge.ReversePaymentResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\CashRechargeMgrService\CashRechargeMgrService.wsdl" />
+    <None Include="Connected Services\CashRechargeMgrService\CBSInterface_CashRecharge.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CashRechargeMgrService\CBSInterface_Common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CashRechargeMgrServiceByRecharge\configuration91.svcinfo" />
+    <None Include="Connected Services\CashRechargeMgrServiceByRecharge\configuration.svcinfo" />
+    <None Include="Connected Services\CashRechargeMgrServiceByRecharge\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\CashRechargeMgrService\HSAPI.CashRechargeMgrService.ActiveFirstResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CashRechargeMgrService\HSAPI.CashRechargeMgrService.ActiveFirstResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CashRechargeMgrService\HSAPI.CashRechargeMgrService.BatchActiveFirstResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CashRechargeMgrService\HSAPI.CashRechargeMgrService.BatchActiveFirstResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CashRechargeMgrService\HSAPI.CashRechargeMgrService.BatchCashRechargeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CashRechargeMgrService\HSAPI.CashRechargeMgrService.BatchCashRechargeResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CashRechargeMgrService\HSAPI.CashRechargeMgrService.cashRechargeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CashRechargeMgrService\HSAPI.CashRechargeMgrService.CashRechargeResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CashRechargeMgrService\HSAPI.CashRechargeMgrService.PaymentEnquiryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CashRechargeMgrService\HSAPI.CashRechargeMgrService.PaymentEnquiryResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CashRechargeMgrService\HSAPI.CashRechargeMgrService.PaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CashRechargeMgrService\HSAPI.CashRechargeMgrService.PaymentResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CashRechargeMgrService\HSAPI.CashRechargeMgrService.ReversePaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\CashRechargeMgrService\HSAPI.CashRechargeMgrService.ReversePaymentResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ChangePrimaryOfferMgrService\ChangePrimaryOfferMgrService.wsdl" />
+    <None Include="Connected Services\ChangePrimaryOfferMgrService\ChangePrimaryOfferMgrService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ChangePrimaryOfferMgrService\ChangePrimaryOfferMgrService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ChangePrimaryOfferMgrService\ChangePrimaryOfferMgrService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\ChangePrimaryOfferMgrService\HSAPI.ChangePrimaryOfferMgrService.BatchChangePrimaryOfferResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ChangePrimaryOfferMgrService\HSAPI.ChangePrimaryOfferMgrService.BatchChangePrimaryOfferResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ChangePrimaryOfferMgrService\HSAPI.ChangePrimaryOfferMgrService.ChangePrimaryOfferResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ChangePrimaryOfferMgrService\HSAPI.ChangePrimaryOfferMgrService.ChangePrimaryOfferResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\DelSubscriberMgrService\configuration91.svcinfo" />
+    <None Include="Connected Services\DelSubscriberMgrService\configuration.svcinfo" />
+    <None Include="Connected Services\CashRechargeMgrService\configuration91.svcinfo" />
+    <None Include="Connected Services\CashRechargeMgrService\configuration.svcinfo" />
+    <None Include="Connected Services\CashRechargeMgrService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ChangePrimaryOfferMgrService\configuration91.svcinfo" />
+    <None Include="Connected Services\ChangePrimaryOfferMgrService\configuration.svcinfo" />
+    <None Include="Connected Services\ChangePrimaryOfferMgrService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\DelSubscriberMgrService\HSAPI.DelSubscriberMgrService.batchDelSubscriberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DelSubscriberMgrService\HSAPI.DelSubscriberMgrService.BatchDelSubscriberResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DelSubscriberMgrService\HSAPI.DelSubscriberMgrService.delSubscriberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\DelSubscriberMgrService\HSAPI.DelSubscriberMgrService.DelSubscriberResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\DelSubscriberMgrService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\NewSubscriberMgrService\configuration91.svcinfo" />
+    <None Include="Connected Services\NewSubscriberMgrService\configuration.svcinfo" />
+    <Content Include="Connected Services\NewSubscriberMgrService\HSAPI.NewSubscriberMgrService.batchNewSubscriberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\NewSubscriberMgrService\HSAPI.NewSubscriberMgrService.BatchNewSubscriberResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\NewSubscriberMgrService\HSAPI.NewSubscriberMgrService.newSubscriberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\NewSubscriberMgrService\HSAPI.NewSubscriberMgrService.NewSubscriberResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\NewSubscriberMgrService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\PasswordMgrService\HSAPI.PasswordMgrService.ChangePasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PasswordMgrService\HSAPI.PasswordMgrService.ChangePasswordResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PasswordMgrService\HSAPI.PasswordMgrService.CheckOperatorPasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PasswordMgrService\HSAPI.PasswordMgrService.CheckOperatorPasswordResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PasswordMgrService\HSAPI.PasswordMgrService.CheckPasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PasswordMgrService\HSAPI.PasswordMgrService.CheckPasswordResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PasswordMgrService\HSAPI.PasswordMgrService.ResetPasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\PasswordMgrService\HSAPI.PasswordMgrService.ResetPasswordResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\DelSubscriberMgrService\CBSInterface_Common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DelSubscriberMgrService\CBSInterface_DelSubscriber.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DelSubscriberMgrService\DelSubscriberMgrService.wsdl" />
+    <None Include="Connected Services\NewSubscriberMgrService\NewSubscriberMgrService.wsdl" />
+    <None Include="Connected Services\NewSubscriberMgrService\NewSubscriberMgrService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\NewSubscriberMgrService\NewSubscriberMgrService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\NewSubscriberMgrService\NewSubscriberMgrService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PasswordMgrService\PasswordMgrService.wsdl" />
+    <None Include="Connected Services\PasswordMgrService\PasswordMgrService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PasswordMgrService\PasswordMgrService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\QueryMgrService11\configuration91.svcinfo" />
+    <None Include="Connected Services\QueryMgrService11\configuration.svcinfo" />
+    <None Include="Connected Services\CardRechargeMgrService\configuration91.svcinfo" />
+    <None Include="Connected Services\CardRechargeMgrService\configuration.svcinfo" />
+    <None Include="Connected Services\CardRechargeMgrService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\PasswordMgrService\configuration91.svcinfo" />
+    <None Include="Connected Services\PasswordMgrService\configuration.svcinfo" />
+    <None Include="Connected Services\PasswordMgrService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.CumulateEnquiryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.CumulateEnquiryResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.offerQueryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.OfferQueryResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.queryAccumulatorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.QueryAccumulatorResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.queryBalanceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.QueryBalanceResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.queryBalanceTransferInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.QueryBalanceTransferInfoResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.queryBillCycleInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.QueryBillCycleInfoResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.queryBillCycleTypeDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.QueryBillCycleTypeDetailResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.queryCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.QueryCustomerResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.queryDefaultBillCycleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.QueryDefaultBillCycleResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.queryDenominationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.QueryDenominationResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.queryFeeItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.QueryFeeItemResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.queryFraudTimesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.QueryFraudTimesResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.queryLastCallCostResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.QueryLastCallCostResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.queryLastTranInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.QueryLastTranInfoResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.queryOfferingCycleTimeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.QueryOfferingCycleTimeResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.queryOnlineBusinessResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.QueryOnlineBusinessResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.queryProductOrderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.QueryProductOrderResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.querySubscriberBasicInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.QuerySubscriberBasicInfoResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.querySubServiceQuatoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.QuerySubServiceQuatoResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.queryTrnCountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.QueryTrnCountResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.subRchLogQueryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService11\HSAPI.QueryMgrService11.SubRchLogQueryResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\QueryMgrService11\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\QueryMgrService\HSAPI.QueryMgrService.queryBalanceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService\HSAPI.QueryMgrService.QueryBalanceResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService\HSAPI.QueryMgrService.queryCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\QueryMgrService\HSAPI.QueryMgrService.QueryCustomerResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\QueryMgrService\QueryMgrService.wsdl" />
+    <None Include="Connected Services\QueryMgrService\QueryMgrService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\QueryMgrService\QueryMgrService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\QueryMgrService\QueryMgrService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\QueryMgrService\QueryMgrService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\StatemgrtMgrService\configuration91.svcinfo" />
+    <None Include="Connected Services\StatemgrtMgrService\configuration.svcinfo" />
+    <None Include="Connected Services\QueryMgrService\configuration91.svcinfo" />
+    <None Include="Connected Services\QueryMgrService\configuration.svcinfo" />
+    <None Include="Connected Services\QueryMgrService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\StatemgrtMgrService\HSAPI.StatemgrtMgrService.balanceToValidityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\StatemgrtMgrService\HSAPI.StatemgrtMgrService.BalanceToValidityResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\StatemgrtMgrService\HSAPI.StatemgrtMgrService.batchModifySubValidityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\StatemgrtMgrService\HSAPI.StatemgrtMgrService.BatchModifySubValidityResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\StatemgrtMgrService\HSAPI.StatemgrtMgrService.batchModLastActDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\StatemgrtMgrService\HSAPI.StatemgrtMgrService.BatchModLastActDateResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\StatemgrtMgrService\HSAPI.StatemgrtMgrService.changingSubscriberStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\StatemgrtMgrService\HSAPI.StatemgrtMgrService.ChangingSubscriberStatusResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\StatemgrtMgrService\HSAPI.StatemgrtMgrService.claimMissingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\StatemgrtMgrService\HSAPI.StatemgrtMgrService.ClaimMissingResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\StatemgrtMgrService\HSAPI.StatemgrtMgrService.disclaimMissingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\StatemgrtMgrService\HSAPI.StatemgrtMgrService.DisclaimMissingResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\StatemgrtMgrService\HSAPI.StatemgrtMgrService.manageETUFraudStateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\StatemgrtMgrService\HSAPI.StatemgrtMgrService.ManageETUFraudStateResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\StatemgrtMgrService\HSAPI.StatemgrtMgrService.modifyLastActiveDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\StatemgrtMgrService\HSAPI.StatemgrtMgrService.ModifyLastActiveDateResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\StatemgrtMgrService\HSAPI.StatemgrtMgrService.modifySubscriberValidityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\StatemgrtMgrService\HSAPI.StatemgrtMgrService.ModifySubscriberValidityResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\StatemgrtMgrService\HSAPI.StatemgrtMgrService.queryAdjustValidityLogResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\StatemgrtMgrService\HSAPI.StatemgrtMgrService.QueryAdjustValidityLogResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\StatemgrtMgrService\HSAPI.StatemgrtMgrService.querySereveStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\StatemgrtMgrService\HSAPI.StatemgrtMgrService.QuerySereveStatusResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\StatemgrtMgrService\HSAPI.StatemgrtMgrService.querySubChangeLogResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\StatemgrtMgrService\HSAPI.StatemgrtMgrService.QuerySubChangeLogResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\StatemgrtMgrService\HSAPI.StatemgrtMgrService.reconnectResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\StatemgrtMgrService\HSAPI.StatemgrtMgrService.ReconnectResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\StatemgrtMgrService\HSAPI.StatemgrtMgrService.suspendResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\StatemgrtMgrService\HSAPI.StatemgrtMgrService.SuspendResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\StatemgrtMgrService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\SubmgrtMgrService\HSAPI.SubmgrtMgrService.BatchMendCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SubmgrtMgrService\HSAPI.SubmgrtMgrService.BatchMendCustomerResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SubmgrtMgrService\HSAPI.SubmgrtMgrService.BatchModifyAcctInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SubmgrtMgrService\HSAPI.SubmgrtMgrService.BatchModifyAcctInfoResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SubmgrtMgrService\HSAPI.SubmgrtMgrService.BatchModifyInitBalanceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SubmgrtMgrService\HSAPI.SubmgrtMgrService.BatchModifyInitBalanceResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SubmgrtMgrService\HSAPI.SubmgrtMgrService.BatchModSubStateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SubmgrtMgrService\HSAPI.SubmgrtMgrService.BatchModSubStateResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SubmgrtMgrService\HSAPI.SubmgrtMgrService.ChangeAccountBasicInforResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SubmgrtMgrService\HSAPI.SubmgrtMgrService.ChangeAccountBasicInforResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SubmgrtMgrService\HSAPI.SubmgrtMgrService.ChangeAcctBillCycleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SubmgrtMgrService\HSAPI.SubmgrtMgrService.ChangeAcctBillCycleResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SubmgrtMgrService\HSAPI.SubmgrtMgrService.ChangeCreditLevelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SubmgrtMgrService\HSAPI.SubmgrtMgrService.ChangeCreditLevelResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SubmgrtMgrService\HSAPI.SubmgrtMgrService.ChangeCustBasicInforResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SubmgrtMgrService\HSAPI.SubmgrtMgrService.ChangeCustBasicInforResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SubmgrtMgrService\HSAPI.SubmgrtMgrService.ChangeMSISDNResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SubmgrtMgrService\HSAPI.SubmgrtMgrService.ChangeMSISDNResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SubmgrtMgrService\HSAPI.SubmgrtMgrService.ChangeSIMResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SubmgrtMgrService\HSAPI.SubmgrtMgrService.ChangeSIMResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SubmgrtMgrService\HSAPI.SubmgrtMgrService.ChangeSubscriberBasicInforResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SubmgrtMgrService\HSAPI.SubmgrtMgrService.ChangeSubscriberBasicInforResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SubmgrtMgrService\HSAPI.SubmgrtMgrService.ManagePaymentRelationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SubmgrtMgrService\HSAPI.SubmgrtMgrService.ManagePaymentRelationResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SubmgrtMgrService\HSAPI.SubmgrtMgrService.MultiSIMResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SubmgrtMgrService\HSAPI.SubmgrtMgrService.MultiSIMResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SubmgrtMgrService\HSAPI.SubmgrtMgrService.SuppressAccountBillResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SubmgrtMgrService\HSAPI.SubmgrtMgrService.SuppressAccountBillResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SubmgrtMgrService\HSAPI.SubmgrtMgrService.UpdateMNPDBResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SubmgrtMgrService\HSAPI.SubmgrtMgrService.UpdateMNPDBResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\SubmgrtMgrService\SubmgrtMgrService.wsdl" />
+    <None Include="Connected Services\SubmgrtMgrService\SubmgrtMgrService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SubmgrtMgrService\SubmgrtMgrService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TransferAccountMgrService\configuration91.svcinfo" />
+    <None Include="Connected Services\TransferAccountMgrService\configuration.svcinfo" />
+    <None Include="Connected Services\SubmgrtMgrService\configuration91.svcinfo" />
+    <None Include="Connected Services\SubmgrtMgrService\configuration.svcinfo" />
+    <None Include="Connected Services\SubmgrtMgrService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Connected Services\TransferAccountMgrService\HSAPI.TransferAccountMgrService.BalanceTrsRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TransferAccountMgrService\HSAPI.TransferAccountMgrService.BalanceTrsRequestResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TransferAccountMgrService\HSAPI.TransferAccountMgrService.CancelTransferResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TransferAccountMgrService\HSAPI.TransferAccountMgrService.CancelTransferResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TransferAccountMgrService\HSAPI.TransferAccountMgrService.PeriodRechResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TransferAccountMgrService\HSAPI.TransferAccountMgrService.PeriodRechResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TransferAccountMgrService\HSAPI.TransferAccountMgrService.QueryBalanceToValidityLogResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TransferAccountMgrService\HSAPI.TransferAccountMgrService.QueryBalanceToValidityLogResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TransferAccountMgrService\HSAPI.TransferAccountMgrService.QueryTransferLogResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TransferAccountMgrService\HSAPI.TransferAccountMgrService.QueryTransferLogResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TransferAccountMgrService\HSAPI.TransferAccountMgrService.TransferAccountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\TransferAccountMgrService\HSAPI.TransferAccountMgrService.TransferAccountResultMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\TransferAccountMgrService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Connected Services\QueryMgrService11\QueryMgrService.wsdl" />
+    <None Include="Connected Services\QueryMgrService11\QueryMgrService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\QueryMgrService11\QueryMgrService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\QueryMgrService11\QueryMgrService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\QueryMgrService11\QueryMgrService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\QueryMgrService11\QueryMgrService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\StatemgrtMgrService\CBSInterface_Common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\StatemgrtMgrService\CBSInterface_StateMgrt.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\StatemgrtMgrService\StatemgrtMgrService.wsdl" />
+    <None Include="Connected Services\TransferAccountMgrService\TransferAccountMgrService.wsdl" />
+    <None Include="Connected Services\TransferAccountMgrService\TransferAccountMgrService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\TransferAccountMgrService\TransferAccountMgrService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile10.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile11.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile2.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile3.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile4.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile5.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile6.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile7.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile8.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile9.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Web References\WebReferences\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\WebReferences\SERVICE.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
+    <None Include="Web References\WebReferences\SERVICE.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\AAAInterface\" />
+    <WCFMetadataStorage Include="Connected Services\AcctcreditMgrService\" />
+    <WCFMetadataStorage Include="Connected Services\AdjustAccountMgrService\" />
+    <WCFMetadataStorage Include="Connected Services\AR4BMPInterfaceService\" />
+    <WCFMetadataStorage Include="Connected Services\ArServices\" />
+    <WCFMetadataStorage Include="Connected Services\CardRechargeMgrService\" />
+    <WCFMetadataStorage Include="Connected Services\CashRechargeMgrServiceByRecharge\" />
+    <WCFMetadataStorage Include="Connected Services\CashRechargeMgrService\" />
+    <WCFMetadataStorage Include="Connected Services\ChangePrimaryOfferMgrService\" />
+    <WCFMetadataStorage Include="Connected Services\DelSubscriberMgrService\" />
+    <WCFMetadataStorage Include="Connected Services\NewSubscriberMgrService\" />
+    <WCFMetadataStorage Include="Connected Services\PasswordMgrService\" />
+    <WCFMetadataStorage Include="Connected Services\QueryMgrService11\" />
+    <WCFMetadataStorage Include="Connected Services\QueryMgrService\" />
+    <WCFMetadataStorage Include="Connected Services\StatemgrtMgrService\" />
+    <WCFMetadataStorage Include="Connected Services\SubmgrtMgrService\" />
+    <WCFMetadataStorage Include="Connected Services\TransferAccountMgrService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\Default\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://smsservice.hormuud.com/SERVICE.ASMX">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebReferences\</RelPath>
+      <UpdateFromURL>https://smsservice.hormuud.com/SERVICE.ASMX</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HSAPI_WebReferences_CustomService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50536</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50536/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

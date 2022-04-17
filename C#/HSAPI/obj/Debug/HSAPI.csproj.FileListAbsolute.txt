@@ -1,0 +1,298 @@
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\obj\Debug\HSAPI.csproj.CoreCompileInputs.cache
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\ApplicationInsights.config
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\HSAPI.dll.config
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\HSAPI.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\HSAPI.pdb
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\csc.exe
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\csc.exe.config
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\csc.rsp
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\csi.exe
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\csi.exe.config
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\csi.rsp
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\System.AppContext.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\System.Console.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\System.IO.Compression.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\System.Net.Http.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\System.Net.Sockets.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\System.ValueTuple.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\System.Xml.XPath.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\vbc.exe
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\vbc.exe.config
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\vbc.rsp
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\VBCSCompiler.exe
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Antlr3.Runtime.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\EntityFramework.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\EntityFramework.SqlServer.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.AI.Web.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.ApplicationInsights.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.Owin.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.Owin.Security.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Newtonsoft.Json.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Owin.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\PCLCrypto.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\PInvoke.BCrypt.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\PInvoke.Kernel32.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\PInvoke.NCrypt.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\PInvoke.Windows.Core.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\System.Net.Http.Formatting.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\System.Web.Cors.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\System.Web.Helpers.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\System.Web.Http.Cors.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\System.Web.Http.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\System.Web.Http.Owin.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\System.Web.Http.WebHost.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\System.Web.Mvc.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\System.Web.Optimization.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\System.Web.Razor.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\System.Web.WebPages.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\System.Web.WebPages.Razor.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Validation.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\WebGrease.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Antlr3.Runtime.pdb
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\EntityFramework.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\EntityFramework.SqlServer.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.AI.PerfCounterCollector.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.AI.Web.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.ApplicationInsights.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.Owin.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.Owin.Security.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Newtonsoft.Json.pdb
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Newtonsoft.Json.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\PCLCrypto.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\PInvoke.BCrypt.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\PInvoke.Kernel32.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\PInvoke.NCrypt.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\PInvoke.Windows.Core.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\System.Net.Http.Formatting.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\System.Web.Helpers.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\System.Web.Http.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\System.Web.Http.Cors.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\System.Web.Http.Owin.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\System.Web.Http.WebHost.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\System.Web.Mvc.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\System.Web.Razor.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\System.Web.WebPages.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\System.Web.WebPages.Razor.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\System.Web.Optimization.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\bin\Validation.xml
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\obj\Debug\HSAPI.csproj.CopyComplete
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\obj\Debug\HSAPI.dll
+C:\Users\STH02135\Desktop\HSAPICC\HSAPI\obj\Debug\HSAPI.pdb
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\ApplicationInsights.config
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\HSAPI.dll.config
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\HSAPI.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\HSAPI.pdb
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\csc.exe
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\csc.exe.config
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\csc.rsp
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\csi.exe
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\csi.exe.config
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\csi.rsp
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\Microsoft.Managed.Core.targets
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\System.AppContext.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\System.Collections.Immutable.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\System.Console.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\System.Globalization.Calendars.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\System.IO.Compression.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\System.IO.FileSystem.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\System.Net.Http.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\System.Net.Sockets.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\System.Reflection.Metadata.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\System.ValueTuple.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\System.Xml.XPath.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\vbc.exe
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\vbc.exe.config
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\vbc.rsp
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\VBCSCompiler.exe
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\roslyn\VBCSCompiler.exe.config
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Antlr3.Runtime.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\EntityFramework.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\EntityFramework.SqlServer.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.AI.DependencyCollector.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.AI.Web.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.AI.WindowsServer.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.ApplicationInsights.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.Owin.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.Owin.Security.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.Owin.Security.Google.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.Web.Infrastructure.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Newtonsoft.Json.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Owin.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\PCLCrypto.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\PInvoke.BCrypt.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\PInvoke.Kernel32.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\PInvoke.NCrypt.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\PInvoke.Windows.Core.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\System.Diagnostics.DiagnosticSource.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\System.Net.Http.Formatting.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\System.Web.Cors.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\System.Web.Helpers.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\System.Web.Http.Cors.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\System.Web.Http.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\System.Web.Http.Owin.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\System.Web.Http.WebHost.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\System.Web.Mvc.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\System.Web.Optimization.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\System.Web.Razor.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\System.Web.WebPages.Deployment.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\System.Web.WebPages.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\System.Web.WebPages.Razor.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Validation.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\WebGrease.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Antlr3.Runtime.pdb
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\EntityFramework.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\EntityFramework.SqlServer.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.AI.DependencyCollector.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.AI.PerfCounterCollector.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.AI.Web.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.AI.WindowsServer.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.ApplicationInsights.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.Owin.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.Owin.Security.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.Owin.Security.Google.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Newtonsoft.Json.pdb
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Newtonsoft.Json.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\PCLCrypto.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\PInvoke.BCrypt.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\PInvoke.Kernel32.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\PInvoke.NCrypt.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\PInvoke.Windows.Core.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\System.Diagnostics.DiagnosticSource.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\System.Net.Http.Formatting.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\System.Web.Helpers.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\System.Web.Http.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\System.Web.Http.Cors.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\System.Web.Http.Owin.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\System.Web.Http.WebHost.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\System.Web.Mvc.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\System.Web.Razor.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\System.Web.WebPages.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\System.Web.WebPages.Deployment.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\System.Web.WebPages.Razor.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\System.Web.Optimization.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\bin\Validation.xml
+E:\Source Code\HSAPICC - Copy\HSAPI\obj\Debug\HSAPI.csproj.CoreCompileInputs.cache
+E:\Source Code\HSAPICC - Copy\HSAPI\obj\Debug\HSAPI.csproj.CopyComplete
+E:\Source Code\HSAPICC - Copy\HSAPI\obj\Debug\HSAPI.dll
+E:\Source Code\HSAPICC - Copy\HSAPI\obj\Debug\HSAPI.pdb
