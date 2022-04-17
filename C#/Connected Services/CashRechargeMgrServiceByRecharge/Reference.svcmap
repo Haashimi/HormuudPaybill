@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="421cfa97-f993-424d-9e05-9b673783c022" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.13.121.226:7782/services/CashRechargeMgrService?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CashRechargeMgrService.xsd" MetadataType="Schema" ID="41a06e25-0809-467b-a684-54d09fef535e" SourceId="1" SourceUrl="http://10.13.121.226:7782/services/CashRechargeMgrService?xsd=CBSInterface_CashRecharge.xsd" />
+    <MetadataFile FileName="CashRechargeMgrService.wsdl" MetadataType="Wsdl" ID="2e100249-1326-48f7-be6a-6f849da42d7f" SourceId="1" SourceUrl="http://10.13.121.226:7782/services/CashRechargeMgrService?wsdl" />
+    <MetadataFile FileName="CashRechargeMgrService1.xsd" MetadataType="Schema" ID="dd7a4cad-aff0-4fe2-b8c6-38dc5b9d6a32" SourceId="1" SourceUrl="http://10.13.121.226:7782/services/CashRechargeMgrService?xsd=CBSInterface_Common.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

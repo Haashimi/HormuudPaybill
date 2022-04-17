@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:delsubscribermgr="http://www.huawei.com/bme/cbsinterface/delsubscribermgr" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns="http://www.huawei.com/bme/cbsinterface/delsubscriber" xmlns:common="http://www.huawei.com/bme/cbsinterface/common" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.huawei.com/bme/cbsinterface/delsubscribermgr" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:delsubscriber="http://www.huawei.com/bme/cbsinterface/delsubscriber" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://www.huawei.com/bme/cbsinterface/delsubscribermgr">
+      <xs:import schemaLocation="CBSInterface_DelSubscriber.xsd" namespace="http://www.huawei.com/bme/cbsinterface/delsubscriber" />
+      <xs:element name="DelSubscriberRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="DelSubscriberRequest" type="delsubscriber:DelSubscriberRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DelSubscriberResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="DelSubscriberResult" type="delsubscriber:DelSubscriberResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BatchDelSubscriberRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="BatchDelSubscriberRequest" type="delsubscriber:BatchDelSubscriberRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BatchDelSubscriberResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </types>
+  <message name="DelSubscriberRequestMessage">
+    <part name="DelSubscriberRequestMsg" element="delsubscribermgr:DelSubscriberRequestMsg" />
+  </message>
+  <message name="BatchDelSubscriberResultMessage">
+    <part name="BatchDelSubscriberResultMsg" element="delsubscribermgr:BatchDelSubscriberResultMsg" />
+  </message>
+  <message name="DelSubscriberResultMessage">
+    <part name="DelSubscriberResultMsg" element="delsubscribermgr:DelSubscriberResultMsg" />
+  </message>
+  <message name="BatchDelSubscriberRequestMessage">
+    <part name="BatchDelSubscriberRequestMsg" element="delsubscribermgr:BatchDelSubscriberRequestMsg" />
+  </message>
+  <portType name="DelSubscriberMgr">
+    <operation name="delSubscriber">
+      <input message="delsubscribermgr:DelSubscriberRequestMessage" />
+      <output message="delsubscribermgr:DelSubscriberResultMessage" />
+    </operation>
+    <operation name="batchDelSubscriber">
+      <input message="delsubscribermgr:BatchDelSubscriberRequestMessage" />
+      <output message="delsubscribermgr:BatchDelSubscriberResultMessage" />
+    </operation>
+  </portType>
+  <binding name="DelSubscriberMgrSoap12Binding" type="delsubscribermgr:DelSubscriberMgr">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="delSubscriber">
+      <soap12:operation soapAction="delSubscriber" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="batchDelSubscriber">
+      <soap12:operation soapAction="batchDelSubscriber" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+  </binding>
+  <binding name="DelSubscriberMgrBinding" type="delsubscribermgr:DelSubscriberMgr">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="delSubscriber">
+      <soap:operation soapAction="delSubscriber" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="batchDelSubscriber">
+      <soap:operation soapAction="batchDelSubscriber" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="DelSubscriberMgrService">
+    <port name="DelSubscriberMgrServiceSoap12Port" binding="delsubscribermgr:DelSubscriberMgrSoap12Binding">
+      <soap12:address location="http://www.huawei.com/bme/cbsinterface/delsubscriber/wsdl/CBSInterface_DelSubscriber.wsdl" />
+    </port>
+    <port name="DelSubscriberMgrServicePort" binding="delsubscribermgr:DelSubscriberMgrBinding">
+      <soap:address location="http://www.huawei.com/bme/cbsinterface/delsubscriber/wsdl/CBSInterface_DelSubscriber.wsdl" />
+    </port>
+  </service>
+</definitions>

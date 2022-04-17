@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:cashrecharge="http://www.huawei.com/bme/cbsinterface/cashrecharge" xmlns:common="http://www.huawei.com/bme/cbsinterface/common" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.huawei.com/bme/cbsinterface/cashrecharge" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="CBSInterface_Common.xsd" namespace="http://www.huawei.com/bme/cbsinterface/common" />
+  <xs:complexType name="PaymentRequest">
+    <xs:all>
+      <xs:element minOccurs="0" name="LogID">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="40" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="SubscriberNo" type="common:SubscriberNo" />
+      <xs:element name="PaymentAmt" type="common:Balance" />
+      <xs:element name="PaymentMode">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="10" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="AccountType" type="common:AccountType" />
+      <xs:element minOccurs="0" name="AdditionalInfo">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="256" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="BankCode">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="12" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="CardSerialNo">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="20" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="CardBatchNo">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="20" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="Location">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="10" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="AgentName">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="64" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="CardType" type="xs:int" />
+      <xs:element minOccurs="0" name="Validity" type="xs:int" />
+      <xs:element minOccurs="0" name="ValidityRule">
+        <xs:annotation>
+          <xs:documentation>Reserved</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="20" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="RechargeSetID" type="xs:int" />
+      <xs:element minOccurs="0" name="AccountCode" type="common:AccountCode" />
+      <xs:element minOccurs="0" name="RechargeRuleID">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="23" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="NotifyFlag" type="xs:int" />
+      <xs:element minOccurs="0" name="Channel" type="xs:int" />
+      <xs:element minOccurs="0" name="CellID">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="20" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="RefNumber">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="64" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="PaymentResult">
+    <xs:all>
+      <xs:element minOccurs="0" name="InternalSerialNo">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="24" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="NewBalance" nillable="true" type="common:Balance" />
+      <xs:element name="NewActiveStop" type="common:Date" />
+      <xs:element minOccurs="0" name="NewSuspendStopDate" type="common:Date" />
+      <xs:element minOccurs="0" name="NewDisableStopDate" type="common:Date" />
+      <xs:element name="ValidityPeriod" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ExtraValidity" nillable="true" type="xs:int" />
+      <xs:element name="AcctChgRecList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="AcctChgRec" type="common:AcctChgRecType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="BalanceAfterRecharge" nillable="true" type="common:Balance" />
+      <xs:element minOccurs="0" name="LoanAmount" nillable="true" type="common:Balance" />
+      <xs:element minOccurs="0" name="LoanPoundage" nillable="true" type="common:Balance" />
+      <xs:element minOccurs="0" name="LoanRecovered" nillable="true" type="common:Balance" />
+      <xs:element minOccurs="0" name="BalanceValidity" type="common:Date" />
+      <xs:element minOccurs="0" name="BalanceValidityPeriod" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="BalanceActiveDate" type="common:Date" />
+      <xs:element minOccurs="0" name="UserDays" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PaymentAmt" nillable="true" type="common:Balance" />
+      <xs:element minOccurs="0" name="TaxAmt" nillable="true" type="common:Balance" />
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="ActiveFirstRequest">
+    <xs:all>
+      <xs:element minOccurs="0" name="LogID" type="xs:string" />
+      <xs:element name="SubscriberNo" type="common:SubscriberNo" />
+      <xs:element minOccurs="0" name="AccessMethod" type="xs:int" />
+      <xs:element minOccurs="0" name="Location">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="10" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="IVRLang" type="xs:int" />
+      <xs:element minOccurs="0" name="SMSLang" type="xs:int" />
+      <xs:element minOccurs="0" name="RechargeAmount" type="common:Balance" />
+      <xs:element minOccurs="0" name="USSDLang" type="xs:int" />
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="PaymentEnquiryRequest">
+    <xs:all>
+      <xs:element name="SubscriberNo" type="common:SubscriberNo" />
+      <xs:element minOccurs="0" name="OldLogID">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="40" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="PaymentMode">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="10" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="StartTime" type="common:DateTime" />
+      <xs:element minOccurs="0" name="EndTime" type="common:DateTime" />
+      <xs:element minOccurs="0" name="PaymentResult">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="1" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="QueryType" type="xs:int">
+        <xs:annotation>
+          <xs:documentation>0-????????????????????????????????????????????????1-???????????????????????????????????????????????????????????????2-?????????????????????????????????????????????????????????0</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AccountCode" type="common:AccountCode" />
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="PaymentEnquiryResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PaymentLog">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="LogID">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="40" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element name="InternalSerialNo">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="23" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element name="SubscriberNo" type="common:SubscriberNo" />
+            <xs:element name="SubCosID" nillable="true" type="xs:int" />
+            <xs:element name="TradeTime" type="common:DateTime" />
+            <xs:element name="ErrorType" type="xs:int" />
+            <xs:element name="PaymentMode">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="10" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element name="OldActiveStop" type="common:Date" />
+            <xs:element name="NewActiveStop" type="common:Date" />
+            <xs:element name="OldSuspendStop" type="common:Date" />
+            <xs:element name="NewSuspendStop" type="common:Date" />
+            <xs:element name="OldDisableStop" type="common:Date" />
+            <xs:element name="NewDisableStop" type="common:Date" />
+            <xs:element name="OldBalance" nillable="true" type="common:Balance" />
+            <xs:element minOccurs="0" name="BalanceAfterRecharge" nillable="true" type="common:Balance" />
+            <xs:element name="NewBalance" nillable="true" type="common:Balance" />
+            <xs:element name="PaymentAmt" nillable="true" type="common:Balance" />
+            <xs:element minOccurs="0" name="Currency" nillable="true" type="xs:int" />
+            <xs:element name="Validity" nillable="true" type="xs:int" />
+            <xs:element name="PrmValidity" type="xs:int" />
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="PaymentBonus">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PrmAcctType" nillable="true" type="common:AccountType" />
+                  <xs:element name="PrmAmt" nillable="true" type="common:Balance" />
+                  <xs:element minOccurs="0" name="CurrPrmAcctBalance" nillable="true" type="common:Balance" />
+                  <xs:element minOccurs="0" name="ChgExpTime" type="xs:integer" />
+                  <xs:element minOccurs="0" name="ApplyTime" type="common:DateTime" />
+                  <xs:element minOccurs="0" name="ExpiryTime" type="common:DateTime" />
+                  <xs:element minOccurs="0" name="MinMeasureId" type="xs:integer" />
+                  <xs:element minOccurs="0" name="AccountTypeDescription">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="64" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="CanceledFlag" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="CancelLogID">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="40" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element name="AdditiontalInfo">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="256" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" name="OperatorID">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="24" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" name="PaymentTax" nillable="true" type="common:Balance" />
+            <xs:element minOccurs="0" name="PaymentPenalty" nillable="true" type="common:Balance" />
+            <xs:element minOccurs="0" name="OperationDes">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="64" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" name="BankCode">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="12" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" name="OldPOSBalance" nillable="true" type="common:Balance" />
+            <xs:element minOccurs="0" name="NewPOSBalance" nillable="true" type="common:Balance" />
+            <xs:element minOccurs="0" name="Location" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="AgentName">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="64" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" name="BatchNo">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="20" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" name="Sequence">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="20" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" name="LoanAmount" nillable="true" type="common:Balance" />
+            <xs:element minOccurs="0" name="LoanPoundage" nillable="true" type="common:Balance" />
+            <xs:element minOccurs="0" name="LoanRecovered" nillable="true" type="common:Balance" />
+            <xs:element minOccurs="0" name="AccountCode" type="common:AccountCode" />
+            <xs:element minOccurs="0" name="BalanceValidity" type="common:Date" />
+            <xs:element minOccurs="0" name="BalanceValidityPeriod" nillable="true" type="xs:int" />
+            <xs:element minOccurs="0" name="BalanceActiveDate" type="common:Date" />
+            <xs:element minOccurs="0" name="UserDays" nillable="true" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="ResultFileName" type="common:FileName" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BatchActiveFirstRequest">
+    <xs:sequence>
+      <xs:element name="FileName" type="common:FileName" />
+      <xs:element minOccurs="0" name="TaskTime" type="common:DateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BatchCashRechargeRequest">
+    <xs:sequence>
+      <xs:element name="FileName" type="common:FileName" />
+      <xs:element minOccurs="0" name="TaskTime" type="common:DateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ReversePaymentRequest">
+    <xs:all>
+      <xs:element minOccurs="0" name="LogID">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="40" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="OldLogID">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="40" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="SubscriberNo" type="common:SubscriberNo" />
+      <xs:element minOccurs="0" name="PaymentMode" type="xs:int" />
+      <xs:element minOccurs="0" name="Channel" type="xs:int" />
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="ReversePaymentResult">
+    <xs:all>
+      <xs:element name="NewBalance" nillable="true" type="common:Balance" />
+      <xs:element name="NewActiveStop" type="common:Date" />
+      <xs:element name="AcctChgRecList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="AcctChgRec" type="common:AcctChgRecType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="InternalSerialNo">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="24" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="LoanAmount" nillable="true" type="common:Balance" />
+      <xs:element minOccurs="0" name="LoanPoundage" nillable="true" type="common:Balance" />
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="SubAccountRechargeRequest">
+    <xs:sequence>
+      <xs:element name="SubscriberNo" type="common:SubscriberNo" />
+      <xs:element name="RechargeAmount" type="common:Balance" />
+      <xs:element name="AccountType" type="common:AccountType" />
+      <xs:element minOccurs="0" name="ValidityDays" type="xs:int" />
+      <xs:element minOccurs="0" name="AdditionalInfo">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="64" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SubAccountRechargeResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AcctChgRec" type="common:AcctChgRecType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CashRechargeRequest">
+    <xs:all>
+      <xs:element minOccurs="0" name="LogID">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="40" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="SubscriberNo" type="common:SubscriberNo" />
+      <xs:element name="PaymentAmt" type="common:Balance" />
+      <xs:element name="PaymentMethod">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="10" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="AccountType" type="common:AccountType" />
+      <xs:element minOccurs="0" name="AdditionalInfo">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="256" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="AgentName">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="64" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="ChannelID" type="xs:int" />
+      <xs:element minOccurs="0" name="DealerMSISDN">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="64" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="CashRechargeResult">
+    <xs:sequence>
+      <xs:element name="NewBalance" nillable="true" type="common:Balance" />
+      <xs:element name="NewActiveStop" type="common:Date" />
+      <xs:element name="ValidityPeriod" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ExtraValidity" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="LoanAmount" nillable="true" type="common:Balance" />
+      <xs:element minOccurs="0" name="LoanPoundage" nillable="true" type="common:Balance" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RechargeBonus">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="PrmAcctType" type="common:AccountType" />
+            <xs:element name="PrmAmt" type="common:Balance" />
+            <xs:element minOccurs="0" name="MinMeasureId" type="xs:integer" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="BalanceValidity" type="common:Date" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

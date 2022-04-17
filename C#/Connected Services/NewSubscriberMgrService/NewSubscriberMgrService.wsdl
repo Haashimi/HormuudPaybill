@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns="http://www.huawei.com/bme/cbsinterface/newsubscriber" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:common="http://www.huawei.com/bme/cbsinterface/common" xmlns:newsubscribermgr="http://www.huawei.com/bme/cbsinterface/newsubscribermgr" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:subscribe="http://www.huawei.com/bme/cbsinterface/subscribe" targetNamespace="http://www.huawei.com/bme/cbsinterface/newsubscribermgr" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema xmlns:newsubscriber="http://www.huawei.com/bme/cbsinterface/newsubscriber" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://www.huawei.com/bme/cbsinterface/newsubscribermgr">
+      <xs:import schemaLocation="NewSubscriberMgrService?xsd=CBSInterface_NewSubscriber.xsd" namespace="http://www.huawei.com/bme/cbsinterface/newsubscriber" />
+      <xs:element name="NewSubscriberRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="NewSubscriberRequest" type="newsubscriber:NewSubscriberRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="NewSubscriberResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="NewSubscriberResult" type="newsubscriber:NewSubscriberResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BatchNewSubscriberRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="NewSubscriberRequest" type="newsubscriber:BatchNewSubscriberRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BatchNewSubscriberResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </types>
+  <message name="NewSubscriberRequestMessage">
+    <part name="NewSubscriberRequestMsg" element="newsubscribermgr:NewSubscriberRequestMsg" />
+  </message>
+  <message name="NewSubscriberResultMessage">
+    <part name="NewSubscriberResultMsg" element="newsubscribermgr:NewSubscriberResultMsg" />
+  </message>
+  <message name="BatchNewSubscriberResultMessage">
+    <part name="BatchNewSubscriberResultMsg" element="newsubscribermgr:BatchNewSubscriberResultMsg" />
+  </message>
+  <message name="BatchNewSubscriberRequestMessage">
+    <part name="BatchNewSubscriberRequestMsg" element="newsubscribermgr:BatchNewSubscriberRequestMsg" />
+  </message>
+  <portType name="NewSubscriberMgr">
+    <operation name="newSubscriber">
+      <input message="newsubscribermgr:NewSubscriberRequestMessage" />
+      <output message="newsubscribermgr:NewSubscriberResultMessage" />
+    </operation>
+    <operation name="batchNewSubscriber">
+      <input message="newsubscribermgr:BatchNewSubscriberRequestMessage" />
+      <output message="newsubscribermgr:BatchNewSubscriberResultMessage" />
+    </operation>
+  </portType>
+  <binding name="NewSubscriberMgrSoap12Binding" type="newsubscribermgr:NewSubscriberMgr">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="newSubscriber">
+      <soap12:operation soapAction="newSubscriber" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="batchNewSubscriber">
+      <soap12:operation soapAction="batchNewSubscriber" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+  </binding>
+  <binding name="NewSubscriberMgrBinding" type="newsubscribermgr:NewSubscriberMgr">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="newSubscriber">
+      <soap:operation soapAction="newSubscriber" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="batchNewSubscriber">
+      <soap:operation soapAction="batchNewSubscriber" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="NewSubscriberMgrService">
+    <port name="NewSubscriberMgrServiceSoap12Port" binding="newsubscribermgr:NewSubscriberMgrSoap12Binding">
+      <soap12:address location="http://http://10.13.231.97:8080/services/NewSubscriberMgrService.NewSubscriberMgrServiceSoap12Port/" />
+    </port>
+    <port name="NewSubscriberMgrServicePort" binding="newsubscribermgr:NewSubscriberMgrBinding">
+      <soap:address location="http://http://10.13.231.97:8080/services/NewSubscriberMgrService.NewSubscriberMgrServicePort/" />
+    </port>
+  </service>
+</definitions>

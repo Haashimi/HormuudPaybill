@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7e6338d1-19ef-4c19-9e2a-1bbc463a5cc7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://http://10.13.231.97:8080/services/SubmgrtMgrService?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SubmgrtMgrService.wsdl" MetadataType="Wsdl" ID="17080890-101f-44c0-a094-8037a891b5d7" SourceId="1" SourceUrl="http://http://10.13.231.97:8080/services/SubmgrtMgrService?wsdl" />
+    <MetadataFile FileName="SubmgrtMgrService.xsd" MetadataType="Schema" ID="63ee88dc-6b4e-4b6c-81fe-59b6d80541a1" SourceId="1" SourceUrl="http://http://10.13.231.97:8080/services/SubmgrtMgrService?xsd=CBSInterface_Common.xsd" />
+    <MetadataFile FileName="SubmgrtMgrService1.xsd" MetadataType="Schema" ID="aafc9298-b72e-4934-a180-1833d3fdfb50" SourceId="1" SourceUrl="http://http://10.13.231.97:8080/services/SubmgrtMgrService?xsd=CBSInterface_Submgrt.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

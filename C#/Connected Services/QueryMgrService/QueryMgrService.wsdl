@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:ns2="http://www.huawei.com/bme/cbsinterface/subscribe" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns3="http://www.huawei.com/bme/cbsinterface/acctcredit" xmlns:common="http://www.huawei.com/bme/cbsinterface/common" xmlns:querymgr="http://www.huawei.com/bme/cbsinterface/querymgr" xmlns:ns="http://www.huawei.com/bme/cbsinterface/query" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://www.huawei.com/bme/cbsinterface/newsubscriber" targetNamespace="http://www.huawei.com/bme/cbsinterface/querymgr" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:query="http://www.huawei.com/bme/cbsinterface/query" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://www.huawei.com/bme/cbsinterface/querymgr">
+      <xs:import schemaLocation="QueryMgrService?xsd=CBSInterface_Query.xsd" namespace="http://www.huawei.com/bme/cbsinterface/query" />
+      <xs:element name="QueryCustomerRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="QueryCustomerRequest" type="query:QueryCustomerRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryCustomerResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element minOccurs="0" name="QueryCustomerResult" type="query:QueryCustomerResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryBalanceRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="QueryBalanceRequest" type="query:QueryBalanceRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryBalanceResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element minOccurs="0" name="QueryBalanceResult" type="query:QueryBalanceResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </types>
+  <message name="QueryBalanceRequestMessage">
+    <part name="QueryBalanceRequestMsg" element="querymgr:QueryBalanceRequestMsg" />
+  </message>
+  <message name="QueryCustomerResultMessage">
+    <part name="QueryCustomerResultMsg" element="querymgr:QueryCustomerResultMsg" />
+  </message>
+  <message name="QueryCustomerRequestMessage">
+    <part name="QueryCustomerRequestMsg" element="querymgr:QueryCustomerRequestMsg" />
+  </message>
+  <message name="QueryBalanceResultMessage">
+    <part name="QueryBalanceResultMsg" element="querymgr:QueryBalanceResultMsg" />
+  </message>
+  <portType name="QueryMgr">
+    <operation name="queryCustomer">
+      <input message="querymgr:QueryCustomerRequestMessage" />
+      <output message="querymgr:QueryCustomerResultMessage" />
+    </operation>
+    <operation name="queryBalance">
+      <input message="querymgr:QueryBalanceRequestMessage" />
+      <output message="querymgr:QueryBalanceResultMessage" />
+    </operation>
+  </portType>
+  <binding name="QueryMgrBinding" type="querymgr:QueryMgr">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="queryCustomer">
+      <soap:operation soapAction="queryCustomer" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryBalance">
+      <soap:operation soapAction="queryBalance" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="QueryMgrService">
+    <port name="QueryMgrServicePort" binding="querymgr:QueryMgrBinding">
+      <soap:address location="http://10.13.231.97:4384/services/QueryMgrService/" />
+    </port>
+  </service>
+</definitions>

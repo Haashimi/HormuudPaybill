@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1a9fa2f5-bd82-4261-9666-24a5e5639d10" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.13.121.215:7782/services/AR4BMPInterfaceService.wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ARCommon.xsd" MetadataType="Schema" ID="e510d6c8-560c-4722-b8a5-46fc7de9d3a7" SourceId="1" SourceUrl="http://10.13.121.215:7782/services/ARCommon.xsd" />
+    <MetadataFile FileName="AR4BMPInterfaceService.xsd" MetadataType="Schema" ID="359fd0f5-eed8-47c7-a3c2-d1886a2daaf0" SourceId="1" SourceUrl="http://10.13.121.215:7782/services/AR4BMPInterfaceService.xsd" />
+    <MetadataFile FileName="AR4BMPInterfaceService.wsdl" MetadataType="Wsdl" ID="75e54587-71ca-4daa-ba66-107642381fcb" SourceId="1" SourceUrl="http://10.13.121.215:7782/services/AR4BMPInterfaceService.wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:arcommon="http://cbs.huawei.com/ar/wsservice/arcommon" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="ArServices?xsd=CBSInterface_AR_Common.xsd" namespace="http://cbs.huawei.com/ar/wsservice/arcommon" />
+  <xs:complexType name="Adv2DepositRequest">
+    <xs:sequence>
+      <xs:element name="AccountAccessCode" type="arcommon:AcctAccessCode">
+        <xs:annotation>
+          <xs:documentation>Desposit request account access code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DepositAmount" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>Reuest advanced payment amount to deposit. The same format and accuracy as database format. ??????????????????????????????</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DepositType" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Deposit Type</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="CurrencyID" type="xs:long" />
+      <xs:element minOccurs="0" name="ExpectedReleaseDate" type="xs:string" />
+      <xs:element minOccurs="0" name="ReasonCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AdditionalProperty" type="arcommon:SimpleProperty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Adv2DepositResult">
+    <xs:sequence>
+      <xs:element name="DepositAmount" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>Deposit amount after the process ?????????????????????????????????????????????????????????????????????</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DepositType" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Processed deposit amount</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AdditionalProperty" type="arcommon:SimpleProperty" />
+      <xs:element minOccurs="0" name="CurrencyID" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

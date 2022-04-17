@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:arcommon="http://cbs.huawei.com/ar/wsservice/arcommon" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="ArServices?xsd=CBSInterface_AR_Common.xsd" namespace="http://cbs.huawei.com/ar/wsservice/arcommon" />
+  <xs:complexType name="QueryAdjustLogRequest">
+    <xs:sequence>
+      <xs:element name="QueryObj">
+        <xs:complexType>
+          <xs:choice>
+            <xs:element name="SubAccessCode" type="arcommon:SubAccessCode" />
+            <xs:element name="AcctAccessCode">
+              <xs:complexType>
+                <xs:complexContent mixed="false">
+                  <xs:extension base="arcommon:AcctAccessCode">
+                    <xs:sequence>
+                      <xs:element minOccurs="0" name="PayType" />
+                    </xs:sequence>
+                  </xs:extension>
+                </xs:complexContent>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="SubGroupAccessCode" type="arcommon:SubGroupAccessCode" />
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="QueryDetailInfo">
+        <xs:complexType>
+          <xs:choice>
+            <xs:element name="FreeUnitInfo">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="FreeUnitInstanceID" type="xs:long" />
+                  <xs:element name="FreeUnitType" type="xs:string" />
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="BalanceInfo">
+              <xs:complexType>
+                <xs:choice>
+                  <xs:element name="BalanceID" type="xs:long" />
+                  <xs:element name="BalanceType" type="xs:string" />
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="ExtTransID" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalRowNum" type="xs:integer" />
+      <xs:element minOccurs="0" name="BeginRowNum" type="xs:integer" />
+      <xs:element minOccurs="0" name="FetchRowNum" type="xs:integer" />
+      <xs:element minOccurs="0" name="StartTime" type="xs:string" />
+      <xs:element minOccurs="0" name="EndTime" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryAdjustLogResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AdjustInfo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="TradeTime" type="xs:string" />
+            <xs:element name="AcctKey" type="xs:string" />
+            <xs:element minOccurs="0" name="SubKey" type="xs:string" />
+            <xs:element minOccurs="0" name="PrimaryIdentity" type="xs:string" />
+            <xs:element minOccurs="0" name="ChannelID" type="xs:string" />
+            <xs:element name="TransID" type="xs:long" />
+            <xs:element minOccurs="0" name="ExtTransID" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="FreeUnitAdjustmentInfo">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="FreeUnitInstanceID" type="xs:long" />
+                  <xs:element minOccurs="0" name="FreeUnitType" type="xs:string" />
+                  <xs:element minOccurs="0" name="AdjustmentType" type="xs:string" />
+                  <xs:element minOccurs="0" name="AdjustmentAmt" type="xs:long" />
+                  <xs:element minOccurs="0" name="MeasureUnit" type="xs:integer" />
+                  <xs:element minOccurs="0" name="EffectiveTime" type="xs:string" />
+                  <xs:element minOccurs="0" name="ExpireTime" type="xs:string" />
+                  <xs:element minOccurs="0" name="CurAmt" type="xs:long" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="BalanceAdjustmentInfo">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="BalanceID" type="xs:long" />
+                  <xs:element minOccurs="0" name="BalanceType" type="xs:string" />
+                  <xs:element minOccurs="0" name="AdjustmentType" type="xs:string" />
+                  <xs:element minOccurs="0" name="AdjustmentAmt" type="xs:long" />
+                  <xs:element minOccurs="0" name="CurrencyID" type="xs:integer" />
+                  <xs:element minOccurs="0" name="EffectiveTime" type="xs:string" />
+                  <xs:element minOccurs="0" name="ExpireTime" type="xs:string" />
+                  <xs:element minOccurs="0" name="CurAmt" type="xs:long" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="OperID" type="xs:long" />
+            <xs:element minOccurs="0" name="DeptID" type="xs:long" />
+            <xs:element minOccurs="0" name="Remark" type="xs:string" />
+            <xs:element name="Reason" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="AdditionalProperty" type="arcommon:SimpleProperty" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TotalRowNum" type="xs:integer" />
+      <xs:element name="BeginRowNum" type="xs:integer" />
+      <xs:element name="FetchRowNum" type="xs:integer" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

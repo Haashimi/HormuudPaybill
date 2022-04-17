@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:arcommon="http://cbs.huawei.com/ar/wsservice/arcommon" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="QueryAuditTrans4InvoicingRequest">
+    <xs:sequence>
+      <xs:element name="BusiDate" type="xs:string" />
+      <xs:element name="TransType" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryAuditTrans4InvoicingResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AuditTrans4InvoicingList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="AuditID" type="xs:long" />
+            <xs:element name="BusiDate" type="xs:string" />
+            <xs:element name="TransType" type="xs:string" />
+            <xs:element name="CurrencyID" type="xs:long" />
+            <xs:element name="TransAmt1" type="xs:long" />
+            <xs:element name="TransAmt2" type="xs:long" />
+            <xs:element name="Count" type="xs:long" />
+            <xs:element name="PaymentFlag" type="xs:long" />
+            <xs:element name="EntryDate" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

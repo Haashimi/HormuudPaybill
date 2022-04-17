@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns="http://www.huawei.com/bme/cbsinterface/submgrt" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:common="http://www.huawei.com/bme/cbsinterface/common" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:submgrtmgr="http://www.huawei.com/bme/cbsinterface/submgrtmgr" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.huawei.com/bme/cbsinterface/submgrtmgr" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:submgrt="http://www.huawei.com/bme/cbsinterface/submgrt" targetNamespace="http://www.huawei.com/bme/cbsinterface/submgrtmgr">
+      <xs:import schemaLocation="SubmgrtMgrService?xsd=CBSInterface_Submgrt.xsd" namespace="http://www.huawei.com/bme/cbsinterface/submgrt" />
+      <xs:element name="ChangeCustBasicInforRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="ChangeCustBasicInforRequest" type="submgrt:ChangeCustBasicInforRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ChangeCustBasicInforResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ChangeAccountBasicInforRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="ChangeAccountBasicInforRequest" type="submgrt:ChangeAccountBasicInforRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ChangeAccountBasicInforResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ChangeSubscriberBasicInforResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ChangeSubscriberBasicInforRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="ChangeSubscriberBasicInforRequest" type="submgrt:ChangeSubscriberBasicInforRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ChangeMSISDNRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="ChangeMSISDNRequest" type="submgrt:ChangeMSISDNRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ChangeMSISDNResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ChangeSIMRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="ChangeSIMRequest" type="submgrt:ChangeSIMRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ChangeSIMResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ChangeAcctBillCycleRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="ChangeAcctBillCycleRequest" type="submgrt:ChangeAcctBillCycleRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ChangeAcctBillCycleResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ChangeCreditLevelRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="ChangeCreditLevelRequest" type="submgrt:ChangeCreditLevelRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ChangeCreditLevelResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ManagePaymentRelationRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="ManagePaymentRelationRequest" type="submgrt:ManagePaymentRelationRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ManagePaymentRelationResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="ManagePaymentRelationResult" type="submgrt:ManagePaymentRelationResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BatchModifyInitBalanceRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="BatchModifyInitBalanceRequest" type="submgrt:BatchModifyInitBalanceRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BatchModifyInitBalanceResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BatchModifyAcctInfoRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="BatchModifyAcctInfoRequest" type="submgrt:BatchModifyAcctInfoRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BatchModifyAcctInfoResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SuppressAccountBillRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="SuppressAccountBillRequest" type="submgrt:SuppressAccountBillRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SuppressAccountBillResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="MultiSIMRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="MultiSIMRequest" type="submgrt:MultiSIMRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="MultiSIMResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateMNPDBRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="UpdateMNPDBRequest" type="submgrt:UpdateMNPDBRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateMNPDBResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BatchModSubStateRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="BatchModSubStateRequest" type="submgrt:BatchModSubStateRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BatchModSubStateResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BatchMendCustomerRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="BatchMendCustomerRequest" type="submgrt:BatchMendCustomerRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BatchMendCustomerResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </types>
+  <message name="ChangeAcctBillCycleRequestMessage">
+    <part name="ChangeAcctBillCycleRequestMsg" element="submgrtmgr:ChangeAcctBillCycleRequestMsg" />
+  </message>
+  <message name="ChangeSubscriberBasicInforRequestMessage">
+    <part name="ChangeSubscriberBasicInforRequestMsg" element="submgrtmgr:ChangeSubscriberBasicInforRequestMsg" />
+  </message>
+  <message name="ChangeAccountBasicInforResultMessage">
+    <part name="ChangeAccountBasicInforResultMsg" element="submgrtmgr:ChangeAccountBasicInforResultMsg" />
+  </message>
+  <message name="ChangeAcctBillCycleResultMessage">
+    <part name="ChangeAcctBillCycleResultMsg" element="submgrtmgr:ChangeAcctBillCycleResultMsg" />
+  </message>
+  <message name="BatchModSubStateResultMessage">
+    <part name="BatchModSubStateResultMsg" element="submgrtmgr:BatchModSubStateResultMsg" />
+  </message>
+  <message name="ChangeCustBasicInforRequestMessage">
+    <part name="ChangeCustBasicInforRequestMsg" element="submgrtmgr:ChangeCustBasicInforRequestMsg" />
+  </message>
+  <message name="MultiSIMResultMessage">
+    <part name="MultiSIMResultMsg" element="submgrtmgr:MultiSIMResultMsg" />
+  </message>
+  <message name="ChangeSIMRequestMessage">
+    <part name="ChangeSIMRequestMsg" element="submgrtmgr:ChangeSIMRequestMsg" />
+  </message>
+  <message name="ChangeCreditLevelRequestMessage">
+    <part name="ChangeCreditLevelRequestMsg" element="submgrtmgr:ChangeCreditLevelRequestMsg" />
+  </message>
+  <message name="BatchModifyInitBalanceRequestMessage">
+    <part name="BatchModifyInitBalanceRequest" element="submgrtmgr:BatchModifyInitBalanceRequestMsg" />
+  </message>
+  <message name="ChangeMSISDNRequestMessage">
+    <part name="ChangeMSISDNRequestMsg" element="submgrtmgr:ChangeMSISDNRequestMsg" />
+  </message>
+  <message name="ChangeCreditLevelResultMessage">
+    <part name="ChangeCreditLevelResultMsg" element="submgrtmgr:ChangeCreditLevelResultMsg" />
+  </message>
+  <message name="ChangeSubscriberBasicInforResultMessage">
+    <part name="ChangeSubscriberBasicInforResultMsg" element="submgrtmgr:ChangeSubscriberBasicInforResultMsg" />
+  </message>
+  <message name="ManagePaymentRelationResultMessage">
+    <part name="ManagePaymentRelationResultMsg" element="submgrtmgr:ManagePaymentRelationResultMsg" />
+  </message>
+  <message name="ChangeAccountBasicInforRequestMessage">
+    <part name="ChangeAccountBasicInforRequestMsg" element="submgrtmgr:ChangeAccountBasicInforRequestMsg" />
+  </message>
+  <message name="ChangeMSISDNResultMessage">
+    <part name="ChangeMSISDNResultMsg" element="submgrtmgr:ChangeMSISDNResultMsg" />
+  </message>
+  <message name="BatchModifyInitBalanceResultMessage">
+    <part name="BatchModifyInitBalanceResultMsg" element="submgrtmgr:BatchModifyInitBalanceResultMsg" />
+  </message>
+  <message name="ManagePaymentRelationRequestMessage">
+    <part name="ManagePaymentRelationRequestMsg" element="submgrtmgr:ManagePaymentRelationRequestMsg" />
+  </message>
+  <message name="ChangeCustBasicInforResultMessage">
+    <part name="ChangeCustBasicInforResultMsg" element="submgrtmgr:ChangeCustBasicInforResultMsg" />
+  </message>
+  <message name="SuppressAccountBillResultMessage">
+    <part name="SuppressAccountBillResultMsg" element="submgrtmgr:SuppressAccountBillResultMsg" />
+  </message>
+  <message name="BatchMendCustomerResultMessage">
+    <part name="BatchMendCustomerResultMsg" element="submgrtmgr:BatchMendCustomerResultMsg" />
+  </message>
+  <message name="UpdateMNPDBResultMessage">
+    <part name="UpdateMNPDBResultMsg" element="submgrtmgr:UpdateMNPDBResultMsg" />
+  </message>
+  <message name="BatchModSubStateRequestMessage">
+    <part name="BatchModSubStateRequestMsg" element="submgrtmgr:BatchModSubStateRequestMsg" />
+  </message>
+  <message name="ChangeSIMResultMessage">
+    <part name="ChangeSIMResultMsg" element="submgrtmgr:ChangeSIMResultMsg" />
+  </message>
+  <message name="BatchMendCustomerRequestMessage">
+    <part name="BatchMendCustomerRequestMsg" element="submgrtmgr:BatchMendCustomerRequestMsg" />
+  </message>
+  <message name="SuppressAccountBillRequestMessage">
+    <part name="SuppressAccountBillRequestMsg" element="submgrtmgr:SuppressAccountBillRequestMsg" />
+  </message>
+  <message name="BatchModifyAcctInfoResultMessage">
+    <part name="BatchModifyAcctInfoResultMsg" element="submgrtmgr:BatchModifyAcctInfoResultMsg" />
+  </message>
+  <message name="MultiSIMRequestMessage">
+    <part name="MultiSIMRequestMsg" element="submgrtmgr:MultiSIMRequestMsg" />
+  </message>
+  <message name="BatchModifyAcctInfoRequestMessage">
+    <part name="BatchModifyAcctInfoRequest" element="submgrtmgr:BatchModifyAcctInfoRequestMsg" />
+  </message>
+  <message name="UpdateMNPDBRequestMessage">
+    <part name="UpdateMNPDBRequestMsg" element="submgrtmgr:UpdateMNPDBRequestMsg" />
+  </message>
+  <portType name="Submgrt">
+    <operation name="ChangeCustBasicInfor">
+      <input message="submgrtmgr:ChangeCustBasicInforRequestMessage" />
+      <output message="submgrtmgr:ChangeCustBasicInforResultMessage" />
+    </operation>
+    <operation name="ChangeAccountBasicInfor">
+      <input message="submgrtmgr:ChangeAccountBasicInforRequestMessage" />
+      <output message="submgrtmgr:ChangeAccountBasicInforResultMessage" />
+    </operation>
+    <operation name="ChangeSubscriberBasicInfor">
+      <input message="submgrtmgr:ChangeSubscriberBasicInforRequestMessage" />
+      <output message="submgrtmgr:ChangeSubscriberBasicInforResultMessage" />
+    </operation>
+    <operation name="ChangeMSISDN">
+      <input message="submgrtmgr:ChangeMSISDNRequestMessage" />
+      <output message="submgrtmgr:ChangeMSISDNResultMessage" />
+    </operation>
+    <operation name="ChangeSIM">
+      <input message="submgrtmgr:ChangeSIMRequestMessage" />
+      <output message="submgrtmgr:ChangeSIMResultMessage" />
+    </operation>
+    <operation name="ChangeCreditLevel">
+      <input message="submgrtmgr:ChangeCreditLevelRequestMessage" />
+      <output message="submgrtmgr:ChangeCreditLevelResultMessage" />
+    </operation>
+    <operation name="ChangeAcctBillCycle">
+      <input message="submgrtmgr:ChangeAcctBillCycleRequestMessage" />
+      <output message="submgrtmgr:ChangeAcctBillCycleResultMessage" />
+    </operation>
+    <operation name="ManagePaymentRelation">
+      <input message="submgrtmgr:ManagePaymentRelationRequestMessage" />
+      <output message="submgrtmgr:ManagePaymentRelationResultMessage" />
+    </operation>
+    <operation name="BatchModifyInitBalance">
+      <input message="submgrtmgr:BatchModifyInitBalanceRequestMessage" />
+      <output message="submgrtmgr:BatchModifyInitBalanceResultMessage" />
+    </operation>
+    <operation name="BatchModifyAcctInfo">
+      <input message="submgrtmgr:BatchModifyAcctInfoRequestMessage" />
+      <output message="submgrtmgr:BatchModifyAcctInfoResultMessage" />
+    </operation>
+    <operation name="SuppressAccountBill">
+      <input message="submgrtmgr:SuppressAccountBillRequestMessage" />
+      <output message="submgrtmgr:SuppressAccountBillResultMessage" />
+    </operation>
+    <operation name="MultiSIM">
+      <input message="submgrtmgr:MultiSIMRequestMessage" />
+      <output message="submgrtmgr:MultiSIMResultMessage" />
+    </operation>
+    <operation name="UpdateMNPDB">
+      <input message="submgrtmgr:UpdateMNPDBRequestMessage" />
+      <output message="submgrtmgr:UpdateMNPDBResultMessage" />
+    </operation>
+    <operation name="BatchModSubState">
+      <input message="submgrtmgr:BatchModSubStateRequestMessage" />
+      <output message="submgrtmgr:BatchModSubStateResultMessage" />
+    </operation>
+    <operation name="BatchMendCustomer">
+      <input message="submgrtmgr:BatchMendCustomerRequestMessage" />
+      <output message="submgrtmgr:BatchMendCustomerResultMessage" />
+    </operation>
+  </portType>
+  <binding name="SubmgrtBinding" type="submgrtmgr:Submgrt">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="ChangeCustBasicInfor">
+      <soap:operation soapAction="ChangeCustBasicInfor" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ChangeSubscriberBasicInfor">
+      <soap:operation soapAction="ChangeSubscriberBasicInfor" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ChangeAccountBasicInfor">
+      <soap:operation soapAction="ChangeAccountBasicInfor" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ChangeMSISDN">
+      <soap:operation soapAction="ChangeMSISDN" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ChangeSIM">
+      <soap:operation soapAction="ChangeSIM" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ChangeAcctBillCycle">
+      <soap:operation soapAction="ChangeAcctBillCycle" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ChangeCreditLevel">
+      <soap:operation soapAction="ChangeCreditLevel" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ManagePaymentRelation">
+      <soap:operation soapAction="ManagePaymentRelation" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="BatchModifyInitBalance">
+      <soap:operation soapAction="BatchModifyInitBalance" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="BatchModifyAcctInfo">
+      <soap:operation soapAction="BatchModifyAcctInfo" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SuppressAccountBill">
+      <soap:operation soapAction="SuppressAccountBill" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="MultiSIM">
+      <soap:operation soapAction="MultiSIM" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="UpdateMNPDB">
+      <soap:operation soapAction="UpdateMNPDB" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="BatchModSubState">
+      <soap:operation soapAction="BatchModSubState" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="BatchMendCustomer">
+      <soap:operation soapAction="BatchMendCustomer" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SubmgrtSoap12Binding" type="submgrtmgr:Submgrt">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="ChangeCustBasicInfor">
+      <soap12:operation soapAction="ChangeCustBasicInfor" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="ChangeSubscriberBasicInfor">
+      <soap12:operation soapAction="ChangeSubscriberBasicInfor" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="ChangeAccountBasicInfor">
+      <soap12:operation soapAction="ChangeAccountBasicInfor" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="ChangeMSISDN">
+      <soap12:operation soapAction="ChangeMSISDN" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="ChangeSIM">
+      <soap12:operation soapAction="ChangeSIM" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="ChangeAcctBillCycle">
+      <soap12:operation soapAction="ChangeAcctBillCycle" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="ChangeCreditLevel">
+      <soap12:operation soapAction="ChangeCreditLevel" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="ManagePaymentRelation">
+      <soap12:operation soapAction="ManagePaymentRelation" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="BatchModifyInitBalance">
+      <soap12:operation soapAction="BatchModifyInitBalance" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="BatchModifyAcctInfo">
+      <soap12:operation soapAction="BatchModifyAcctInfo" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="SuppressAccountBill">
+      <soap12:operation soapAction="SuppressAccountBill" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="MultiSIM">
+      <soap12:operation soapAction="MultiSIM" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="UpdateMNPDB">
+      <soap12:operation soapAction="UpdateMNPDB" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="BatchModSubState">
+      <soap12:operation soapAction="BatchModSubState" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="BatchMendCustomer">
+      <soap12:operation soapAction="BatchMendCustomer" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+  </binding>
+  <service name="SubmgrtMgrService">
+    <port name="SubmgrtMgrServiceSoap12Port" binding="submgrtmgr:SubmgrtSoap12Binding">
+      <soap12:address location="http://http://10.13.231.97:8080/services/SubmgrtMgrService.SubmgrtMgrServiceSoap12Port/" />
+    </port>
+    <port name="SubmgrtServicePort" binding="submgrtmgr:SubmgrtBinding">
+      <soap:address location="http://http://10.13.231.97:8080/services/SubmgrtMgrService.SubmgrtServicePort/" />
+    </port>
+  </service>
+</definitions>

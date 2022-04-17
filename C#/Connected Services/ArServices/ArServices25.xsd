@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:arcommon="http://cbs.huawei.com/ar/wsservice/arcommon" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="ArServices?xsd=CBSInterface_AR_Common.xsd" namespace="http://cbs.huawei.com/ar/wsservice/arcommon" />
+  <xs:complexType name="QueryPaymentLogRequest">
+    <xs:sequence>
+      <xs:element name="AcctAccessCode">
+        <xs:complexType>
+          <xs:complexContent mixed="false">
+            <xs:extension base="arcommon:AcctAccessCode">
+              <xs:sequence>
+                <xs:element minOccurs="0" name="PayType" type="arcommon:string64" />
+              </xs:sequence>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="ExtTransID" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalRowNum" type="xs:long" />
+      <xs:element minOccurs="0" name="BeginRowNum" type="xs:long" />
+      <xs:element minOccurs="0" name="FetchRowNum" type="xs:long" />
+      <xs:element minOccurs="0" name="StartTime" type="xs:string" />
+      <xs:element minOccurs="0" name="EndTime" type="xs:string" />
+      <xs:element minOccurs="0" name="PaymentMethod" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryPaymentLogResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PaymentInfo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="AcctKey" type="xs:string" />
+            <xs:element name="CustKey" type="xs:string" />
+            <xs:element minOccurs="0" name="SubKey" type="xs:string" />
+            <xs:element minOccurs="0" name="PrimaryIdentity" type="xs:string" />
+            <xs:element name="TransID" type="xs:string" />
+            <xs:element minOccurs="0" name="TransType" type="xs:string" />
+            <xs:element minOccurs="0" name="ExtTransID" type="xs:string" />
+            <xs:element minOccurs="0" name="ExtPayType" type="xs:string" />
+            <xs:element minOccurs="0" name="ReceiptNo" type="xs:string" />
+            <xs:element name="PaymentTime" type="xs:string" />
+            <xs:element name="Amount" type="xs:long" />
+            <xs:element name="CurrencyID" type="xs:integer" />
+            <xs:element minOccurs="0" name="OriAmount" type="xs:long" />
+            <xs:element minOccurs="0" name="OriCurrencyID" type="xs:integer" />
+            <xs:element minOccurs="0" name="CurrencyRate" type="xs:float" />
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="PaymentDetail">
+              <xs:annotation>
+                <xs:documentation>Not retern for prepaid user</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ApplyType" type="xs:string" />
+                  <xs:element name="ApplyAmount" type="xs:long" />
+                  <xs:element minOccurs="0" name="PrimaryIdentity" type="xs:string" />
+                  <xs:element minOccurs="0" name="InvoiceNo" type="xs:string" />
+                  <xs:element minOccurs="0" name="InvoiceID" type="xs:long" />
+                  <xs:element minOccurs="0" name="InvoiceDetailID" type="xs:long" />
+                  <xs:element minOccurs="0" name="ChargeCode" type="xs:string" />
+                  <xs:element minOccurs="0" name="ChargeAmount" type="xs:long">
+                    <xs:annotation>
+                      <xs:documentation>????????????</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" maxOccurs="unbounded" name="TaxList" type="arcommon:Tax" />
+                  <xs:element minOccurs="0" name="DiscountAmount" type="xs:long" />
+                  <xs:element minOccurs="0" name="BillCycleId" type="xs:integer" />
+                  <xs:element minOccurs="0" name="InvoiceDate" type="xs:string" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="PaymentMethod" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>only return for postpaid payment records</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="RechargeType" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>only return for prepaid payment records</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="CardInfo">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="CardPinNumber" type="xs:string" />
+                  <xs:element minOccurs="0" name="CardSequence" type="xs:string" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="BankInfo" type="arcommon:BankInfo" />
+            <xs:element minOccurs="0" name="PayChannelID" type="xs:string" />
+            <xs:element minOccurs="0" name="AccessMode" type="xs:string" />
+            <xs:element name="Status" type="xs:string" />
+            <xs:element minOccurs="0" name="ResultCode" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Will not retrurn this node for postpaid payment record</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="OperID" type="xs:long" />
+            <xs:element minOccurs="0" name="DeptID" type="xs:long" />
+            <xs:element minOccurs="0" name="ReversalOpID" type="xs:long">
+              <xs:annotation>
+                <xs:documentation>Only return when the payment is reversaled</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="ReversalDeptID" type="xs:long">
+              <xs:annotation>
+                <xs:documentation>Only return when the payment is reversaled</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="ReversalTime" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Only return when the payment is reversaled</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="LifeCycleChgInfo">
+              <xs:annotation>
+                <xs:documentation>Only return for prepaid users if lifecyle changes</xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" name="OldLifeCycleStatus">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="StatusName" type="xs:string" />
+                        <xs:element name="StatusExpireTime" type="xs:string" />
+                        <xs:element name="StatusIndex" type="xs:string" />
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element maxOccurs="unbounded" name="NewLifeCycleStatus">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="StatusName" type="xs:string" />
+                        <xs:element name="StatusExpireTime" type="xs:string" />
+                        <xs:element name="StatusIndex" type="xs:string" />
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="ChgValidity" type="xs:integer" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="BalanceChgInfo" type="arcommon:BalanceChgInfo" />
+            <xs:element minOccurs="0" name="RechargeBonus">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" maxOccurs="unbounded" name="FreeUnitItemList">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="FreeUnitID" type="xs:string" />
+                        <xs:element name="FreeUnitType" type="xs:string" />
+                        <xs:element minOccurs="0" name="FreeUnitTypeName" type="xs:string" />
+                        <xs:element name="MeasureUnit" type="xs:string" />
+                        <xs:element minOccurs="0" name="MeasureUnitName" type="xs:string" />
+                        <xs:element name="BonusAmt" nillable="true" type="xs:long" />
+                        <xs:element name="EffectiveTime" type="xs:string" />
+                        <xs:element name="ExpireTime" type="xs:string" />
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element minOccurs="0" maxOccurs="unbounded" name="BalanceList">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="BalanceType" type="xs:string" />
+                        <xs:element minOccurs="0" name="BalanceID" type="xs:string" />
+                        <xs:element name="BalanceTypeName" type="xs:string" />
+                        <xs:element name="BonusAmt" type="xs:long" />
+                        <xs:element name="CurrencyID" type="xs:integer" />
+                        <xs:element name="EffectiveTime" type="xs:string" />
+                        <xs:element name="ExpireTime" type="xs:string" />
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="AdditionalProperty" type="arcommon:SimpleProperty">
+              <xs:annotation>
+                <xs:documentation>It is reserved for future extension</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="TotalPaymentAmount" type="xs:long" />
+            <xs:element minOccurs="0" name="CurAmount" type="xs:long" />
+            <xs:element minOccurs="0" name="TaxAmount" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TotalRowNum" type="xs:long" />
+      <xs:element name="BeginRowNum" type="xs:long" />
+      <xs:element name="FetchRowNum" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

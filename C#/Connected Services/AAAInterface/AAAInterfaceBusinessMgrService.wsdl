@@ -1,0 +1,3250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:businessmgrmsg="http://www.huawei.com/bme/aaainterface/cbs/businessmgrmsg" xmlns:business="http://www.huawei.com/bme/aaainterface/cbs/businessmgr" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:common="http://www.huawei.com/bme/aaainterface/common" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://www.huawei.com/bme/aaainterface/cbs/businessmgr" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.huawei.com/bme/aaainterface/common">
+      <xs:include schemaLocation="xsd0.xsd" />
+    </xs:schema>
+    <xs:schema xmlns="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.huawei.com/bme/aaainterface/cbs/businessmgr">
+      <xs:include schemaLocation="xsd1.xsd" />
+    </xs:schema>
+    <xs:schema xmlns="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.huawei.com/bme/aaainterface/cbs/businessmgrmsg">
+      <xs:import schemaLocation="xsd0.xsd" namespace="http://www.huawei.com/bme/aaainterface/common" />
+      <xs:import schemaLocation="xsd1.xsd" namespace="http://www.huawei.com/bme/aaainterface/cbs/businessmgr" />
+      <xs:element name="NewAAASubscriberRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="NewAAASubscriberRequest" type="business:NewAAASubscriberRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="NewAAASubscriberResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="NewAAASubscriberResult" type="business:NewAAASubscriberResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ModifyAAASubscriberRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="ModifyAAASubscriberRequest" type="business:ModifyAAASubscriberRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ModifyAAASubscriberResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ModifyAAASubscriberIDRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="ModifyAAASubscriberIDRequest" type="business:ModifyAAASubscriberIDRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ModifyAAASubscriberIDResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="ModifyAAASubscriberIDResult" type="business:ModifyAAASubscriberIDResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryAAASubscriberRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="QueryAAASubscriberRequest" type="business:QueryAAASubscriberRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryAAASubscriberResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="QueryAAASubscriberResult" type="business:QueryAAASubscriberResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteAAASubscriberRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="DeleteAAASubscriberRequest" type="business:DeleteAAASubscriberRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteAAASubscriberResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="OrderSubscriberServiceRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="OrderSubscriberServiceRequest" type="business:OrderSubscriberServiceRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="OrderSubscriberServiceResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ModifySubscriberServiceRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="ModifySubscriberServiceRequest" type="business:ModifySubscriberServiceRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ModifySubscriberServiceResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QuerySubscriberServiceRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="QuerySubscriberServiceRequest" type="business:QuerySubscriberServiceRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QuerySubscriberServiceResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="QuerySubscriberServiceResult" type="business:QuerySubscriberServiceResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CancelSubscriberServiceRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="CancelSubscriberServiceRequest" type="business:CancelSubscriberServiceRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CancelSubscriberServiceResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="OrderLocationServiceRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="OrderLocationServiceRequest" type="business:OrderLocationServiceRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="OrderLocationServiceResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ModifyLocationServiceRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="ModifyLocationServiceRequest" type="business:ModifyLocationServiceRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ModifyLocationServiceResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryLocationServiceRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="QueryLocationServiceRequest" type="business:QueryLocationServiceRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryLocationServiceResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="QueryLocationServiceResult" type="business:QueryLocationServiceResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CancelLocationServiceRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="CancelLocationServiceRequest" type="business:CancelLocationServiceRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CancelLocationServiceResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QuerySubscriberSessionRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="QuerySubscriberSessionRequest" type="business:QuerySubscriberSessionRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QuerySubscriberSessionResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="QuerySubscriberSessionResult" type="business:QuerySubscriberSessionResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DiagnoseSubscriberRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="DiagnoseSubscriberRequest" type="business:DiagnoseSubscriberRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DiagnoseSubscriberResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="DiagnoseSubscriberResult" type="business:DiagnoseSubscriberResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ResetSubscriberSessionRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="ResetSubscriberSessionRequest" type="business:ResetSubscriberSessionRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ResetSubscriberSessionResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SetDynamicPasswordRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="SetDynamicPasswordRequest" type="business:SetDynamicPasswordRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SetDynamicPasswordResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QuerySubscriberCDRRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="QuerySubscriberCDRRequest" type="business:QuerySubscriberCDRRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QuerySubscriberCDRResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="QuerySubscriberCDRResult" type="business:QuerySubscriberCDRResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WLANQueryUEMACValidityRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="WLANQueryUEMACValidityRequest" type="business:WLANQueryUEMACValidityRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WLANQueryUEMACValidityResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="WLANQueryUEMACValidityResult" type="business:WLANQueryUEMACValidityResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryOnlineGroupSubscriberRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="QueryOnlineGroupSubscriberRequest" type="business:QueryOnlineGroupSubscriberRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryOnlineGroupSubscriberResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="QueryOnlineGroupSubscriberResult" type="business:QueryOnlineGroupSubscriberResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SubscriberLoginRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="SubscriberLoginRequest" type="business:SubscriberLoginRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SubscriberLoginResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="SubscriberLoginResult" type="business:SubscriberLoginResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ModifyAAASubscriberPswdRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="ModifyAAASubscriberPswdRequest" type="business:ModifyAAASubscriberPswdRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ModifyAAASubscriberPswdResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateCustomerLicenseRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="UpdateCustomerLicenseRequest" type="business:UpdateCustomerLicenseRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateCustomerLicenseResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="UpdateCustomerLicenseResult" type="business:UpdateCustomerLicenseResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryServiceInfoRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="QueryServiceInfoRequest" type="business:QueryServiceInfoRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryServiceInfoResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="QueryServiceInfoResult" type="business:QueryServiceInfoResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateDataRoutingRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="UpdateDataRoutingRequest" type="business:UpdateDataRoutingRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateDataRoutingResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="UpdateDataRoutingResult" type="business:UpdateDataRoutingResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeactivateSubscriberRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="DeactivateSubscriberRequest" type="business:DeactivateSubscriberRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeactivateSubscriberResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ActivateSubscriberRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="ActivateSubscriberRequest" type="business:ActivateSubscriberRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ActivateSubscriberResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="OrderPushProductRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="OrderPushProductRequest" type="business:OrderPushProductRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="OrderPushProductResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CancelPushProductRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="CancelPushProductRequest" type="business:CancelPushProductRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CancelPushProductResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryPushProductRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="QueryPushProductRequest" type="business:QueryPushProductRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryPushProductResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="QueryPushProductResult" type="business:QueryPushProductResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WLANExtendPreCardLifeRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="WLANExtendPreCardLifeRequest" type="business:WLANExtendPreCardLifeRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WLANExtendPreCardLifeResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WLANCombinePreCardUsageRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="WLANCombinePreCardUsageRequest" type="business:WLANCombinePreCardUsageRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WLANCombinePreCardUsageResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Wlan_DynamicPwd_RequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="Wlan_DynamicPwd_Request" type="business:Wlan_DynamicPwd_Request" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Wlan_DynamicPwd_ResponseMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="Wlan_DynamicPwd_Response" type="business:Wlan_DynamicPwd_Response" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryUserProductStatusRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="QueryUserProductStatusRequest" type="business:QueryUserProductStatusRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryUserProductStatusResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="QueryUserProductStatusResult" type="business:QueryUserProductStatusResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryLocationServiceUsageRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="QueryLocationServiceUsageRequest" type="business:QueryLocationServiceUsageRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryLocationServiceUsageResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="QueryLocationServiceUsageResult" type="business:QueryLocationServiceUsageResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ResetAAASubscriberPswdRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="ResetAAASubscriberPswdRequest" type="business:ResetAAASubscriberPswdRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ResetAAASubscriberPswdResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="ResetAAASubscriberPswdResult" type="business:ResetAAASubscriberPswdResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RollbackLocationServiceRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="RollbackLocationServiceRequest" type="business:RollbackLocationServiceRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RollbackLocationServiceResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="NewCustomerRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="NewCustomerRequest" type="business:NewCustomerRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="NewCustomerResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ModifyCustomerRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="ModifyCustomerRequest" type="business:ModifyCustomerRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ModifyCustomerResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteCustomerRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="DeleteCustomerRequest" type="business:DeleteCustomerRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteCustomerResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WLANSMSNotifyRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="WLANSMSNotifyRequest" type="business:WLANSMSNotifyRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WLANSMSNotifyResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WLANQueryBindedMACRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="WLANQueryBindedMACRequest" type="business:WLANQueryBindedMACRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WLANQueryBindedMACResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="WLANQueryBindedMACResult" type="business:WLANQueryBindedMACResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WLANDeleteBindedMACRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="WLANDeleteBindedMACRequest" type="business:WLANDeleteBindedMACRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WLANDeleteBindedMACResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WLANUnregisterUEMACRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="WLANUnregisterUEMACRequest" type="business:WLANUnregisterUEMACRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WLANUnregisterUEMACResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetSubscriberRealNAIRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="GetSubscriberRealNAIRequest" type="business:GetSubscriberRealNAIRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetSubscriberRealNAIResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="GetSubscriberRealNAIResult" type="business:GetSubscriberRealNAIResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetSubscriberPasswordRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="GetSubscriberPasswordRequest" type="business:GetSubscriberPasswordRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetSubscriberPasswordResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="GetSubscriberPasswordResult" type="business:GetSubscriberPasswordResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QuerySubscriberByPayAccountRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="QuerySubscriberByPayAccountRequest" type="business:QuerySubscriberByPayAccountRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QuerySubscriberByPayAccountResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="QuerySubscriberByPayAccountResult" type="business:QuerySubscriberByPayAccountResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QuerySubscriberAccessFailRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="QuerySubscriberAccessFailRequest" type="business:QuerySubscriberAccessFailRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QuerySubscriberAccessFailResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="QuerySubscriberAccessFailResult" type="business:QuerySubscriberAccessFailResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ModifyPublicSubControlRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="ModifyPublicSubControlRequest" type="business:ModifyPublicSubControlRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ModifyPublicSubControlResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryPublicSubControlRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="QueryPublicSubControlRequest" type="business:QueryPublicSubControlRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryPublicSubControlResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="QueryPublicSubControlResult" type="business:QueryPublicSubControlResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WLANCardDeductRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="WLANCardDeductRequest" type="business:WLANCardDeductRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WLANCardDeductResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WLANBusinessOrderRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="WLANBusinessOrderRequest" type="business:WLANBusinessOrderRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WLANBusinessOrderResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WLANActivationCodeVerifyRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="WLANActivationCodeVerifyRequest" type="business:WLANActivationCodeVerifyRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WLANActivationCodeVerifyResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="WLANActivationCodeVerifyResult" type="business:WLANActivationCodeVerifyResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WLANProductActivationRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="WLANProductActivationRequest" type="business:WLANProductActivationRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WLANProductActivationResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="WLANProductActivationResult" type="business:WLANProductActivationResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="HandleFilterAccessResultNotifyRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="HandleFilterAccessResultNotifyRequest" type="business:HandleFilterAccessResultNotifyRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="HandleFilterAccessResultNotifyResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SetNASBindingInfoRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="SetNASBindingInfoRequest" type="business:SetNASBindingInfoRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SetNASBindingInfoResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="VerifyPasswordRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="VerifyPasswordRequest" type="business:VerifyPasswordRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="VerifyPasswordResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QuerySubscriberWholeInfoRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="QuerySubscriberWholeInfoRequest" type="business:QuerySubscriberWholeInfoRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QuerySubscriberWholeInfoResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="QuerySubscriberWholeInfoResult" type="business:QuerySubscriberWholeInfoResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AutoRegisterRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="AutoRegisterRequest" type="business:AutoRegisterRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AutoRegisterResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ReplaceLocationServiceRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="ReplaceLocationServiceRequest" type="business:ReplaceLocationServiceRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ReplaceLocationServiceResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ClearNASBindingRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="ClearNASBindingRequest" type="business:ClearNASBindingRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ClearNASBindingResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="ClearNASBindingResult" type="business:ClearNASBindingResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ListOnlineGroupSubscriberRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="ListOnlineGroupSubscriberRequest" type="business:ListOnlineGroupSubscriberRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ListOnlineGroupSubscriberResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="ListOnlineGroupSubscriberResult" type="business:ListOnlineGroupSubscriberResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QuerySubscriberSelfcareOpLogRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="QuerySubscriberSelfcareOpLogRequest" type="business:QuerySubscriberSelfcareOpLogRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QuerySubscriberSelfcareOpLogResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="QuerySubscriberSelfcareOpLogResult" type="business:QuerySubscriberSelfcareOpLogResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ModBandwidthRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="ModBandwidthRequest" type="business:ModBandwidthRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ModBandwidthResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RecoverBandwidthRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="RecoverBandwidthRequest" type="business:RecoverBandwidthRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RecoverBandwidthResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BindingUERequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="BindingUERequest" type="business:BindingUERequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BindingUEResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UnBindingUERequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="UnBindingUERequest" type="business:UnBindingUERequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UnBindingUEResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryBindedUEIDRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="QueryBindedUEIDRequest" type="business:QueryBindedUEIDRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryBindedUEIDResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="QueryBindedUEIDResult" type="business:QueryBindedUEIDResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryPublicSubIDByUEIDRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="QueryPublicSubIDByUEIDRequest" type="business:QueryPublicSubIDByUEIDRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryPublicSubIDByUEIDResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="QueryPublicSubIDByUEIDResult" type="business:QueryPublicSubIDByUEIDResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryAAASubscriberByUEIDRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="QueryAAASubscriberByUEIDRequest" type="business:QueryAAASubscriberByUEIDRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryAAASubscriberByUEIDResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="QueryAAASubscriberByUEIDResult" type="business:QueryAAASubscriberByUEIDResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AuthSubscriberRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="AuthSubscriberRequest" type="business:AuthSubscriberRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AuthSubscriberResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="AuthSubscriberResult" type="business:AuthSubscriberResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RechargeRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="RechargeRequest" type="business:RechargeRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RechargeResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="RechargeResult" type="business:RechargeResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RechargeRollbackRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="RechargeRollbackRequest" type="business:RechargeRollbackRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RechargeRollbackResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RechargeQueryRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="RechargeQueryRequest" type="business:RechargeQueryRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RechargeQueryResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="RechargeQueryResult" type="business:RechargeQueryResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="SetNASBindingInfoRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:SetNASBindingInfoRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="SetNASBindingInfoResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:SetNASBindingInfoResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="HandleFilterAccessResultNotifyRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:HandleFilterAccessResultNotifyRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="HandleFilterAccessResultNotifyResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:HandleFilterAccessResultNotifyResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="ResetSubscriberSessionRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:ResetSubscriberSessionRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="ResetSubscriberSessionResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:ResetSubscriberSessionResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="OrderLocationServiceRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:OrderLocationServiceRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="OrderLocationServiceResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:OrderLocationServiceResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="QuerySubscriberCDRRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QuerySubscriberCDRRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="QuerySubscriberCDRResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QuerySubscriberCDRResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="ModifyLocationServiceRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:ModifyLocationServiceRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="ModifyLocationServiceResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:ModifyLocationServiceResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="AutoRegisterRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:AutoRegisterRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="AutoRegisterResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:AutoRegisterResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCustomerLicenseRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:UpdateCustomerLicenseRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCustomerLicenseResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:UpdateCustomerLicenseResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="SubscriberLoginRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:SubscriberLoginRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="SubscriberLoginResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:SubscriberLoginResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="ModifyAAASubscriberIDRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:ModifyAAASubscriberIDRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="ModifyAAASubscriberIDResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:ModifyAAASubscriberIDResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="ReplaceLocationServiceRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:ReplaceLocationServiceRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="ReplaceLocationServiceResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:ReplaceLocationServiceResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="WLANQueryUEMACValidityRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:WLANQueryUEMACValidityRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="WLANQueryUEMACValidityResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:WLANQueryUEMACValidityResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="QuerySubscriberSessionRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QuerySubscriberSessionRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="QuerySubscriberSessionResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QuerySubscriberSessionResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="WLANExtendPreCardLifeRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:WLANExtendPreCardLifeRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="WLANExtendPreCardLifeResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:WLANExtendPreCardLifeResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="QuerySubscriberWholeInfoRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QuerySubscriberWholeInfoRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="QuerySubscriberWholeInfoResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QuerySubscriberWholeInfoResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="QueryOnlineGroupSubscriberRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QueryOnlineGroupSubscriberRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="QueryOnlineGroupSubscriberResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QueryOnlineGroupSubscriberResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCustomerRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:DeleteCustomerRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCustomerResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:DeleteCustomerResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="RechargeRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:RechargeRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="RechargeResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:RechargeResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="WLANCombinePreCardUsageRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:WLANCombinePreCardUsageRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="WLANCombinePreCardUsageResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:WLANCombinePreCardUsageResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="QueryPublicSubControlRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QueryPublicSubControlRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="QueryPublicSubControlResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QueryPublicSubControlResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="QueryLocationServiceUsageRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QueryLocationServiceUsageRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="QueryLocationServiceUsageResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QueryLocationServiceUsageResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="OrderSubscriberServiceRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:OrderSubscriberServiceRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="OrderSubscriberServiceResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:OrderSubscriberServiceResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="QueryServiceInfoRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QueryServiceInfoRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="QueryServiceInfoResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QueryServiceInfoResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="WLANQueryBindedMACRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:WLANQueryBindedMACRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="WLANQueryBindedMACResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:WLANQueryBindedMACResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="ModifyAAASubscriberRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:ModifyAAASubscriberRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="ModifyAAASubscriberResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:ModifyAAASubscriberResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="RechargeRollbackRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:RechargeRollbackRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="RechargeRollbackResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:RechargeRollbackResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="NewCustomerRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:NewCustomerRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="NewCustomerResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:NewCustomerResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="ModifySubscriberServiceRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:ModifySubscriberServiceRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="ModifySubscriberServiceResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:ModifySubscriberServiceResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="GetSubscriberPasswordRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:GetSubscriberPasswordRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="GetSubscriberPasswordResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:GetSubscriberPasswordResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="RechargeQueryRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:RechargeQueryRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="RechargeQueryResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:RechargeQueryResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="RecoverBandwidthRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:RecoverBandwidthRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="RecoverBandwidthResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:RecoverBandwidthResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAAASubscriberRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:DeleteAAASubscriberRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAAASubscriberResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:DeleteAAASubscriberResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="ModifyCustomerRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:ModifyCustomerRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="ModifyCustomerResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:ModifyCustomerResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="QueryAAASubscriberByUEIDRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QueryAAASubscriberByUEIDRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="QueryAAASubscriberByUEIDResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QueryAAASubscriberByUEIDResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="UnBindingUERequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:UnBindingUERequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="UnBindingUEResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:UnBindingUEResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="WLANCardDeductRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:WLANCardDeductRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="WLANCardDeductResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:WLANCardDeductResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="ModifyPublicSubControlRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:ModifyPublicSubControlRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="ModifyPublicSubControlResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:ModifyPublicSubControlResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="AuthSubscriberRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:AuthSubscriberRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="AuthSubscriberResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:AuthSubscriberResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="ListOnlineGroupSubscriberRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:ListOnlineGroupSubscriberRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="ListOnlineGroupSubscriberResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:ListOnlineGroupSubscriberResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="DiagnoseSubscriberRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:DiagnoseSubscriberRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="DiagnoseSubscriberResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:DiagnoseSubscriberResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="NewAAASubscriberRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:NewAAASubscriberRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="NewAAASubscriberResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:NewAAASubscriberResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="ModifyAAASubscriberPswdRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:ModifyAAASubscriberPswdRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="ModifyAAASubscriberPswdResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:ModifyAAASubscriberPswdResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="DeactivateSubscriberRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:DeactivateSubscriberRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="DeactivateSubscriberResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:DeactivateSubscriberResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="ResetAAASubscriberPswdRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:ResetAAASubscriberPswdRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="ResetAAASubscriberPswdResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:ResetAAASubscriberPswdResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="ModBandwidthRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:ModBandwidthRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="ModBandwidthResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:ModBandwidthResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="QueryBindedUEIDRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QueryBindedUEIDRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="QueryBindedUEIDResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QueryBindedUEIDResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDataRoutingRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:UpdateDataRoutingRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDataRoutingResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:UpdateDataRoutingResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="ActivateSubscriberRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:ActivateSubscriberRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="ActivateSubscriberResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:ActivateSubscriberResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="CancelSubscriberServiceRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:CancelSubscriberServiceRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="CancelSubscriberServiceResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:CancelSubscriberServiceResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="CancelLocationServiceRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:CancelLocationServiceRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="CancelLocationServiceResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:CancelLocationServiceResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="WLANSMSNotifyRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:WLANSMSNotifyRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="WLANSMSNotifyResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:WLANSMSNotifyResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="BindingUERequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:BindingUERequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="BindingUEResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:BindingUEResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="QueryLocationServiceRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QueryLocationServiceRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="QueryLocationServiceResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QueryLocationServiceResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="GetSubscriberRealNAIRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:GetSubscriberRealNAIRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="GetSubscriberRealNAIResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:GetSubscriberRealNAIResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="WLANProductActivationRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:WLANProductActivationRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="WLANProductActivationResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:WLANProductActivationResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="QuerySubscriberByPayAccountRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QuerySubscriberByPayAccountRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="QuerySubscriberByPayAccountResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QuerySubscriberByPayAccountResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="ClearNASBindingRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:ClearNASBindingRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="ClearNASBindingResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:ClearNASBindingResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="OrderPushProductRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:OrderPushProductRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="OrderPushProductResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:OrderPushProductResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="QueryPushProductRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QueryPushProductRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="QueryPushProductResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QueryPushProductResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="CancelPushProductRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:CancelPushProductRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="CancelPushProductResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:CancelPushProductResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="RollbackLocationServiceRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:RollbackLocationServiceRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="RollbackLocationServiceResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:RollbackLocationServiceResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="QuerySubscriberServiceRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QuerySubscriberServiceRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="QuerySubscriberServiceResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QuerySubscriberServiceResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="Wlan_DynamicPwd_RequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:Wlan_DynamicPwd_RequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="Wlan_DynamicPwd_ResponseMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:Wlan_DynamicPwd_ResponseMsg" />
+  </wsdl:message>
+  <wsdl:message name="QuerySubscriberAccessFailRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QuerySubscriberAccessFailRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="QuerySubscriberAccessFailResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QuerySubscriberAccessFailResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="WLANBusinessOrderRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:WLANBusinessOrderRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="WLANBusinessOrderResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:WLANBusinessOrderResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="QueryPublicSubIDByUEIDRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QueryPublicSubIDByUEIDRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="QueryPublicSubIDByUEIDResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QueryPublicSubIDByUEIDResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="WLANDeleteBindedMACRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:WLANDeleteBindedMACRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="WLANDeleteBindedMACResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:WLANDeleteBindedMACResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="SetDynamicPasswordRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:SetDynamicPasswordRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="SetDynamicPasswordResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:SetDynamicPasswordResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="WLANUnregisterUEMACRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:WLANUnregisterUEMACRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="WLANUnregisterUEMACResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:WLANUnregisterUEMACResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="VerifyPasswordRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:VerifyPasswordRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="VerifyPasswordResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:VerifyPasswordResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="WLANActivationCodeVerifyRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:WLANActivationCodeVerifyRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="WLANActivationCodeVerifyResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:WLANActivationCodeVerifyResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="QuerySubscriberSelfcareOpLogRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QuerySubscriberSelfcareOpLogRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="QuerySubscriberSelfcareOpLogResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QuerySubscriberSelfcareOpLogResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="QueryUserProductStatusRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QueryUserProductStatusRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="QueryUserProductStatusResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QueryUserProductStatusResultMsg" />
+  </wsdl:message>
+  <wsdl:message name="QueryAAASubscriberRequestMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QueryAAASubscriberRequestMsg" />
+  </wsdl:message>
+  <wsdl:message name="QueryAAASubscriberResultMessage">
+    <wsdl:part name="part1" element="businessmgrmsg:QueryAAASubscriberResultMsg" />
+  </wsdl:message>
+  <wsdl:portType name="AAAInterfaceBusinessMgrServicePortType">
+    <wsdl:operation name="SetNASBindingInfo">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="SetNASBindingInfo" message="business:SetNASBindingInfoRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/SetNASBindingInfoResponse" message="business:SetNASBindingInfoResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HandleFilterAccessResultNotify">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="HandleFilterAccessResultNotify" message="business:HandleFilterAccessResultNotifyRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/HandleFilterAccessResultNotifyResponse" message="business:HandleFilterAccessResultNotifyResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetSubscriberSession">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="ResetSubscriberSession" message="business:ResetSubscriberSessionRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/ResetSubscriberSessionResponse" message="business:ResetSubscriberSessionResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OrderLocationService">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="OrderLocationService" message="business:OrderLocationServiceRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/OrderLocationServiceResponse" message="business:OrderLocationServiceResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QuerySubscriberCDR">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="QuerySubscriberCDR" message="business:QuerySubscriberCDRRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/QuerySubscriberCDRResponse" message="business:QuerySubscriberCDRResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyLocationService">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="ModifyLocationService" message="business:ModifyLocationServiceRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/ModifyLocationServiceResponse" message="business:ModifyLocationServiceResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoRegister">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="AutoRegister" message="business:AutoRegisterRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/AutoRegisterResponse" message="business:AutoRegisterResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomerLicense">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="UpdateCustomerLicense" message="business:UpdateCustomerLicenseRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/UpdateCustomerLicenseResponse" message="business:UpdateCustomerLicenseResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubscriberLogin">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="SubscriberLogin" message="business:SubscriberLoginRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/SubscriberLoginResponse" message="business:SubscriberLoginResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyAAASubscriberID">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="ModifyAAASubscriberID" message="business:ModifyAAASubscriberIDRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/ModifyAAASubscriberIDResponse" message="business:ModifyAAASubscriberIDResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReplaceLocationService">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="ReplaceLocationService" message="business:ReplaceLocationServiceRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/ReplaceLocationServiceResponse" message="business:ReplaceLocationServiceResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WLANQueryUEMACValidity">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="WLANQueryUEMACValidity" message="business:WLANQueryUEMACValidityRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/WLANQueryUEMACValidityResponse" message="business:WLANQueryUEMACValidityResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QuerySubscriberSession">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="QuerySubscriberSession" message="business:QuerySubscriberSessionRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/QuerySubscriberSessionResponse" message="business:QuerySubscriberSessionResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WLANExtendPreCardLife">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="WLANExtendPreCardLife" message="business:WLANExtendPreCardLifeRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/WLANExtendPreCardLifeResponse" message="business:WLANExtendPreCardLifeResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QuerySubscriberWholeInfo">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="QuerySubscriberWholeInfo" message="business:QuerySubscriberWholeInfoRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/QuerySubscriberWholeInfoResponse" message="business:QuerySubscriberWholeInfoResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryOnlineGroupSubscriber">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="QueryOnlineGroupSubscriber" message="business:QueryOnlineGroupSubscriberRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/QueryOnlineGroupSubscriberResponse" message="business:QueryOnlineGroupSubscriberResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomer">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="DeleteCustomer" message="business:DeleteCustomerRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/DeleteCustomerResponse" message="business:DeleteCustomerResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Recharge">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="Recharge" message="business:RechargeRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/RechargeResponse" message="business:RechargeResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WLANCombinePreCardUsage">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="WLANCombinePreCardUsage" message="business:WLANCombinePreCardUsageRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/WLANCombinePreCardUsageResponse" message="business:WLANCombinePreCardUsageResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPublicSubControl">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="QueryPublicSubControl" message="business:QueryPublicSubControlRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/QueryPublicSubControlResponse" message="business:QueryPublicSubControlResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryLocationServiceUsage">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="QueryLocationServiceUsage" message="business:QueryLocationServiceUsageRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/QueryLocationServiceUsageResponse" message="business:QueryLocationServiceUsageResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OrderSubscriberService">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="OrderSubscriberService" message="business:OrderSubscriberServiceRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/OrderSubscriberServiceResponse" message="business:OrderSubscriberServiceResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryServiceInfo">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="QueryServiceInfo" message="business:QueryServiceInfoRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/QueryServiceInfoResponse" message="business:QueryServiceInfoResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WLANQueryBindedMAC">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="WLANQueryBindedMAC" message="business:WLANQueryBindedMACRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/WLANQueryBindedMACResponse" message="business:WLANQueryBindedMACResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyAAASubscriber">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="ModifyAAASubscriber" message="business:ModifyAAASubscriberRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/ModifyAAASubscriberResponse" message="business:ModifyAAASubscriberResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RechargeRollback">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="RechargeRollback" message="business:RechargeRollbackRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/RechargeRollbackResponse" message="business:RechargeRollbackResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewCustomer">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="NewCustomer" message="business:NewCustomerRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/NewCustomerResponse" message="business:NewCustomerResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifySubscriberService">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="ModifySubscriberService" message="business:ModifySubscriberServiceRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/ModifySubscriberServiceResponse" message="business:ModifySubscriberServiceResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubscriberPassword">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="GetSubscriberPassword" message="business:GetSubscriberPasswordRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/GetSubscriberPasswordResponse" message="business:GetSubscriberPasswordResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RechargeQuery">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="RechargeQuery" message="business:RechargeQueryRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/RechargeQueryResponse" message="business:RechargeQueryResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecoverBandwidth">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="RecoverBandwidth" message="business:RecoverBandwidthRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/RecoverBandwidthResponse" message="business:RecoverBandwidthResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAAASubscriber">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="DeleteAAASubscriber" message="business:DeleteAAASubscriberRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/DeleteAAASubscriberResponse" message="business:DeleteAAASubscriberResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyCustomer">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="ModifyCustomer" message="business:ModifyCustomerRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/ModifyCustomerResponse" message="business:ModifyCustomerResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAAASubscriberByUEID">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="QueryAAASubscriberByUEID" message="business:QueryAAASubscriberByUEIDRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/QueryAAASubscriberByUEIDResponse" message="business:QueryAAASubscriberByUEIDResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnBindingUE">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="UnBindingUE" message="business:UnBindingUERequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/UnBindingUEResponse" message="business:UnBindingUEResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WLANCardDeduct">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="WLANCardDeduct" message="business:WLANCardDeductRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/WLANCardDeductResponse" message="business:WLANCardDeductResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyPublicSubControl">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="ModifyPublicSubControl" message="business:ModifyPublicSubControlRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/ModifyPublicSubControlResponse" message="business:ModifyPublicSubControlResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthSubscriber">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="AuthSubscriber" message="business:AuthSubscriberRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/AuthSubscriberResponse" message="business:AuthSubscriberResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListOnlineGroupSubscriber">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="ListOnlineGroupSubscriber" message="business:ListOnlineGroupSubscriberRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/ListOnlineGroupSubscriberResponse" message="business:ListOnlineGroupSubscriberResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DiagnoseSubscriber">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="DiagnoseSubscriber" message="business:DiagnoseSubscriberRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/DiagnoseSubscriberResponse" message="business:DiagnoseSubscriberResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewAAASubscriber">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="NewAAASubscriber" message="business:NewAAASubscriberRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/NewAAASubscriberResponse" message="business:NewAAASubscriberResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyAAASubscriberPswd">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="ModifyAAASubscriberPswd" message="business:ModifyAAASubscriberPswdRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/ModifyAAASubscriberPswdResponse" message="business:ModifyAAASubscriberPswdResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeactivateSubscriber">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="DeactivateSubscriber" message="business:DeactivateSubscriberRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/DeactivateSubscriberResponse" message="business:DeactivateSubscriberResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetAAASubscriberPswd">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="ResetAAASubscriberPswd" message="business:ResetAAASubscriberPswdRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/ResetAAASubscriberPswdResponse" message="business:ResetAAASubscriberPswdResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModBandwidth">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="ModBandwidth" message="business:ModBandwidthRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/ModBandwidthResponse" message="business:ModBandwidthResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryBindedUEID">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="QueryBindedUEID" message="business:QueryBindedUEIDRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/QueryBindedUEIDResponse" message="business:QueryBindedUEIDResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDataRouting">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="UpdateDataRouting" message="business:UpdateDataRoutingRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/UpdateDataRoutingResponse" message="business:UpdateDataRoutingResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActivateSubscriber">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="ActivateSubscriber" message="business:ActivateSubscriberRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/ActivateSubscriberResponse" message="business:ActivateSubscriberResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelSubscriberService">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="CancelSubscriberService" message="business:CancelSubscriberServiceRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/CancelSubscriberServiceResponse" message="business:CancelSubscriberServiceResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelLocationService">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="CancelLocationService" message="business:CancelLocationServiceRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/CancelLocationServiceResponse" message="business:CancelLocationServiceResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WLANSMSNotify">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="WLANSMSNotify" message="business:WLANSMSNotifyRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/WLANSMSNotifyResponse" message="business:WLANSMSNotifyResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BindingUE">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="BindingUE" message="business:BindingUERequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/BindingUEResponse" message="business:BindingUEResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryLocationService">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="QueryLocationService" message="business:QueryLocationServiceRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/QueryLocationServiceResponse" message="business:QueryLocationServiceResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubscriberRealNAI">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="GetSubscriberRealNAI" message="business:GetSubscriberRealNAIRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/GetSubscriberRealNAIResponse" message="business:GetSubscriberRealNAIResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WLANProductActivation">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="WLANProductActivation" message="business:WLANProductActivationRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/WLANProductActivationResponse" message="business:WLANProductActivationResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QuerySubscriberByPayAccount">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="QuerySubscriberByPayAccount" message="business:QuerySubscriberByPayAccountRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/QuerySubscriberByPayAccountResponse" message="business:QuerySubscriberByPayAccountResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearNASBinding">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="ClearNASBinding" message="business:ClearNASBindingRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/ClearNASBindingResponse" message="business:ClearNASBindingResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OrderPushProduct">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="OrderPushProduct" message="business:OrderPushProductRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/OrderPushProductResponse" message="business:OrderPushProductResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPushProduct">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="QueryPushProduct" message="business:QueryPushProductRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/QueryPushProductResponse" message="business:QueryPushProductResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelPushProduct">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="CancelPushProduct" message="business:CancelPushProductRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/CancelPushProductResponse" message="business:CancelPushProductResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RollbackLocationService">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="RollbackLocationService" message="business:RollbackLocationServiceRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/RollbackLocationServiceResponse" message="business:RollbackLocationServiceResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QuerySubscriberService">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="QuerySubscriberService" message="business:QuerySubscriberServiceRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/QuerySubscriberServiceResponse" message="business:QuerySubscriberServiceResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WLANDynamicPwd">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="WLANDynamicPwd" message="business:Wlan_DynamicPwd_RequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/WLANDynamicPwdResponse" message="business:Wlan_DynamicPwd_ResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QuerySubscriberAccessFail">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="QuerySubscriberAccessFail" message="business:QuerySubscriberAccessFailRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/QuerySubscriberAccessFailResponse" message="business:QuerySubscriberAccessFailResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WLANBusinessOrder">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="WLANBusinessOrder" message="business:WLANBusinessOrderRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/WLANBusinessOrderResponse" message="business:WLANBusinessOrderResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPublicSubIDByUEID">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="QueryPublicSubIDByUEID" message="business:QueryPublicSubIDByUEIDRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/QueryPublicSubIDByUEIDResponse" message="business:QueryPublicSubIDByUEIDResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WLANDeleteBindedMAC">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="WLANDeleteBindedMAC" message="business:WLANDeleteBindedMACRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/WLANDeleteBindedMACResponse" message="business:WLANDeleteBindedMACResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDynamicPassword">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="SetDynamicPassword" message="business:SetDynamicPasswordRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/SetDynamicPasswordResponse" message="business:SetDynamicPasswordResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WLANUnregisterUEMAC">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="WLANUnregisterUEMAC" message="business:WLANUnregisterUEMACRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/WLANUnregisterUEMACResponse" message="business:WLANUnregisterUEMACResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyPassword">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="VerifyPassword" message="business:VerifyPasswordRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/VerifyPasswordResponse" message="business:VerifyPasswordResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WLANActivationCodeVerify">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="WLANActivationCodeVerify" message="business:WLANActivationCodeVerifyRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/WLANActivationCodeVerifyResponse" message="business:WLANActivationCodeVerifyResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QuerySubscriberSelfcareOpLog">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="QuerySubscriberSelfcareOpLog" message="business:QuerySubscriberSelfcareOpLogRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/QuerySubscriberSelfcareOpLogResponse" message="business:QuerySubscriberSelfcareOpLogResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryUserProductStatus">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="QueryUserProductStatus" message="business:QueryUserProductStatusRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/QueryUserProductStatusResponse" message="business:QueryUserProductStatusResultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAAASubscriber">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="QueryAAASubscriber" message="business:QueryAAASubscriberRequestMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://www.huawei.com/bme/aaainterface/cbs/businessmgr/CBSInterfaceBusinessMgr/QueryAAASubscriberResponse" message="business:QueryAAASubscriberResultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AAAInterfaceBusinessMgrServiceSOAP11Binding" type="business:AAAInterfaceBusinessMgrServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SetNASBindingInfo">
+      <soap:operation soapAction="SetNASBindingInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HandleFilterAccessResultNotify">
+      <soap:operation soapAction="HandleFilterAccessResultNotify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetSubscriberSession">
+      <soap:operation soapAction="ResetSubscriberSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderLocationService">
+      <soap:operation soapAction="OrderLocationService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuerySubscriberCDR">
+      <soap:operation soapAction="QuerySubscriberCDR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyLocationService">
+      <soap:operation soapAction="ModifyLocationService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoRegister">
+      <soap:operation soapAction="AutoRegister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomerLicense">
+      <soap:operation soapAction="UpdateCustomerLicense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubscriberLogin">
+      <soap:operation soapAction="SubscriberLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyAAASubscriberID">
+      <soap:operation soapAction="ModifyAAASubscriberID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReplaceLocationService">
+      <soap:operation soapAction="ReplaceLocationService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WLANQueryUEMACValidity">
+      <soap:operation soapAction="WLANQueryUEMACValidity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuerySubscriberSession">
+      <soap:operation soapAction="QuerySubscriberSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WLANExtendPreCardLife">
+      <soap:operation soapAction="WLANExtendPreCardLife" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuerySubscriberWholeInfo">
+      <soap:operation soapAction="QuerySubscriberWholeInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOnlineGroupSubscriber">
+      <soap:operation soapAction="QueryOnlineGroupSubscriber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomer">
+      <soap:operation soapAction="DeleteCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recharge">
+      <soap:operation soapAction="Recharge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WLANCombinePreCardUsage">
+      <soap:operation soapAction="WLANCombinePreCardUsage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPublicSubControl">
+      <soap:operation soapAction="QueryPublicSubControl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryLocationServiceUsage">
+      <soap:operation soapAction="QueryLocationServiceUsage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderSubscriberService">
+      <soap:operation soapAction="OrderSubscriberService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryServiceInfo">
+      <soap:operation soapAction="QueryServiceInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WLANQueryBindedMAC">
+      <soap:operation soapAction="WLANQueryBindedMAC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyAAASubscriber">
+      <soap:operation soapAction="ModifyAAASubscriber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechargeRollback">
+      <soap:operation soapAction="RechargeRollback" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewCustomer">
+      <soap:operation soapAction="NewCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifySubscriberService">
+      <soap:operation soapAction="ModifySubscriberService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubscriberPassword">
+      <soap:operation soapAction="GetSubscriberPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechargeQuery">
+      <soap:operation soapAction="RechargeQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecoverBandwidth">
+      <soap:operation soapAction="RecoverBandwidth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAAASubscriber">
+      <soap:operation soapAction="DeleteAAASubscriber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyCustomer">
+      <soap:operation soapAction="ModifyCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAAASubscriberByUEID">
+      <soap:operation soapAction="QueryAAASubscriberByUEID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnBindingUE">
+      <soap:operation soapAction="UnBindingUE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WLANCardDeduct">
+      <soap:operation soapAction="WLANCardDeduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyPublicSubControl">
+      <soap:operation soapAction="ModifyPublicSubControl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthSubscriber">
+      <soap:operation soapAction="AuthSubscriber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListOnlineGroupSubscriber">
+      <soap:operation soapAction="ListOnlineGroupSubscriber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DiagnoseSubscriber">
+      <soap:operation soapAction="DiagnoseSubscriber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewAAASubscriber">
+      <soap:operation soapAction="NewAAASubscriber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyAAASubscriberPswd">
+      <soap:operation soapAction="ModifyAAASubscriberPswd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeactivateSubscriber">
+      <soap:operation soapAction="DeactivateSubscriber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetAAASubscriberPswd">
+      <soap:operation soapAction="ResetAAASubscriberPswd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModBandwidth">
+      <soap:operation soapAction="ModBandwidth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryBindedUEID">
+      <soap:operation soapAction="QueryBindedUEID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDataRouting">
+      <soap:operation soapAction="UpdateDataRouting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivateSubscriber">
+      <soap:operation soapAction="ActivateSubscriber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelSubscriberService">
+      <soap:operation soapAction="CancelSubscriberService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelLocationService">
+      <soap:operation soapAction="CancelLocationService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WLANSMSNotify">
+      <soap:operation soapAction="WLANSMSNotify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindingUE">
+      <soap:operation soapAction="BindingUE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryLocationService">
+      <soap:operation soapAction="QueryLocationService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubscriberRealNAI">
+      <soap:operation soapAction="GetSubscriberRealNAI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WLANProductActivation">
+      <soap:operation soapAction="WLANProductActivation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuerySubscriberByPayAccount">
+      <soap:operation soapAction="QuerySubscriberByPayAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearNASBinding">
+      <soap:operation soapAction="ClearNASBinding" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderPushProduct">
+      <soap:operation soapAction="OrderPushProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPushProduct">
+      <soap:operation soapAction="QueryPushProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelPushProduct">
+      <soap:operation soapAction="CancelPushProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RollbackLocationService">
+      <soap:operation soapAction="RollbackLocationService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuerySubscriberService">
+      <soap:operation soapAction="QuerySubscriberService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WLANDynamicPwd">
+      <soap:operation soapAction="WLANDynamicPwd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuerySubscriberAccessFail">
+      <soap:operation soapAction="QuerySubscriberAccessFail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WLANBusinessOrder">
+      <soap:operation soapAction="WLANBusinessOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPublicSubIDByUEID">
+      <soap:operation soapAction="QueryPublicSubIDByUEID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WLANDeleteBindedMAC">
+      <soap:operation soapAction="WLANDeleteBindedMAC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDynamicPassword">
+      <soap:operation soapAction="SetDynamicPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WLANUnregisterUEMAC">
+      <soap:operation soapAction="WLANUnregisterUEMAC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyPassword">
+      <soap:operation soapAction="VerifyPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WLANActivationCodeVerify">
+      <soap:operation soapAction="WLANActivationCodeVerify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuerySubscriberSelfcareOpLog">
+      <soap:operation soapAction="QuerySubscriberSelfcareOpLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryUserProductStatus">
+      <soap:operation soapAction="QueryUserProductStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAAASubscriber">
+      <soap:operation soapAction="QueryAAASubscriber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AAAInterfaceBusinessMgrServiceSOAP12Binding" type="business:AAAInterfaceBusinessMgrServicePortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SetNASBindingInfo">
+      <soap12:operation soapAction="SetNASBindingInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HandleFilterAccessResultNotify">
+      <soap12:operation soapAction="HandleFilterAccessResultNotify" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetSubscriberSession">
+      <soap12:operation soapAction="ResetSubscriberSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderLocationService">
+      <soap12:operation soapAction="OrderLocationService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuerySubscriberCDR">
+      <soap12:operation soapAction="QuerySubscriberCDR" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyLocationService">
+      <soap12:operation soapAction="ModifyLocationService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoRegister">
+      <soap12:operation soapAction="AutoRegister" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomerLicense">
+      <soap12:operation soapAction="UpdateCustomerLicense" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubscriberLogin">
+      <soap12:operation soapAction="SubscriberLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyAAASubscriberID">
+      <soap12:operation soapAction="ModifyAAASubscriberID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReplaceLocationService">
+      <soap12:operation soapAction="ReplaceLocationService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WLANQueryUEMACValidity">
+      <soap12:operation soapAction="WLANQueryUEMACValidity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuerySubscriberSession">
+      <soap12:operation soapAction="QuerySubscriberSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WLANExtendPreCardLife">
+      <soap12:operation soapAction="WLANExtendPreCardLife" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuerySubscriberWholeInfo">
+      <soap12:operation soapAction="QuerySubscriberWholeInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryOnlineGroupSubscriber">
+      <soap12:operation soapAction="QueryOnlineGroupSubscriber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCustomer">
+      <soap12:operation soapAction="DeleteCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Recharge">
+      <soap12:operation soapAction="Recharge" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WLANCombinePreCardUsage">
+      <soap12:operation soapAction="WLANCombinePreCardUsage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPublicSubControl">
+      <soap12:operation soapAction="QueryPublicSubControl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryLocationServiceUsage">
+      <soap12:operation soapAction="QueryLocationServiceUsage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderSubscriberService">
+      <soap12:operation soapAction="OrderSubscriberService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryServiceInfo">
+      <soap12:operation soapAction="QueryServiceInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WLANQueryBindedMAC">
+      <soap12:operation soapAction="WLANQueryBindedMAC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyAAASubscriber">
+      <soap12:operation soapAction="ModifyAAASubscriber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechargeRollback">
+      <soap12:operation soapAction="RechargeRollback" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewCustomer">
+      <soap12:operation soapAction="NewCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifySubscriberService">
+      <soap12:operation soapAction="ModifySubscriberService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubscriberPassword">
+      <soap12:operation soapAction="GetSubscriberPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechargeQuery">
+      <soap12:operation soapAction="RechargeQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecoverBandwidth">
+      <soap12:operation soapAction="RecoverBandwidth" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAAASubscriber">
+      <soap12:operation soapAction="DeleteAAASubscriber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyCustomer">
+      <soap12:operation soapAction="ModifyCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAAASubscriberByUEID">
+      <soap12:operation soapAction="QueryAAASubscriberByUEID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnBindingUE">
+      <soap12:operation soapAction="UnBindingUE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WLANCardDeduct">
+      <soap12:operation soapAction="WLANCardDeduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyPublicSubControl">
+      <soap12:operation soapAction="ModifyPublicSubControl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthSubscriber">
+      <soap12:operation soapAction="AuthSubscriber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListOnlineGroupSubscriber">
+      <soap12:operation soapAction="ListOnlineGroupSubscriber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DiagnoseSubscriber">
+      <soap12:operation soapAction="DiagnoseSubscriber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewAAASubscriber">
+      <soap12:operation soapAction="NewAAASubscriber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyAAASubscriberPswd">
+      <soap12:operation soapAction="ModifyAAASubscriberPswd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeactivateSubscriber">
+      <soap12:operation soapAction="DeactivateSubscriber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetAAASubscriberPswd">
+      <soap12:operation soapAction="ResetAAASubscriberPswd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModBandwidth">
+      <soap12:operation soapAction="ModBandwidth" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryBindedUEID">
+      <soap12:operation soapAction="QueryBindedUEID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDataRouting">
+      <soap12:operation soapAction="UpdateDataRouting" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivateSubscriber">
+      <soap12:operation soapAction="ActivateSubscriber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelSubscriberService">
+      <soap12:operation soapAction="CancelSubscriberService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelLocationService">
+      <soap12:operation soapAction="CancelLocationService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WLANSMSNotify">
+      <soap12:operation soapAction="WLANSMSNotify" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BindingUE">
+      <soap12:operation soapAction="BindingUE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryLocationService">
+      <soap12:operation soapAction="QueryLocationService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubscriberRealNAI">
+      <soap12:operation soapAction="GetSubscriberRealNAI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WLANProductActivation">
+      <soap12:operation soapAction="WLANProductActivation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuerySubscriberByPayAccount">
+      <soap12:operation soapAction="QuerySubscriberByPayAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearNASBinding">
+      <soap12:operation soapAction="ClearNASBinding" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderPushProduct">
+      <soap12:operation soapAction="OrderPushProduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPushProduct">
+      <soap12:operation soapAction="QueryPushProduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelPushProduct">
+      <soap12:operation soapAction="CancelPushProduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RollbackLocationService">
+      <soap12:operation soapAction="RollbackLocationService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuerySubscriberService">
+      <soap12:operation soapAction="QuerySubscriberService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WLANDynamicPwd">
+      <soap12:operation soapAction="WLANDynamicPwd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuerySubscriberAccessFail">
+      <soap12:operation soapAction="QuerySubscriberAccessFail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WLANBusinessOrder">
+      <soap12:operation soapAction="WLANBusinessOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPublicSubIDByUEID">
+      <soap12:operation soapAction="QueryPublicSubIDByUEID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WLANDeleteBindedMAC">
+      <soap12:operation soapAction="WLANDeleteBindedMAC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDynamicPassword">
+      <soap12:operation soapAction="SetDynamicPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WLANUnregisterUEMAC">
+      <soap12:operation soapAction="WLANUnregisterUEMAC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyPassword">
+      <soap12:operation soapAction="VerifyPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WLANActivationCodeVerify">
+      <soap12:operation soapAction="WLANActivationCodeVerify" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QuerySubscriberSelfcareOpLog">
+      <soap12:operation soapAction="QuerySubscriberSelfcareOpLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryUserProductStatus">
+      <soap12:operation soapAction="QueryUserProductStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAAASubscriber">
+      <soap12:operation soapAction="QueryAAASubscriber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AAAInterfaceBusinessMgrService">
+    <wsdl:port name="AAAInterfaceBusinessMgrServiceSOAP11port_http" binding="business:AAAInterfaceBusinessMgrServiceSOAP11Binding">
+      <soap:address location="http://www.huawei.com/bme/aaainterface/businessmgr/wsdl/AAAInterface_BusinessMgr.wsdl" />
+    </wsdl:port>
+    <wsdl:port name="AAAInterfaceBusinessMgrServiceSOAP12port_http" binding="business:AAAInterfaceBusinessMgrServiceSOAP12Binding">
+      <soap12:address location="http://www.huawei.com/bme/aaainterface/businessmgr/wsdl/AAAInterface_BusinessMgr.wsdl" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

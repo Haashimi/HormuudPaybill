@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:arcommon="http://cbs.huawei.com/ar/wsservice/arcommon" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="ArServices?xsd=CBSInterface_AR_Common.xsd" namespace="http://cbs.huawei.com/ar/wsservice/arcommon" />
+  <xs:complexType name="QuerySumBalanceAndCreditRequest">
+    <xs:sequence>
+      <xs:element name="QueryObj">
+        <xs:complexType>
+          <xs:choice>
+            <xs:element name="SubAccessCode" type="arcommon:SubAccessCode" />
+            <xs:element name="AcctAccessCode">
+              <xs:complexType>
+                <xs:complexContent mixed="false">
+                  <xs:extension base="arcommon:AcctAccessCode" />
+                </xs:complexContent>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QuerySumBalanceAndCreditResult">
+    <xs:sequence>
+      <xs:element name="AcctKey" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BalanceResult" type="arcommon:MainAcctBalance" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OutStandingResult">
+        <xs:annotation>
+          <xs:documentation>???????????????????????????????????????????????????????????? ???????????????????????????????????????????????????</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="OutStandingAmount" type="xs:long" />
+            <xs:element name="CurrencyID" type="xs:integer" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AccountCredit">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="CreditLimitType" type="xs:string" />
+            <xs:element minOccurs="0" name="CreditLimitTypeName" type="xs:string" />
+            <xs:element name="TotalCreditAmount" type="xs:long" />
+            <xs:element name="TotalUsageAmount" type="xs:long" />
+            <xs:element name="TotalRemainAmount" type="xs:long" />
+            <xs:element name="CurrencyID" type="xs:integer" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UnbilledResult">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ChargeAmount" type="xs:long" />
+            <xs:element name="CurrencyID" type="xs:integer" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

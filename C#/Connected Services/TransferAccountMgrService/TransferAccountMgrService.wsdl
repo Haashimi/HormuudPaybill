@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns="http://www.huawei.com/bme/cbsinterface/transferaccount" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:common="http://www.huawei.com/bme/cbsinterface/common" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:transferaccountmgr="http://www.huawei.com/bme/cbsinterface/transferaccountmgr" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.huawei.com/bme/cbsinterface/transferaccountmgr" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:transferaccount="http://www.huawei.com/bme/cbsinterface/transferaccount" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://www.huawei.com/bme/cbsinterface/transferaccountmgr">
+      <xs:import schemaLocation="TransferAccountMgrService?xsd=CBSInterface_TransferAccount.xsd" namespace="http://www.huawei.com/bme/cbsinterface/transferaccount" />
+      <xs:element name="TransferAccountRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="TransferAccountRequest" type="transferaccount:TransferAccountRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TransferAccountResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="TransferAccountResult" type="transferaccount:TransferAccountResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryTransferLogRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="QueryTransferLogRequest" type="transferaccount:QueryTransferLogRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryTransferLogResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="QueryTransferLogResult" type="transferaccount:QueryTransferLogResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CancelTransferRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="CancelTransferRequest" type="transferaccount:CancelTransferRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CancelTransferResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="CancelTransferResult" type="transferaccount:CancelTransferResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryBalanceToValidityLogRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="QueryBalanceToValidityLogRequest" type="transferaccount:QueryBalanceToValidityLogRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryBalanceToValidityLogResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="QueryBalanceToValidityLogResult" type="transferaccount:QueryBalanceToValidityLogResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BalanceTrsRequestRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="BalanceTrsRequestRequest" type="transferaccount:BalanceTrsRequestRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BalanceTrsRequestResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PeriodRechRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="PeriodRechRequest" type="transferaccount:PeriodRechRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PeriodRechResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </types>
+  <message name="QueryBalanceToValidityLogRequestMessage">
+    <part name="QueryBalanceToValidityLogRequestMsg" element="transferaccountmgr:QueryBalanceToValidityLogRequestMsg" />
+  </message>
+  <message name="PeriodRechResultMessage">
+    <part name="PeriodRechResultMsg" element="transferaccountmgr:PeriodRechResultMsg" />
+  </message>
+  <message name="QueryBalanceToValidityLogResultMessage">
+    <part name="QueryBalanceToValidityLogResultMsg" element="transferaccountmgr:QueryBalanceToValidityLogResultMsg" />
+  </message>
+  <message name="TransferAccountResultMessage">
+    <part name="TransferAccountResultMsg" element="transferaccountmgr:TransferAccountResultMsg" />
+  </message>
+  <message name="CancelTransferRequestMessage">
+    <part name="CancelTransferRequestMsg" element="transferaccountmgr:CancelTransferRequestMsg" />
+  </message>
+  <message name="QueryTransferLogRequestMessage">
+    <part name="QueryTransferLogRequestMsg" element="transferaccountmgr:QueryTransferLogRequestMsg" />
+  </message>
+  <message name="BalanceTrsRequestRequestMessage">
+    <part name="BalanceTrsRequestRequestMsg" element="transferaccountmgr:BalanceTrsRequestRequestMsg" />
+  </message>
+  <message name="BalanceTrsRequestResultMessage">
+    <part name="BalanceTrsRequestResultMsg" element="transferaccountmgr:BalanceTrsRequestResultMsg" />
+  </message>
+  <message name="PeriodRechRequestMessage">
+    <part name="PeriodRechRequestMsg" element="transferaccountmgr:PeriodRechRequestMsg" />
+  </message>
+  <message name="QueryTransferLogResultMessage">
+    <part name="QueryTransferLogResultMsg" element="transferaccountmgr:QueryTransferLogResultMsg" />
+  </message>
+  <message name="TransferAccountRequestMessage">
+    <part name="TransferAccountRequestMsg" element="transferaccountmgr:TransferAccountRequestMsg" />
+  </message>
+  <message name="CancelTransferResultMessage">
+    <part name="CancelTransferResultMsg" element="transferaccountmgr:CancelTransferResultMsg" />
+  </message>
+  <portType name="TransferAccountMgr">
+    <operation name="TransferAccount">
+      <input message="transferaccountmgr:TransferAccountRequestMessage" />
+      <output message="transferaccountmgr:TransferAccountResultMessage" />
+    </operation>
+    <operation name="CancelTransfer">
+      <input message="transferaccountmgr:CancelTransferRequestMessage" />
+      <output message="transferaccountmgr:CancelTransferResultMessage" />
+    </operation>
+    <operation name="QueryTransferLog">
+      <input message="transferaccountmgr:QueryTransferLogRequestMessage" />
+      <output message="transferaccountmgr:QueryTransferLogResultMessage" />
+    </operation>
+    <operation name="QueryBalanceToValidityLog">
+      <input message="transferaccountmgr:QueryBalanceToValidityLogRequestMessage" />
+      <output message="transferaccountmgr:QueryBalanceToValidityLogResultMessage" />
+    </operation>
+    <operation name="BalanceTrsRequest">
+      <input message="transferaccountmgr:BalanceTrsRequestRequestMessage" />
+      <output message="transferaccountmgr:BalanceTrsRequestResultMessage" />
+    </operation>
+    <operation name="PeriodRech">
+      <input message="transferaccountmgr:PeriodRechRequestMessage" />
+      <output message="transferaccountmgr:PeriodRechResultMessage" />
+    </operation>
+  </portType>
+  <binding name="TransferAccountMgrBinding" type="transferaccountmgr:TransferAccountMgr">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="TransferAccount">
+      <soap:operation soapAction="TransferAccount" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CancelTransfer">
+      <soap:operation soapAction="CancelTransfer" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="QueryTransferLog">
+      <soap:operation soapAction="QueryTransferLog" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="QueryBalanceToValidityLog">
+      <soap:operation soapAction="QueryBalanceToValidityLog" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="BalanceTrsRequest">
+      <soap:operation soapAction="BalanceTrsRequest" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="PeriodRech">
+      <soap:operation soapAction="PeriodRech" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="TransferAccountMgrSoap12Binding" type="transferaccountmgr:TransferAccountMgr">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="TransferAccount">
+      <soap12:operation soapAction="TransferAccount" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="CancelTransfer">
+      <soap12:operation soapAction="CancelTransfer" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="QueryTransferLog">
+      <soap12:operation soapAction="QueryTransferLog" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="QueryBalanceToValidityLog">
+      <soap12:operation soapAction="QueryBalanceToValidityLog" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="BalanceTrsRequest">
+      <soap12:operation soapAction="BalanceTrsRequest" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="PeriodRech">
+      <soap12:operation soapAction="PeriodRech" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+  </binding>
+  <service name="TransferAccountMgrService">
+    <port name="TransferAccountMgrServicePort" binding="transferaccountmgr:TransferAccountMgrBinding">
+      <soap:address location="http://http://10.13.231.97:8080/services/TransferAccountMgrService.TransferAccountMgrServicePort/" />
+    </port>
+    <port name="TransferAccountMgrServiceSoap12Port" binding="transferaccountmgr:TransferAccountMgrSoap12Binding">
+      <soap12:address location="http://http://10.13.231.97:8080/services/TransferAccountMgrService.TransferAccountMgrServiceSoap12Port/" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:arcommon="http://cbs.huawei.com/ar/wsservice/arcommon" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="ArServices?xsd=CBSInterface_AR_Common.xsd" namespace="http://cbs.huawei.com/ar/wsservice/arcommon" />
+  <xs:complexType name="CorrectionRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CorrectionSerialNo" type="xs:string" />
+      <xs:element name="CorrectionObj">
+        <xs:complexType>
+          <xs:choice>
+            <xs:element name="SubAccessCode" type="arcommon:SubAccessCode" />
+            <xs:element name="AcctAccessCode">
+              <xs:complexType>
+                <xs:complexContent mixed="false">
+                  <xs:extension base="arcommon:AcctAccessCode">
+                    <xs:sequence>
+                      <xs:element minOccurs="0" name="PayType" type="xs:string" />
+                    </xs:sequence>
+                  </xs:extension>
+                </xs:complexContent>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="InvoiceInfo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="InvoiceNo" type="xs:string" />
+            <xs:element name="CorrectionLevel" type="xs:string" />
+            <xs:element name="CorrectionType" type="xs:string" />
+            <xs:element maxOccurs="unbounded" name="Detail">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:choice>
+                    <xs:element name="InvoiceDetailID" type="xs:long" />
+                    <xs:sequence>
+                      <xs:element name="BillItemID" type="xs:string" />
+                      <xs:element minOccurs="0" name="ChargeCode" type="xs:string" />
+                    </xs:sequence>
+                  </xs:choice>
+                  <xs:element name="CorrectionAmt" type="xs:long" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="CurrencyID" type="xs:integer" />
+            <xs:element minOccurs="0" name="BillingCycleID" type="xs:string" />
+            <xs:element minOccurs="0" name="DueDate" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="ReasonCode" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AdditionalProperty" type="arcommon:SimpleProperty">
+        <xs:annotation>
+          <xs:documentation>It is reserved for future extension</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Remark" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

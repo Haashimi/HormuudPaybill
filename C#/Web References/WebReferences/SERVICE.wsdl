@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usrnm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psswrd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sender" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="timeSent" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="messageText" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="shortcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResponseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ResponseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckBalance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckBalanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckBalanceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthenticationToken" type="tns:AuthenticationToken" />
+      <s:complexType name="AuthenticationToken">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="InnerToken" type="s1:guid" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="CustomSOAPHeader" type="tns:CustomSOAPHeader" />
+      <s:complexType name="CustomSOAPHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="CheckDelivery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MessageID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckDeliveryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckDeliveryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PostService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PostServiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostServiceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SMSType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Type" type="tns:SMSType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="SMSType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Normal" />
+          <s:enumeration value="Flash" />
+          <s:enumeration value="Zero" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="SMSTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SMSTypeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Type" type="tns:SMSType" />
+            <s:element minOccurs="1" maxOccurs="1" name="sType" type="tns:SubmitType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="SubmitType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Sychronous" />
+          <s:enumeration value="Asynchronous" />
+          <s:enumeration value="GroupLogo" />
+          <s:enumeration value="Ringtone" />
+          <s:enumeration value="vCard" />
+          <s:enumeration value="WAPPushOrMMS" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="SubmitTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitTypeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Encoding">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Type" type="tns:SMSType" />
+            <s:element minOccurs="1" maxOccurs="1" name="sType" type="tns:SubmitType" />
+            <s:element minOccurs="1" maxOccurs="1" name="eType" type="tns:EncodingType" />
+            <s:element minOccurs="0" maxOccurs="1" name="UDH" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="EncodingType">
+        <s:restriction base="s:string">
+          <s:enumeration value="et7BitText" />
+          <s:enumeration value="et8BitHexadecimal" />
+          <s:enumeration value="etUCS2Text" />
+          <s:enumeration value="etISO88591" />
+          <s:enumeration value="etISO88595" />
+          <s:enumeration value="etISO88598" />
+          <s:enumeration value="etWAPPushOrMMS" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="EncodingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EncodingResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Binary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Type" type="tns:SMSType" />
+            <s:element minOccurs="1" maxOccurs="1" name="eType" type="tns:EncodingType" />
+            <s:element minOccurs="0" maxOccurs="1" name="UDH" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BinaryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BinaryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServiceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ResponseSoapIn">
+    <wsdl:part name="parameters" element="tns:Response" />
+  </wsdl:message>
+  <wsdl:message name="ResponseSoapOut">
+    <wsdl:part name="parameters" element="tns:ResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckBalanceSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckBalance" />
+  </wsdl:message>
+  <wsdl:message name="CheckBalanceSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckBalanceAuthenticationToken">
+    <wsdl:part name="AuthenticationToken" element="tns:AuthenticationToken" />
+  </wsdl:message>
+  <wsdl:message name="CheckBalanceCustomSOAPHeader">
+    <wsdl:part name="CustomSOAPHeader" element="tns:CustomSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="CheckDeliverySoapIn">
+    <wsdl:part name="parameters" element="tns:CheckDelivery" />
+  </wsdl:message>
+  <wsdl:message name="CheckDeliverySoapOut">
+    <wsdl:part name="parameters" element="tns:CheckDeliveryResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckDeliveryAuthenticationToken">
+    <wsdl:part name="AuthenticationToken" element="tns:AuthenticationToken" />
+  </wsdl:message>
+  <wsdl:message name="CheckDeliveryCustomSOAPHeader">
+    <wsdl:part name="CustomSOAPHeader" element="tns:CustomSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="PostServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:PostService" />
+  </wsdl:message>
+  <wsdl:message name="PostServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:PostServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="PostServiceAuthenticationToken">
+    <wsdl:part name="AuthenticationToken" element="tns:AuthenticationToken" />
+  </wsdl:message>
+  <wsdl:message name="PostServiceCustomSOAPHeader">
+    <wsdl:part name="CustomSOAPHeader" element="tns:CustomSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="SMSTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:SMSType" />
+  </wsdl:message>
+  <wsdl:message name="SMSTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:SMSTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SMSTypeAuthenticationToken">
+    <wsdl:part name="AuthenticationToken" element="tns:AuthenticationToken" />
+  </wsdl:message>
+  <wsdl:message name="SMSTypeCustomSOAPHeader">
+    <wsdl:part name="CustomSOAPHeader" element="tns:CustomSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="SubmitTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitType" />
+  </wsdl:message>
+  <wsdl:message name="SubmitTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitTypeAuthenticationToken">
+    <wsdl:part name="AuthenticationToken" element="tns:AuthenticationToken" />
+  </wsdl:message>
+  <wsdl:message name="SubmitTypeCustomSOAPHeader">
+    <wsdl:part name="CustomSOAPHeader" element="tns:CustomSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="EncodingSoapIn">
+    <wsdl:part name="parameters" element="tns:Encoding" />
+  </wsdl:message>
+  <wsdl:message name="EncodingSoapOut">
+    <wsdl:part name="parameters" element="tns:EncodingResponse" />
+  </wsdl:message>
+  <wsdl:message name="EncodingAuthenticationToken">
+    <wsdl:part name="AuthenticationToken" element="tns:AuthenticationToken" />
+  </wsdl:message>
+  <wsdl:message name="EncodingCustomSOAPHeader">
+    <wsdl:part name="CustomSOAPHeader" element="tns:CustomSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="BinarySoapIn">
+    <wsdl:part name="parameters" element="tns:Binary" />
+  </wsdl:message>
+  <wsdl:message name="BinarySoapOut">
+    <wsdl:part name="parameters" element="tns:BinaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="BinaryAuthenticationToken">
+    <wsdl:part name="AuthenticationToken" element="tns:AuthenticationToken" />
+  </wsdl:message>
+  <wsdl:message name="BinaryCustomSOAPHeader">
+    <wsdl:part name="CustomSOAPHeader" element="tns:CustomSOAPHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetService" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceAuthenticationToken">
+    <wsdl:part name="AuthenticationToken" element="tns:AuthenticationToken" />
+  </wsdl:message>
+  <wsdl:message name="GetServiceCustomSOAPHeader">
+    <wsdl:part name="CustomSOAPHeader" element="tns:CustomSOAPHeader" />
+  </wsdl:message>
+  <wsdl:portType name="CustomServiceSoap">
+    <wsdl:operation name="Response">
+      <wsdl:input message="tns:ResponseSoapIn" />
+      <wsdl:output message="tns:ResponseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckBalance">
+      <wsdl:input message="tns:CheckBalanceSoapIn" />
+      <wsdl:output message="tns:CheckBalanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckDelivery">
+      <wsdl:input message="tns:CheckDeliverySoapIn" />
+      <wsdl:output message="tns:CheckDeliverySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PostService">
+      <wsdl:input message="tns:PostServiceSoapIn" />
+      <wsdl:output message="tns:PostServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PostService">
+      <wsdl:input name="SMSType" message="tns:SMSTypeSoapIn" />
+      <wsdl:output name="SMSType" message="tns:SMSTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PostService">
+      <wsdl:input name="SubmitType" message="tns:SubmitTypeSoapIn" />
+      <wsdl:output name="SubmitType" message="tns:SubmitTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PostService">
+      <wsdl:input name="Encoding" message="tns:EncodingSoapIn" />
+      <wsdl:output name="Encoding" message="tns:EncodingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PostService">
+      <wsdl:input name="Binary" message="tns:BinarySoapIn" />
+      <wsdl:output name="Binary" message="tns:BinarySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetService">
+      <wsdl:input message="tns:GetServiceSoapIn" />
+      <wsdl:output message="tns:GetServiceSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CustomServiceSoap" type="tns:CustomServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Response">
+      <soap:operation soapAction="http://tempuri.org/Response" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckBalance">
+      <soap:operation soapAction="http://tempuri.org/CheckBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CheckBalanceAuthenticationToken" part="AuthenticationToken" use="literal" />
+        <soap:header message="tns:CheckBalanceCustomSOAPHeader" part="CustomSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDelivery">
+      <soap:operation soapAction="http://tempuri.org/CheckDelivery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CheckDeliveryAuthenticationToken" part="AuthenticationToken" use="literal" />
+        <soap:header message="tns:CheckDeliveryCustomSOAPHeader" part="CustomSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostService">
+      <soap:operation soapAction="http://tempuri.org/PostService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PostServiceAuthenticationToken" part="AuthenticationToken" use="literal" />
+        <soap:header message="tns:PostServiceCustomSOAPHeader" part="CustomSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostService">
+      <soap:operation soapAction="http://tempuri.org/SMSType" style="document" />
+      <wsdl:input name="SMSType">
+        <soap:body use="literal" />
+        <soap:header message="tns:SMSTypeAuthenticationToken" part="AuthenticationToken" use="literal" />
+        <soap:header message="tns:SMSTypeCustomSOAPHeader" part="CustomSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SMSType">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostService">
+      <soap:operation soapAction="http://tempuri.org/SubmitType" style="document" />
+      <wsdl:input name="SubmitType">
+        <soap:body use="literal" />
+        <soap:header message="tns:SubmitTypeAuthenticationToken" part="AuthenticationToken" use="literal" />
+        <soap:header message="tns:SubmitTypeCustomSOAPHeader" part="CustomSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SubmitType">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostService">
+      <soap:operation soapAction="http://tempuri.org/Encoding" style="document" />
+      <wsdl:input name="Encoding">
+        <soap:body use="literal" />
+        <soap:header message="tns:EncodingAuthenticationToken" part="AuthenticationToken" use="literal" />
+        <soap:header message="tns:EncodingCustomSOAPHeader" part="CustomSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Encoding">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostService">
+      <soap:operation soapAction="http://tempuri.org/Binary" style="document" />
+      <wsdl:input name="Binary">
+        <soap:body use="literal" />
+        <soap:header message="tns:BinaryAuthenticationToken" part="AuthenticationToken" use="literal" />
+        <soap:header message="tns:BinaryCustomSOAPHeader" part="CustomSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Binary">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetService">
+      <soap:operation soapAction="http://tempuri.org/GetService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetServiceAuthenticationToken" part="AuthenticationToken" use="literal" />
+        <soap:header message="tns:GetServiceCustomSOAPHeader" part="CustomSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CustomServiceSoap12" type="tns:CustomServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Response">
+      <soap12:operation soapAction="http://tempuri.org/Response" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckBalance">
+      <soap12:operation soapAction="http://tempuri.org/CheckBalance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:CheckBalanceAuthenticationToken" part="AuthenticationToken" use="literal" />
+        <soap12:header message="tns:CheckBalanceCustomSOAPHeader" part="CustomSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDelivery">
+      <soap12:operation soapAction="http://tempuri.org/CheckDelivery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:CheckDeliveryAuthenticationToken" part="AuthenticationToken" use="literal" />
+        <soap12:header message="tns:CheckDeliveryCustomSOAPHeader" part="CustomSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostService">
+      <soap12:operation soapAction="http://tempuri.org/PostService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PostServiceAuthenticationToken" part="AuthenticationToken" use="literal" />
+        <soap12:header message="tns:PostServiceCustomSOAPHeader" part="CustomSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostService">
+      <soap12:operation soapAction="http://tempuri.org/SMSType" style="document" />
+      <wsdl:input name="SMSType">
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SMSTypeAuthenticationToken" part="AuthenticationToken" use="literal" />
+        <soap12:header message="tns:SMSTypeCustomSOAPHeader" part="CustomSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SMSType">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostService">
+      <soap12:operation soapAction="http://tempuri.org/SubmitType" style="document" />
+      <wsdl:input name="SubmitType">
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SubmitTypeAuthenticationToken" part="AuthenticationToken" use="literal" />
+        <soap12:header message="tns:SubmitTypeCustomSOAPHeader" part="CustomSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SubmitType">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostService">
+      <soap12:operation soapAction="http://tempuri.org/Encoding" style="document" />
+      <wsdl:input name="Encoding">
+        <soap12:body use="literal" />
+        <soap12:header message="tns:EncodingAuthenticationToken" part="AuthenticationToken" use="literal" />
+        <soap12:header message="tns:EncodingCustomSOAPHeader" part="CustomSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Encoding">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostService">
+      <soap12:operation soapAction="http://tempuri.org/Binary" style="document" />
+      <wsdl:input name="Binary">
+        <soap12:body use="literal" />
+        <soap12:header message="tns:BinaryAuthenticationToken" part="AuthenticationToken" use="literal" />
+        <soap12:header message="tns:BinaryCustomSOAPHeader" part="CustomSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Binary">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetService">
+      <soap12:operation soapAction="http://tempuri.org/GetService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetServiceAuthenticationToken" part="AuthenticationToken" use="literal" />
+        <soap12:header message="tns:GetServiceCustomSOAPHeader" part="CustomSOAPHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CustomService">
+    <wsdl:port name="CustomServiceSoap" binding="tns:CustomServiceSoap">
+      <soap:address location="https://smsservice.hormuud.com/SERVICE.ASMX" />
+    </wsdl:port>
+    <wsdl:port name="CustomServiceSoap12" binding="tns:CustomServiceSoap12">
+      <soap12:address location="https://smsservice.hormuud.com/SERVICE.ASMX" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

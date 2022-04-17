@@ -1,0 +1,1210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\STH02135\Desktop\HSAPI PUBLISH</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="ApplicationInsights.config">
+      <publishTime>03/05/2020 09:21:41</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/HelpPage.css">
+      <publishTime>03/05/2020 09:21:47</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/Api.cshtml">
+      <publishTime>03/05/2020 09:21:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ApiGroup.cshtml">
+      <publishTime>03/05/2020 09:21:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/CollectionModelDescription.cshtml">
+      <publishTime>03/05/2020 09:21:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ComplexTypeModelDescription.cshtml">
+      <publishTime>03/05/2020 09:21:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/DictionaryModelDescription.cshtml">
+      <publishTime>03/05/2020 09:21:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/EnumTypeModelDescription.cshtml">
+      <publishTime>03/05/2020 09:21:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/HelpPageApiModel.cshtml">
+      <publishTime>03/05/2020 09:21:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ImageSample.cshtml">
+      <publishTime>03/05/2020 09:21:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/InvalidSample.cshtml">
+      <publishTime>03/05/2020 09:21:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/KeyValuePairModelDescription.cshtml">
+      <publishTime>03/05/2020 09:21:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ModelDescriptionLink.cshtml">
+      <publishTime>03/05/2020 09:21:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/Parameters.cshtml">
+      <publishTime>03/05/2020 09:21:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/Samples.cshtml">
+      <publishTime>03/05/2020 09:21:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/SimpleTypeModelDescription.cshtml">
+      <publishTime>03/05/2020 09:21:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/TextSample.cshtml">
+      <publishTime>03/05/2020 09:21:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/Index.cshtml">
+      <publishTime>03/05/2020 09:21:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/ResourceModel.cshtml">
+      <publishTime>03/05/2020 09:21:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Shared/_Layout.cshtml">
+      <publishTime>03/05/2020 09:21:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Web.config">
+      <publishTime>03/05/2020 09:21:46</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/_ViewStart.cshtml">
+      <publishTime>03/05/2020 09:21:46</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>03/05/2020 09:23:24</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>03/05/2020 09:23:24</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>03/05/2020 09:21:41</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>03/05/2020 09:23:39</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>03/05/2020 09:23:39</publishTime>
+    </File>
+    <File Include="bin/HSAPI.dll">
+      <publishTime>05/27/2020 10:19:20</publishTime>
+    </File>
+    <File Include="bin/HSAPI.pdb">
+      <publishTime>05/27/2020 10:19:20</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>03/05/2020 09:23:18</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>03/05/2020 09:23:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>03/05/2020 09:22:49</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>03/05/2020 09:22:45</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>03/05/2020 09:22:44</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>03/05/2020 09:23:15</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>03/05/2020 09:22:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>03/05/2020 09:22:47</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>03/05/2020 09:23:23</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>03/05/2020 09:22:44</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.TelemetryCorrelation.dll">
+      <publishTime>03/05/2020 09:22:46</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>03/05/2020 09:23:35</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>03/05/2020 09:22:47</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>03/05/2020 09:22:46</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
+      <publishTime>03/05/2020 09:22:47</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>03/05/2020 09:23:35</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Facebook.dll">
+      <publishTime>03/05/2020 09:22:52</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Google.dll">
+      <publishTime>03/05/2020 09:22:59</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.MicrosoftAccount.dll">
+      <publishTime>03/05/2020 09:22:45</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>03/05/2020 09:23:14</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Twitter.dll">
+      <publishTime>03/05/2020 09:22:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>03/05/2020 09:23:37</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/05/2020 09:22:54</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.pdb">
+      <publishTime>03/05/2020 09:22:54</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>03/05/2020 09:22:46</publishTime>
+    </File>
+    <File Include="bin/PCLCrypto.dll">
+      <publishTime>03/05/2020 09:23:36</publishTime>
+    </File>
+    <File Include="bin/PInvoke.BCrypt.dll">
+      <publishTime>03/05/2020 09:22:50</publishTime>
+    </File>
+    <File Include="bin/PInvoke.Kernel32.dll">
+      <publishTime>03/05/2020 09:23:19</publishTime>
+    </File>
+    <File Include="bin/PInvoke.NCrypt.dll">
+      <publishTime>03/05/2020 09:23:15</publishTime>
+    </File>
+    <File Include="bin/PInvoke.Windows.Core.dll">
+      <publishTime>03/05/2020 09:23:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>03/05/2020 09:23:29</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>03/05/2020 09:23:29</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>03/05/2020 09:23:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>03/05/2020 09:23:29</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe.config">
+      <publishTime>03/05/2020 09:23:29</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>03/05/2020 09:23:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>03/05/2020 09:23:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>03/05/2020 09:23:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>03/05/2020 09:23:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>03/05/2020 09:23:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>03/05/2020 09:23:29</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>03/05/2020 09:23:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>03/05/2020 09:23:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>03/05/2020 09:23:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>03/05/2020 09:23:29</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Managed.Core.targets">
+      <publishTime>03/05/2020 09:23:29</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>03/05/2020 09:23:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Win32.Primitives.dll">
+      <publishTime>03/05/2020 09:23:29</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>03/05/2020 09:23:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>03/05/2020 09:23:29</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Console.dll">
+      <publishTime>03/05/2020 09:23:29</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.DiagnosticSource.dll">
+      <publishTime>03/05/2020 09:23:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.FileVersionInfo.dll">
+      <publishTime>03/05/2020 09:23:29</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>03/05/2020 09:23:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Globalization.Calendars.dll">
+      <publishTime>03/05/2020 09:23:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Compression.dll">
+      <publishTime>03/05/2020 09:23:29</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Compression.ZipFile.dll">
+      <publishTime>03/05/2020 09:23:29</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>03/05/2020 09:23:29</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>03/05/2020 09:23:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Net.Http.dll">
+      <publishTime>03/05/2020 09:23:29</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Net.Sockets.dll">
+      <publishTime>03/05/2020 09:23:29</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>03/05/2020 09:23:29</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Runtime.InteropServices.RuntimeInformation.dll">
+      <publishTime>03/05/2020 09:23:29</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Algorithms.dll">
+      <publishTime>03/05/2020 09:23:29</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Encoding.dll">
+      <publishTime>03/05/2020 09:23:29</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Primitives.dll">
+      <publishTime>03/05/2020 09:23:29</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.X509Certificates.dll">
+      <publishTime>03/05/2020 09:23:29</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Text.Encoding.CodePages.dll">
+      <publishTime>03/05/2020 09:23:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Threading.Tasks.Extensions.dll">
+      <publishTime>03/05/2020 09:23:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.ValueTuple.dll">
+      <publishTime>03/05/2020 09:23:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.ReaderWriter.dll">
+      <publishTime>03/05/2020 09:23:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XmlDocument.dll">
+      <publishTime>03/05/2020 09:23:29</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.dll">
+      <publishTime>03/05/2020 09:23:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.XDocument.dll">
+      <publishTime>03/05/2020 09:23:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>03/05/2020 09:23:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>03/05/2020 09:23:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>03/05/2020 09:23:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>03/05/2020 09:23:30</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>03/05/2020 09:23:30</publishTime>
+    </File>
+    <File Include="bin/System.Diagnostics.DiagnosticSource.dll">
+      <publishTime>03/05/2020 09:23:03</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>03/05/2020 09:22:51</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>03/05/2020 09:22:44</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>03/05/2020 09:23:13</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.Owin.dll">
+      <publishTime>03/05/2020 09:22:49</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>03/05/2020 09:22:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>03/05/2020 09:22:51</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>03/05/2020 09:22:58</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>03/05/2020 09:22:43</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>03/05/2020 09:22:44</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>03/05/2020 09:22:44</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>03/05/2020 09:22:44</publishTime>
+    </File>
+    <File Include="bin/Validation.dll">
+      <publishTime>03/05/2020 09:23:25</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>03/05/2020 09:22:45</publishTime>
+    </File>
+    <File Include="Connected Services/AcctcreditMgrService/HSAPI.AcctcreditMgrService.batchModifyInitCreditResponse.datasource">
+      <publishTime>03/05/2020 09:21:58</publishTime>
+    </File>
+    <File Include="Connected Services/AcctcreditMgrService/HSAPI.AcctcreditMgrService.BatchModifyInitCreditResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:58</publishTime>
+    </File>
+    <File Include="Connected Services/AcctcreditMgrService/HSAPI.AcctcreditMgrService.manAcctCreditResponse.datasource">
+      <publishTime>03/05/2020 09:21:58</publishTime>
+    </File>
+    <File Include="Connected Services/AcctcreditMgrService/HSAPI.AcctcreditMgrService.ManAcctCreditResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:58</publishTime>
+    </File>
+    <File Include="Connected Services/AcctcreditMgrService/HSAPI.AcctcreditMgrService.ManAcctSubCreditSwitchResponse.datasource">
+      <publishTime>03/05/2020 09:21:58</publishTime>
+    </File>
+    <File Include="Connected Services/AcctcreditMgrService/HSAPI.AcctcreditMgrService.ManAcctSubCreditSwitchResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:58</publishTime>
+    </File>
+    <File Include="Connected Services/AcctcreditMgrService/HSAPI.AcctcreditMgrService.ManSubCreditResponse.datasource">
+      <publishTime>03/05/2020 09:21:58</publishTime>
+    </File>
+    <File Include="Connected Services/AcctcreditMgrService/HSAPI.AcctcreditMgrService.ManSubCreditResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:58</publishTime>
+    </File>
+    <File Include="Connected Services/AcctcreditMgrService/HSAPI.AcctcreditMgrService.queryAcctCreditResponse.datasource">
+      <publishTime>03/05/2020 09:21:58</publishTime>
+    </File>
+    <File Include="Connected Services/AcctcreditMgrService/HSAPI.AcctcreditMgrService.QueryAcctCreditResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:58</publishTime>
+    </File>
+    <File Include="Connected Services/AcctcreditMgrService/HSAPI.AcctcreditMgrService.QueryAcctSubCreditResponse.datasource">
+      <publishTime>03/05/2020 09:21:58</publishTime>
+    </File>
+    <File Include="Connected Services/AcctcreditMgrService/HSAPI.AcctcreditMgrService.QueryAcctSubCreditResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:58</publishTime>
+    </File>
+    <File Include="Connected Services/AdjustAccountMgrService/HSAPI.AdjustAccountMgrService.AdjustAccountResponse.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/AdjustAccountMgrService/HSAPI.AdjustAccountMgrService.AdjustAccountResultMsg.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/AdjustAccountMgrService/HSAPI.AdjustAccountMgrService.BatchAdjustAccountAmtResponse.datasource">
+      <publishTime>03/05/2020 09:22:01</publishTime>
+    </File>
+    <File Include="Connected Services/AdjustAccountMgrService/HSAPI.AdjustAccountMgrService.BatchAdjustAccountAmtResultMsg.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/AdjustAccountMgrService/HSAPI.AdjustAccountMgrService.batchAdjustAccountResponse.datasource">
+      <publishTime>03/05/2020 09:22:01</publishTime>
+    </File>
+    <File Include="Connected Services/AdjustAccountMgrService/HSAPI.AdjustAccountMgrService.BatchAdjustAccountResultMsg.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/AdjustAccountMgrService/HSAPI.AdjustAccountMgrService.ExchangeAccountResponse.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/AdjustAccountMgrService/HSAPI.AdjustAccountMgrService.ExchangeAccountResultMsg.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/AdjustAccountMgrService/HSAPI.AdjustAccountMgrService.QueryAdjustmentLogResponse.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/AdjustAccountMgrService/HSAPI.AdjustAccountMgrService.QueryAdjustmentLogResultMsg.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/AdjustAccountMgrService/HSAPI.AdjustAccountMgrService.SyncBalance4POSResponse.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/AdjustAccountMgrService/HSAPI.AdjustAccountMgrService.SyncBalance4POSResultMsg.datasource">
+      <publishTime>03/05/2020 09:22:01</publishTime>
+    </File>
+    <File Include="Connected Services/AR4BMPInterfaceService/HSAPI.AR4BMPInterfaceService.adjustmentResponse.datasource">
+      <publishTime>03/05/2020 09:21:54</publishTime>
+    </File>
+    <File Include="Connected Services/AR4BMPInterfaceService/HSAPI.AR4BMPInterfaceService.AdjustmentResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:54</publishTime>
+    </File>
+    <File Include="Connected Services/AR4BMPInterfaceService/HSAPI.AR4BMPInterfaceService.batchPaymentResponse.datasource">
+      <publishTime>03/05/2020 09:21:54</publishTime>
+    </File>
+    <File Include="Connected Services/AR4BMPInterfaceService/HSAPI.AR4BMPInterfaceService.BatchPaymentResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:54</publishTime>
+    </File>
+    <File Include="Connected Services/AR4BMPInterfaceService/HSAPI.AR4BMPInterfaceService.billing2arResponse.datasource">
+      <publishTime>03/05/2020 09:21:54</publishTime>
+    </File>
+    <File Include="Connected Services/AR4BMPInterfaceService/HSAPI.AR4BMPInterfaceService.Billing2arResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:54</publishTime>
+    </File>
+    <File Include="Connected Services/AR4BMPInterfaceService/HSAPI.AR4BMPInterfaceService.forfeitResponse.datasource">
+      <publishTime>03/05/2020 09:21:54</publishTime>
+    </File>
+    <File Include="Connected Services/AR4BMPInterfaceService/HSAPI.AR4BMPInterfaceService.ForfeitResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:54</publishTime>
+    </File>
+    <File Include="Connected Services/AR4BMPInterfaceService/HSAPI.AR4BMPInterfaceService.paymentResponse.datasource">
+      <publishTime>03/05/2020 09:21:54</publishTime>
+    </File>
+    <File Include="Connected Services/AR4BMPInterfaceService/HSAPI.AR4BMPInterfaceService.PaymentResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:54</publishTime>
+    </File>
+    <File Include="Connected Services/AR4BMPInterfaceService/HSAPI.AR4BMPInterfaceService.queryBalanceResponse.datasource">
+      <publishTime>03/05/2020 09:21:54</publishTime>
+    </File>
+    <File Include="Connected Services/AR4BMPInterfaceService/HSAPI.AR4BMPInterfaceService.QueryBalanceResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:54</publishTime>
+    </File>
+    <File Include="Connected Services/AR4BMPInterfaceService/HSAPI.AR4BMPInterfaceService.queryInvoiceInfoResponse.datasource">
+      <publishTime>03/05/2020 09:21:54</publishTime>
+    </File>
+    <File Include="Connected Services/AR4BMPInterfaceService/HSAPI.AR4BMPInterfaceService.QueryInvoiceInfoResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:54</publishTime>
+    </File>
+    <File Include="Connected Services/AR4BMPInterfaceService/HSAPI.AR4BMPInterfaceService.queryTranDenominationResponse.datasource">
+      <publishTime>03/05/2020 09:21:54</publishTime>
+    </File>
+    <File Include="Connected Services/AR4BMPInterfaceService/HSAPI.AR4BMPInterfaceService.QueryTranDenominationResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:54</publishTime>
+    </File>
+    <File Include="Connected Services/AR4BMPInterfaceService/HSAPI.AR4BMPInterfaceService.voidPaymentResponse.datasource">
+      <publishTime>03/05/2020 09:21:54</publishTime>
+    </File>
+    <File Include="Connected Services/AR4BMPInterfaceService/HSAPI.AR4BMPInterfaceService.VoidResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:54</publishTime>
+    </File>
+    <File Include="Connected Services/CardRechargeMgrService/HSAPI.CardRechargeMgrService.BatchDeleteRechageBlackResponse.datasource">
+      <publishTime>03/05/2020 09:21:51</publishTime>
+    </File>
+    <File Include="Connected Services/CardRechargeMgrService/HSAPI.CardRechargeMgrService.BatchDeleteRechageBlackResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:51</publishTime>
+    </File>
+    <File Include="Connected Services/CardRechargeMgrService/HSAPI.CardRechargeMgrService.DeleteRechageBlackResponse.datasource">
+      <publishTime>03/05/2020 09:21:51</publishTime>
+    </File>
+    <File Include="Connected Services/CardRechargeMgrService/HSAPI.CardRechargeMgrService.DeleteRechageBlackResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:51</publishTime>
+    </File>
+    <File Include="Connected Services/CardRechargeMgrService/HSAPI.CardRechargeMgrService.ModifyVoucherStateResponse.datasource">
+      <publishTime>03/05/2020 09:21:51</publishTime>
+    </File>
+    <File Include="Connected Services/CardRechargeMgrService/HSAPI.CardRechargeMgrService.ModifyVoucherStateResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:51</publishTime>
+    </File>
+    <File Include="Connected Services/CardRechargeMgrService/HSAPI.CardRechargeMgrService.QueryRechargeBlackResponse.datasource">
+      <publishTime>03/05/2020 09:21:51</publishTime>
+    </File>
+    <File Include="Connected Services/CardRechargeMgrService/HSAPI.CardRechargeMgrService.QueryRechargeBlackResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:51</publishTime>
+    </File>
+    <File Include="Connected Services/CardRechargeMgrService/HSAPI.CardRechargeMgrService.VoucherEnquiryByPINResponse.datasource">
+      <publishTime>03/05/2020 09:21:51</publishTime>
+    </File>
+    <File Include="Connected Services/CardRechargeMgrService/HSAPI.CardRechargeMgrService.VoucherEnquiryByPINResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:51</publishTime>
+    </File>
+    <File Include="Connected Services/CardRechargeMgrService/HSAPI.CardRechargeMgrService.VoucherEnquiryBySeqResponse.datasource">
+      <publishTime>03/05/2020 09:21:51</publishTime>
+    </File>
+    <File Include="Connected Services/CardRechargeMgrService/HSAPI.CardRechargeMgrService.VoucherEnquiryBySeqResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:51</publishTime>
+    </File>
+    <File Include="Connected Services/CardRechargeMgrService/HSAPI.CardRechargeMgrService.VoucherRechargeBySeqResponse.datasource">
+      <publishTime>03/05/2020 09:21:51</publishTime>
+    </File>
+    <File Include="Connected Services/CardRechargeMgrService/HSAPI.CardRechargeMgrService.VoucherRechargeBySeqResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:51</publishTime>
+    </File>
+    <File Include="Connected Services/CardRechargeMgrService/HSAPI.CardRechargeMgrService.VoucherRechargeEnquiryResponse.datasource">
+      <publishTime>03/05/2020 09:21:51</publishTime>
+    </File>
+    <File Include="Connected Services/CardRechargeMgrService/HSAPI.CardRechargeMgrService.VoucherRechargeEnquiryResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:51</publishTime>
+    </File>
+    <File Include="Connected Services/CardRechargeMgrService/HSAPI.CardRechargeMgrService.VoucherRechargeResponse.datasource">
+      <publishTime>03/05/2020 09:21:51</publishTime>
+    </File>
+    <File Include="Connected Services/CardRechargeMgrService/HSAPI.CardRechargeMgrService.VoucherRechargeResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:51</publishTime>
+    </File>
+    <File Include="Connected Services/CashRechargeMgrService/HSAPI.CashRechargeMgrService.ActiveFirstResponse.datasource">
+      <publishTime>03/05/2020 09:21:53</publishTime>
+    </File>
+    <File Include="Connected Services/CashRechargeMgrService/HSAPI.CashRechargeMgrService.ActiveFirstResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:53</publishTime>
+    </File>
+    <File Include="Connected Services/CashRechargeMgrService/HSAPI.CashRechargeMgrService.BatchActiveFirstResponse.datasource">
+      <publishTime>03/05/2020 09:21:53</publishTime>
+    </File>
+    <File Include="Connected Services/CashRechargeMgrService/HSAPI.CashRechargeMgrService.BatchActiveFirstResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:53</publishTime>
+    </File>
+    <File Include="Connected Services/CashRechargeMgrService/HSAPI.CashRechargeMgrService.BatchCashRechargeResponse.datasource">
+      <publishTime>03/05/2020 09:21:53</publishTime>
+    </File>
+    <File Include="Connected Services/CashRechargeMgrService/HSAPI.CashRechargeMgrService.BatchCashRechargeResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:53</publishTime>
+    </File>
+    <File Include="Connected Services/CashRechargeMgrService/HSAPI.CashRechargeMgrService.cashRechargeResponse.datasource">
+      <publishTime>03/05/2020 09:21:53</publishTime>
+    </File>
+    <File Include="Connected Services/CashRechargeMgrService/HSAPI.CashRechargeMgrService.CashRechargeResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:53</publishTime>
+    </File>
+    <File Include="Connected Services/CashRechargeMgrService/HSAPI.CashRechargeMgrService.PaymentEnquiryResponse.datasource">
+      <publishTime>03/05/2020 09:21:53</publishTime>
+    </File>
+    <File Include="Connected Services/CashRechargeMgrService/HSAPI.CashRechargeMgrService.PaymentEnquiryResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:53</publishTime>
+    </File>
+    <File Include="Connected Services/CashRechargeMgrService/HSAPI.CashRechargeMgrService.PaymentResponse.datasource">
+      <publishTime>03/05/2020 09:21:53</publishTime>
+    </File>
+    <File Include="Connected Services/CashRechargeMgrService/HSAPI.CashRechargeMgrService.PaymentResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:53</publishTime>
+    </File>
+    <File Include="Connected Services/CashRechargeMgrService/HSAPI.CashRechargeMgrService.ReversePaymentResponse.datasource">
+      <publishTime>03/05/2020 09:21:53</publishTime>
+    </File>
+    <File Include="Connected Services/CashRechargeMgrService/HSAPI.CashRechargeMgrService.ReversePaymentResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:53</publishTime>
+    </File>
+    <File Include="Connected Services/ChangePrimaryOfferMgrService/HSAPI.ChangePrimaryOfferMgrService.BatchChangePrimaryOfferResponse.datasource">
+      <publishTime>05/16/2020 09:53:18</publishTime>
+    </File>
+    <File Include="Connected Services/ChangePrimaryOfferMgrService/HSAPI.ChangePrimaryOfferMgrService.BatchChangePrimaryOfferResultMsg.datasource">
+      <publishTime>05/16/2020 09:53:18</publishTime>
+    </File>
+    <File Include="Connected Services/ChangePrimaryOfferMgrService/HSAPI.ChangePrimaryOfferMgrService.ChangePrimaryOfferResponse.datasource">
+      <publishTime>05/16/2020 09:53:18</publishTime>
+    </File>
+    <File Include="Connected Services/ChangePrimaryOfferMgrService/HSAPI.ChangePrimaryOfferMgrService.ChangePrimaryOfferResultMsg.datasource">
+      <publishTime>05/16/2020 09:53:18</publishTime>
+    </File>
+    <File Include="Connected Services/DelSubscriberMgrService/HSAPI.DelSubscriberMgrService.batchDelSubscriberResponse.datasource">
+      <publishTime>03/05/2020 09:21:50</publishTime>
+    </File>
+    <File Include="Connected Services/DelSubscriberMgrService/HSAPI.DelSubscriberMgrService.BatchDelSubscriberResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:50</publishTime>
+    </File>
+    <File Include="Connected Services/DelSubscriberMgrService/HSAPI.DelSubscriberMgrService.delSubscriberResponse.datasource">
+      <publishTime>03/05/2020 09:21:50</publishTime>
+    </File>
+    <File Include="Connected Services/DelSubscriberMgrService/HSAPI.DelSubscriberMgrService.DelSubscriberResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:50</publishTime>
+    </File>
+    <File Include="Connected Services/NewSubscriberMgrService/HSAPI.NewSubscriberMgrService.batchNewSubscriberResponse.datasource">
+      <publishTime>04/09/2020 09:43:57</publishTime>
+    </File>
+    <File Include="Connected Services/NewSubscriberMgrService/HSAPI.NewSubscriberMgrService.BatchNewSubscriberResultMsg.datasource">
+      <publishTime>04/09/2020 09:43:57</publishTime>
+    </File>
+    <File Include="Connected Services/NewSubscriberMgrService/HSAPI.NewSubscriberMgrService.newSubscriberResponse.datasource">
+      <publishTime>04/09/2020 09:43:57</publishTime>
+    </File>
+    <File Include="Connected Services/NewSubscriberMgrService/HSAPI.NewSubscriberMgrService.NewSubscriberResultMsg.datasource">
+      <publishTime>04/09/2020 09:43:57</publishTime>
+    </File>
+    <File Include="Connected Services/PasswordMgrService/HSAPI.PasswordMgrService.ChangePasswordResponse.datasource">
+      <publishTime>03/05/2020 09:21:56</publishTime>
+    </File>
+    <File Include="Connected Services/PasswordMgrService/HSAPI.PasswordMgrService.ChangePasswordResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:56</publishTime>
+    </File>
+    <File Include="Connected Services/PasswordMgrService/HSAPI.PasswordMgrService.CheckOperatorPasswordResponse.datasource">
+      <publishTime>03/05/2020 09:21:56</publishTime>
+    </File>
+    <File Include="Connected Services/PasswordMgrService/HSAPI.PasswordMgrService.CheckOperatorPasswordResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:55</publishTime>
+    </File>
+    <File Include="Connected Services/PasswordMgrService/HSAPI.PasswordMgrService.CheckPasswordResponse.datasource">
+      <publishTime>03/05/2020 09:21:55</publishTime>
+    </File>
+    <File Include="Connected Services/PasswordMgrService/HSAPI.PasswordMgrService.CheckPasswordResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:56</publishTime>
+    </File>
+    <File Include="Connected Services/PasswordMgrService/HSAPI.PasswordMgrService.ResetPasswordResponse.datasource">
+      <publishTime>03/05/2020 09:21:56</publishTime>
+    </File>
+    <File Include="Connected Services/PasswordMgrService/HSAPI.PasswordMgrService.ResetPasswordResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:56</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.CumulateEnquiryResponse.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.CumulateEnquiryResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:59</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.offerQueryResponse.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.OfferQueryResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:59</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.queryAccumulatorResponse.datasource">
+      <publishTime>03/05/2020 09:21:59</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.QueryAccumulatorResultMsg.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.queryBalanceResponse.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.QueryBalanceResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:59</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.queryBalanceTransferInfoResponse.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.QueryBalanceTransferInfoResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:59</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.queryBillCycleInfoResponse.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.QueryBillCycleInfoResultMsg.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.queryBillCycleTypeDetailResponse.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.QueryBillCycleTypeDetailResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:59</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.queryCustomerResponse.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.QueryCustomerResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:59</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.queryDefaultBillCycleResponse.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.QueryDefaultBillCycleResultMsg.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.queryDenominationResponse.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.QueryDenominationResultMsg.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.queryFeeItemResponse.datasource">
+      <publishTime>03/05/2020 09:21:59</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.QueryFeeItemResultMsg.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.queryFraudTimesResponse.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.QueryFraudTimesResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:59</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.queryLastCallCostResponse.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.QueryLastCallCostResultMsg.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.queryLastTranInfoResponse.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.QueryLastTranInfoResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:59</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.queryOfferingCycleTimeResponse.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.QueryOfferingCycleTimeResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:59</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.queryOnlineBusinessResponse.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.QueryOnlineBusinessResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:59</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.queryProductOrderResponse.datasource">
+      <publishTime>03/05/2020 09:21:59</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.QueryProductOrderResultMsg.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.querySubscriberBasicInfoResponse.datasource">
+      <publishTime>03/05/2020 09:21:59</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.QuerySubscriberBasicInfoResultMsg.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.querySubServiceQuatoResponse.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.QuerySubServiceQuatoResultMsg.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.queryTrnCountResponse.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.QueryTrnCountResultMsg.datasource">
+      <publishTime>03/05/2020 09:22:00</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.subRchLogQueryResponse.datasource">
+      <publishTime>03/05/2020 09:21:59</publishTime>
+    </File>
+    <File Include="Connected Services/QueryMgrService/HSAPI.QueryMgrService.SubRchLogQueryResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:59</publishTime>
+    </File>
+    <File Include="Connected Services/StatemgrtMgrService/HSAPI.StatemgrtMgrService.balanceToValidityResponse.datasource">
+      <publishTime>03/05/2020 09:21:52</publishTime>
+    </File>
+    <File Include="Connected Services/StatemgrtMgrService/HSAPI.StatemgrtMgrService.BalanceToValidityResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:52</publishTime>
+    </File>
+    <File Include="Connected Services/StatemgrtMgrService/HSAPI.StatemgrtMgrService.batchModifySubValidityResponse.datasource">
+      <publishTime>03/05/2020 09:21:52</publishTime>
+    </File>
+    <File Include="Connected Services/StatemgrtMgrService/HSAPI.StatemgrtMgrService.BatchModifySubValidityResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:52</publishTime>
+    </File>
+    <File Include="Connected Services/StatemgrtMgrService/HSAPI.StatemgrtMgrService.batchModLastActDateResponse.datasource">
+      <publishTime>03/05/2020 09:21:52</publishTime>
+    </File>
+    <File Include="Connected Services/StatemgrtMgrService/HSAPI.StatemgrtMgrService.BatchModLastActDateResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:52</publishTime>
+    </File>
+    <File Include="Connected Services/StatemgrtMgrService/HSAPI.StatemgrtMgrService.changingSubscriberStatusResponse.datasource">
+      <publishTime>03/05/2020 09:21:52</publishTime>
+    </File>
+    <File Include="Connected Services/StatemgrtMgrService/HSAPI.StatemgrtMgrService.ChangingSubscriberStatusResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:52</publishTime>
+    </File>
+    <File Include="Connected Services/StatemgrtMgrService/HSAPI.StatemgrtMgrService.claimMissingResponse.datasource">
+      <publishTime>03/05/2020 09:21:52</publishTime>
+    </File>
+    <File Include="Connected Services/StatemgrtMgrService/HSAPI.StatemgrtMgrService.ClaimMissingResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:52</publishTime>
+    </File>
+    <File Include="Connected Services/StatemgrtMgrService/HSAPI.StatemgrtMgrService.disclaimMissingResponse.datasource">
+      <publishTime>03/05/2020 09:21:52</publishTime>
+    </File>
+    <File Include="Connected Services/StatemgrtMgrService/HSAPI.StatemgrtMgrService.DisclaimMissingResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:52</publishTime>
+    </File>
+    <File Include="Connected Services/StatemgrtMgrService/HSAPI.StatemgrtMgrService.manageETUFraudStateResponse.datasource">
+      <publishTime>03/05/2020 09:21:52</publishTime>
+    </File>
+    <File Include="Connected Services/StatemgrtMgrService/HSAPI.StatemgrtMgrService.ManageETUFraudStateResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:52</publishTime>
+    </File>
+    <File Include="Connected Services/StatemgrtMgrService/HSAPI.StatemgrtMgrService.modifyLastActiveDateResponse.datasource">
+      <publishTime>03/05/2020 09:21:52</publishTime>
+    </File>
+    <File Include="Connected Services/StatemgrtMgrService/HSAPI.StatemgrtMgrService.ModifyLastActiveDateResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:52</publishTime>
+    </File>
+    <File Include="Connected Services/StatemgrtMgrService/HSAPI.StatemgrtMgrService.modifySubscriberValidityResponse.datasource">
+      <publishTime>03/05/2020 09:21:52</publishTime>
+    </File>
+    <File Include="Connected Services/StatemgrtMgrService/HSAPI.StatemgrtMgrService.ModifySubscriberValidityResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:52</publishTime>
+    </File>
+    <File Include="Connected Services/StatemgrtMgrService/HSAPI.StatemgrtMgrService.queryAdjustValidityLogResponse.datasource">
+      <publishTime>03/05/2020 09:21:52</publishTime>
+    </File>
+    <File Include="Connected Services/StatemgrtMgrService/HSAPI.StatemgrtMgrService.QueryAdjustValidityLogResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:52</publishTime>
+    </File>
+    <File Include="Connected Services/StatemgrtMgrService/HSAPI.StatemgrtMgrService.querySereveStatusResponse.datasource">
+      <publishTime>03/05/2020 09:21:52</publishTime>
+    </File>
+    <File Include="Connected Services/StatemgrtMgrService/HSAPI.StatemgrtMgrService.QuerySereveStatusResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:52</publishTime>
+    </File>
+    <File Include="Connected Services/StatemgrtMgrService/HSAPI.StatemgrtMgrService.querySubChangeLogResponse.datasource">
+      <publishTime>03/05/2020 09:21:52</publishTime>
+    </File>
+    <File Include="Connected Services/StatemgrtMgrService/HSAPI.StatemgrtMgrService.QuerySubChangeLogResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:52</publishTime>
+    </File>
+    <File Include="Connected Services/StatemgrtMgrService/HSAPI.StatemgrtMgrService.reconnectResponse.datasource">
+      <publishTime>03/05/2020 09:21:52</publishTime>
+    </File>
+    <File Include="Connected Services/StatemgrtMgrService/HSAPI.StatemgrtMgrService.ReconnectResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:52</publishTime>
+    </File>
+    <File Include="Connected Services/StatemgrtMgrService/HSAPI.StatemgrtMgrService.suspendResponse.datasource">
+      <publishTime>03/05/2020 09:21:52</publishTime>
+    </File>
+    <File Include="Connected Services/StatemgrtMgrService/HSAPI.StatemgrtMgrService.SuspendResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:52</publishTime>
+    </File>
+    <File Include="Connected Services/SubmgrtMgrService/HSAPI.SubmgrtMgrService.BatchMendCustomerResponse.datasource">
+      <publishTime>03/05/2020 09:21:57</publishTime>
+    </File>
+    <File Include="Connected Services/SubmgrtMgrService/HSAPI.SubmgrtMgrService.BatchMendCustomerResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:57</publishTime>
+    </File>
+    <File Include="Connected Services/SubmgrtMgrService/HSAPI.SubmgrtMgrService.BatchModifyAcctInfoResponse.datasource">
+      <publishTime>03/05/2020 09:21:57</publishTime>
+    </File>
+    <File Include="Connected Services/SubmgrtMgrService/HSAPI.SubmgrtMgrService.BatchModifyAcctInfoResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:57</publishTime>
+    </File>
+    <File Include="Connected Services/SubmgrtMgrService/HSAPI.SubmgrtMgrService.BatchModifyInitBalanceResponse.datasource">
+      <publishTime>03/05/2020 09:21:57</publishTime>
+    </File>
+    <File Include="Connected Services/SubmgrtMgrService/HSAPI.SubmgrtMgrService.BatchModifyInitBalanceResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:57</publishTime>
+    </File>
+    <File Include="Connected Services/SubmgrtMgrService/HSAPI.SubmgrtMgrService.BatchModSubStateResponse.datasource">
+      <publishTime>03/05/2020 09:21:57</publishTime>
+    </File>
+    <File Include="Connected Services/SubmgrtMgrService/HSAPI.SubmgrtMgrService.BatchModSubStateResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:57</publishTime>
+    </File>
+    <File Include="Connected Services/SubmgrtMgrService/HSAPI.SubmgrtMgrService.ChangeAccountBasicInforResponse.datasource">
+      <publishTime>03/05/2020 09:21:57</publishTime>
+    </File>
+    <File Include="Connected Services/SubmgrtMgrService/HSAPI.SubmgrtMgrService.ChangeAccountBasicInforResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:57</publishTime>
+    </File>
+    <File Include="Connected Services/SubmgrtMgrService/HSAPI.SubmgrtMgrService.ChangeAcctBillCycleResponse.datasource">
+      <publishTime>03/05/2020 09:21:57</publishTime>
+    </File>
+    <File Include="Connected Services/SubmgrtMgrService/HSAPI.SubmgrtMgrService.ChangeAcctBillCycleResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:57</publishTime>
+    </File>
+    <File Include="Connected Services/SubmgrtMgrService/HSAPI.SubmgrtMgrService.ChangeCreditLevelResponse.datasource">
+      <publishTime>03/05/2020 09:21:57</publishTime>
+    </File>
+    <File Include="Connected Services/SubmgrtMgrService/HSAPI.SubmgrtMgrService.ChangeCreditLevelResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:57</publishTime>
+    </File>
+    <File Include="Connected Services/SubmgrtMgrService/HSAPI.SubmgrtMgrService.ChangeCustBasicInforResponse.datasource">
+      <publishTime>03/05/2020 09:21:57</publishTime>
+    </File>
+    <File Include="Connected Services/SubmgrtMgrService/HSAPI.SubmgrtMgrService.ChangeCustBasicInforResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:57</publishTime>
+    </File>
+    <File Include="Connected Services/SubmgrtMgrService/HSAPI.SubmgrtMgrService.ChangeMSISDNResponse.datasource">
+      <publishTime>03/05/2020 09:21:57</publishTime>
+    </File>
+    <File Include="Connected Services/SubmgrtMgrService/HSAPI.SubmgrtMgrService.ChangeMSISDNResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:57</publishTime>
+    </File>
+    <File Include="Connected Services/SubmgrtMgrService/HSAPI.SubmgrtMgrService.ChangeSIMResponse.datasource">
+      <publishTime>03/05/2020 09:21:57</publishTime>
+    </File>
+    <File Include="Connected Services/SubmgrtMgrService/HSAPI.SubmgrtMgrService.ChangeSIMResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:57</publishTime>
+    </File>
+    <File Include="Connected Services/SubmgrtMgrService/HSAPI.SubmgrtMgrService.ChangeSubscriberBasicInforResponse.datasource">
+      <publishTime>03/05/2020 09:21:57</publishTime>
+    </File>
+    <File Include="Connected Services/SubmgrtMgrService/HSAPI.SubmgrtMgrService.ChangeSubscriberBasicInforResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:57</publishTime>
+    </File>
+    <File Include="Connected Services/SubmgrtMgrService/HSAPI.SubmgrtMgrService.ManagePaymentRelationResponse.datasource">
+      <publishTime>03/05/2020 09:21:57</publishTime>
+    </File>
+    <File Include="Connected Services/SubmgrtMgrService/HSAPI.SubmgrtMgrService.ManagePaymentRelationResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:57</publishTime>
+    </File>
+    <File Include="Connected Services/SubmgrtMgrService/HSAPI.SubmgrtMgrService.MultiSIMResponse.datasource">
+      <publishTime>03/05/2020 09:21:57</publishTime>
+    </File>
+    <File Include="Connected Services/SubmgrtMgrService/HSAPI.SubmgrtMgrService.MultiSIMResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:57</publishTime>
+    </File>
+    <File Include="Connected Services/SubmgrtMgrService/HSAPI.SubmgrtMgrService.SuppressAccountBillResponse.datasource">
+      <publishTime>03/05/2020 09:21:57</publishTime>
+    </File>
+    <File Include="Connected Services/SubmgrtMgrService/HSAPI.SubmgrtMgrService.SuppressAccountBillResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:57</publishTime>
+    </File>
+    <File Include="Connected Services/SubmgrtMgrService/HSAPI.SubmgrtMgrService.UpdateMNPDBResponse.datasource">
+      <publishTime>03/05/2020 09:21:57</publishTime>
+    </File>
+    <File Include="Connected Services/SubmgrtMgrService/HSAPI.SubmgrtMgrService.UpdateMNPDBResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:57</publishTime>
+    </File>
+    <File Include="Connected Services/TransferAccountMgrService/HSAPI.TransferAccountMgrService.BalanceTrsRequestResponse.datasource">
+      <publishTime>03/05/2020 09:21:55</publishTime>
+    </File>
+    <File Include="Connected Services/TransferAccountMgrService/HSAPI.TransferAccountMgrService.BalanceTrsRequestResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:55</publishTime>
+    </File>
+    <File Include="Connected Services/TransferAccountMgrService/HSAPI.TransferAccountMgrService.CancelTransferResponse.datasource">
+      <publishTime>03/05/2020 09:21:55</publishTime>
+    </File>
+    <File Include="Connected Services/TransferAccountMgrService/HSAPI.TransferAccountMgrService.CancelTransferResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:55</publishTime>
+    </File>
+    <File Include="Connected Services/TransferAccountMgrService/HSAPI.TransferAccountMgrService.PeriodRechResponse.datasource">
+      <publishTime>03/05/2020 09:21:55</publishTime>
+    </File>
+    <File Include="Connected Services/TransferAccountMgrService/HSAPI.TransferAccountMgrService.PeriodRechResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:55</publishTime>
+    </File>
+    <File Include="Connected Services/TransferAccountMgrService/HSAPI.TransferAccountMgrService.QueryBalanceToValidityLogResponse.datasource">
+      <publishTime>03/05/2020 09:21:55</publishTime>
+    </File>
+    <File Include="Connected Services/TransferAccountMgrService/HSAPI.TransferAccountMgrService.QueryBalanceToValidityLogResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:55</publishTime>
+    </File>
+    <File Include="Connected Services/TransferAccountMgrService/HSAPI.TransferAccountMgrService.QueryTransferLogResponse.datasource">
+      <publishTime>03/05/2020 09:21:55</publishTime>
+    </File>
+    <File Include="Connected Services/TransferAccountMgrService/HSAPI.TransferAccountMgrService.QueryTransferLogResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:55</publishTime>
+    </File>
+    <File Include="Connected Services/TransferAccountMgrService/HSAPI.TransferAccountMgrService.TransferAccountResponse.datasource">
+      <publishTime>03/05/2020 09:21:55</publishTime>
+    </File>
+    <File Include="Connected Services/TransferAccountMgrService/HSAPI.TransferAccountMgrService.TransferAccountResultMsg.datasource">
+      <publishTime>03/05/2020 09:21:55</publishTime>
+    </File>
+    <File Include="Content/bootstrap-grid.css">
+      <publishTime>03/05/2020 09:22:19</publishTime>
+    </File>
+    <File Include="Content/bootstrap-grid.css.map">
+      <publishTime>03/05/2020 09:22:19</publishTime>
+    </File>
+    <File Include="Content/bootstrap-grid.min.css">
+      <publishTime>03/05/2020 09:22:19</publishTime>
+    </File>
+    <File Include="Content/bootstrap-grid.min.css.map">
+      <publishTime>03/05/2020 09:22:19</publishTime>
+    </File>
+    <File Include="Content/bootstrap-reboot.css">
+      <publishTime>03/05/2020 09:22:19</publishTime>
+    </File>
+    <File Include="Content/bootstrap-reboot.css.map">
+      <publishTime>03/05/2020 09:22:19</publishTime>
+    </File>
+    <File Include="Content/bootstrap-reboot.min.css">
+      <publishTime>03/05/2020 09:22:19</publishTime>
+    </File>
+    <File Include="Content/bootstrap-reboot.min.css.map">
+      <publishTime>03/05/2020 09:22:19</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>03/05/2020 09:22:19</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css.map">
+      <publishTime>03/05/2020 09:22:19</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>03/05/2020 09:22:19</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css.map">
+      <publishTime>03/05/2020 09:22:19</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>03/05/2020 09:22:19</publishTime>
+    </File>
+    <File Include="Controllers/InvestorController.cs">
+      <publishTime>03/22/2020 15:27:57</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>03/05/2020 09:21:49</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>03/05/2020 09:21:45</publishTime>
+    </File>
+    <File Include="Repositories/MembersRespository.cs">
+      <publishTime>03/22/2020 15:32:31</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.bundle.js">
+      <publishTime>03/05/2020 09:21:44</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.bundle.js.map">
+      <publishTime>03/05/2020 09:21:44</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.bundle.min.js">
+      <publishTime>03/05/2020 09:21:44</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.bundle.min.js.map">
+      <publishTime>03/05/2020 09:21:43</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>03/05/2020 09:21:45</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js.map">
+      <publishTime>03/05/2020 09:21:43</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>03/05/2020 09:21:43</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js.map">
+      <publishTime>03/05/2020 09:21:44</publishTime>
+    </File>
+    <File Include="Scripts/esm/popper-utils.js">
+      <publishTime>03/05/2020 09:21:44</publishTime>
+    </File>
+    <File Include="Scripts/esm/popper-utils.js.map">
+      <publishTime>03/05/2020 09:21:44</publishTime>
+    </File>
+    <File Include="Scripts/esm/popper-utils.min.js">
+      <publishTime>03/05/2020 09:21:44</publishTime>
+    </File>
+    <File Include="Scripts/esm/popper-utils.min.js.map">
+      <publishTime>03/05/2020 09:21:44</publishTime>
+    </File>
+    <File Include="Scripts/esm/popper.js">
+      <publishTime>03/05/2020 09:21:44</publishTime>
+    </File>
+    <File Include="Scripts/esm/popper.js.map">
+      <publishTime>03/05/2020 09:21:44</publishTime>
+    </File>
+    <File Include="Scripts/esm/popper.min.js">
+      <publishTime>03/05/2020 09:21:44</publishTime>
+    </File>
+    <File Include="Scripts/esm/popper.min.js.map">
+      <publishTime>03/05/2020 09:21:44</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.3.1.js">
+      <publishTime>03/05/2020 09:21:44</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.3.1.min.js">
+      <publishTime>03/05/2020 09:21:44</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.3.1.min.map">
+      <publishTime>03/05/2020 09:21:44</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.3.1.slim.js">
+      <publishTime>03/05/2020 09:21:44</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.3.1.slim.min.js">
+      <publishTime>03/05/2020 09:21:44</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.3.1.slim.min.map">
+      <publishTime>03/05/2020 09:21:43</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>03/05/2020 09:21:43</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>03/05/2020 09:21:44</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>03/05/2020 09:21:44</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>03/05/2020 09:21:45</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.8.3.js">
+      <publishTime>03/05/2020 09:21:45</publishTime>
+    </File>
+    <File Include="Scripts/popper-utils.js">
+      <publishTime>03/05/2020 09:21:43</publishTime>
+    </File>
+    <File Include="Scripts/popper-utils.js.map">
+      <publishTime>03/05/2020 09:21:44</publishTime>
+    </File>
+    <File Include="Scripts/popper-utils.min.js">
+      <publishTime>03/05/2020 09:21:44</publishTime>
+    </File>
+    <File Include="Scripts/popper-utils.min.js.map">
+      <publishTime>03/05/2020 09:21:44</publishTime>
+    </File>
+    <File Include="Scripts/popper.js">
+      <publishTime>03/05/2020 09:21:43</publishTime>
+    </File>
+    <File Include="Scripts/popper.js.map">
+      <publishTime>03/05/2020 09:21:44</publishTime>
+    </File>
+    <File Include="Scripts/popper.min.js">
+      <publishTime>03/05/2020 09:21:44</publishTime>
+    </File>
+    <File Include="Scripts/popper.min.js.map">
+      <publishTime>03/05/2020 09:21:44</publishTime>
+    </File>
+    <File Include="Scripts/README.md">
+      <publishTime>03/05/2020 09:21:44</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>03/05/2020 09:21:44</publishTime>
+    </File>
+    <File Include="Scripts/respond.matchmedia.addListener.js">
+      <publishTime>03/05/2020 09:21:43</publishTime>
+    </File>
+    <File Include="Scripts/respond.matchmedia.addListener.min.js">
+      <publishTime>03/05/2020 09:21:44</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>03/05/2020 09:21:44</publishTime>
+    </File>
+    <File Include="Scripts/umd/popper-utils.js">
+      <publishTime>03/05/2020 09:21:45</publishTime>
+    </File>
+    <File Include="Scripts/umd/popper-utils.js.map">
+      <publishTime>03/05/2020 09:21:45</publishTime>
+    </File>
+    <File Include="Scripts/umd/popper-utils.min.js">
+      <publishTime>03/05/2020 09:21:45</publishTime>
+    </File>
+    <File Include="Scripts/umd/popper-utils.min.js.map">
+      <publishTime>03/05/2020 09:21:45</publishTime>
+    </File>
+    <File Include="Scripts/umd/popper.js">
+      <publishTime>03/05/2020 09:21:45</publishTime>
+    </File>
+    <File Include="Scripts/umd/popper.js.map">
+      <publishTime>03/05/2020 09:21:45</publishTime>
+    </File>
+    <File Include="Scripts/umd/popper.min.js">
+      <publishTime>03/05/2020 09:21:45</publishTime>
+    </File>
+    <File Include="Scripts/umd/popper.min.js.map">
+      <publishTime>03/05/2020 09:21:45</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>03/05/2020 09:21:49</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>03/05/2020 09:21:49</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>03/05/2020 09:21:49</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>03/05/2020 09:21:49</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>03/05/2020 09:21:49</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/27/2020 08:36:19</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

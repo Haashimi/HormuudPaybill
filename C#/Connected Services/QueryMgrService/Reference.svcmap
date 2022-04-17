@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d7ddbc0b-f770-4863-913c-09d066100154" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.13.231.97:8080/services/QueryMgrService?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="QueryMgrService.xsd" MetadataType="Schema" ID="d0fcc7b4-1e37-4ac1-a8e9-a6c2235a03e6" SourceId="1" SourceUrl="http://10.13.231.97:8080/services/QueryMgrService?xsd=CBSInterface_CommonFor33.xsd" />
+    <MetadataFile FileName="QueryMgrService1.xsd" MetadataType="Schema" ID="89967f34-1394-46e9-8f64-6e0f532f7a83" SourceId="1" SourceUrl="http://10.13.231.97:8080/services/QueryMgrService?xsd=CBSInterface_Query.xsd" />
+    <MetadataFile FileName="QueryMgrService.wsdl" MetadataType="Wsdl" ID="49798543-1fd2-4328-821b-eef29b5a3d45" SourceId="1" SourceUrl="http://10.13.231.97:8080/services/QueryMgrService?wsdl" />
+    <MetadataFile FileName="QueryMgrService2.xsd" MetadataType="Schema" ID="24f9acca-dc78-4187-ad3b-78c016b28aa0" SourceId="1" SourceUrl="http://10.13.231.97:8080/services/QueryMgrService?xsd=CBSInterface_Subscribe.xsd" />
+    <MetadataFile FileName="QueryMgrService3.xsd" MetadataType="Schema" ID="81f73c2c-1c56-440b-a645-527657fb2ce4" SourceId="1" SourceUrl="http://10.13.231.97:8080/services/QueryMgrService?xsd=CBSInterface_AcctCredit.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

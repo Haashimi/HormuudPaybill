@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:common="http://cbs.huawei.com/ar/wsservice/common" xmlns:armsg="http://cbs.huawei.com/ar/wsservice/bmpinterface/armsg" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ar="http://cbs.huawei.com/ar/wsservice/bmpinterface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://cbs.huawei.com/ar/wsservice/bmpinterface" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://cbs.huawei.com/ar/wsservice/common">
+      <xs:include schemaLocation="ARCommon.xsd" />
+    </xs:schema>
+    <xs:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://cbs.huawei.com/ar/wsservice/bmpinterface">
+      <xs:include schemaLocation="AR4BMPInterfaceService.xsd" />
+    </xs:schema>
+    <xs:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://cbs.huawei.com/ar/wsservice/bmpinterface/armsg">
+      <xs:import schemaLocation="ARCommon.xsd" namespace="http://cbs.huawei.com/ar/wsservice/common" />
+      <xs:import schemaLocation="AR4BMPInterfaceService.xsd" namespace="http://cbs.huawei.com/ar/wsservice/bmpinterface" />
+      <xs:element name="Billing2arRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="Billing2arRequest" type="ar:Billing2arRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Billing2arResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ForfeitRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="ForfeitRequest" type="ar:ForfeitRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ForfeitResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PaymentRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="PaymentRequest" type="ar:PaymentRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PaymentResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element minOccurs="0" name="PaymentResult" type="ar:PaymentResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BatchPaymentRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="BatchPaymentRequest" type="ar:BatchPaymentRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BatchPaymentResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element minOccurs="0" name="BatchPaymentResult" type="ar:BatchPaymentResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AdjustmentRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="AdjustmentRequest" type="ar:AdjustmentRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AdjustmentResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element minOccurs="0" name="AdjustmentResult" type="ar:AdjustmentResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryBalanceRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="QueryBalanceRequest" type="ar:QueryBalanceRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryBalanceResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element minOccurs="0" name="QueryBalanceResult" type="ar:QueryBalanceResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="VoidRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="VoidRequest" type="ar:VoidRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="VoidResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element minOccurs="0" name="VoidResult" type="ar:VoidResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryInvoiceInfoRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="QueryInvoiceInfoRequest" type="ar:QueryInvoiceInfoRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryInvoiceInfoResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element minOccurs="0" name="QueryInvoiceInfoResult" type="ar:QueryInvoiceInfoResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryTranDenominationRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="QueryTranDenominationRequest" type="ar:QueryTranDenominationRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryTranDenominationResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="QueryTranDenominationResult" type="ar:QueryTranDenominationResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </types>
+  <message name="QueryBalanceRequestMessage">
+    <part name="QueryBalanceRequestMsg" element="armsg:QueryBalanceRequestMsg" />
+  </message>
+  <message name="VoidResultMessage">
+    <part name="VoidResultMsg" element="armsg:VoidResultMsg" />
+  </message>
+  <message name="QueryTranDenominationResultMessage">
+    <part name="QueryTranDenominationResultMsg" element="armsg:QueryTranDenominationResultMsg" />
+  </message>
+  <message name="QueryTranDenominationRequestMessage">
+    <part name="QueryTranDenominationRequestMsg" element="armsg:QueryTranDenominationRequestMsg" />
+  </message>
+  <message name="QueryInvoiceInfoRequestMessage">
+    <part name="QueryInvoiceInfoRequestMsg" element="armsg:QueryInvoiceInfoRequestMsg" />
+  </message>
+  <message name="ForfeitResultMessage">
+    <part name="ForfeitResultMsg" element="armsg:ForfeitResultMsg" />
+  </message>
+  <message name="Billing2arRequestMessage">
+    <part name="Billing2arRequestMsg" element="armsg:Billing2arRequestMsg" />
+  </message>
+  <message name="QueryBalanceResultMessage">
+    <part name="QueryBalanceResultMsg" element="armsg:QueryBalanceResultMsg" />
+  </message>
+  <message name="QueryInvoiceInfoResultMessage">
+    <part name="QueryInvoiceInfoResultMsg" element="armsg:QueryInvoiceInfoResultMsg" />
+  </message>
+  <message name="Billing2arResultMessage">
+    <part name="Billing2arResultMsg" element="armsg:Billing2arResultMsg" />
+  </message>
+  <message name="ForfeitRequestMessage">
+    <part name="ForfeitRequestMsg" element="armsg:ForfeitRequestMsg" />
+  </message>
+  <message name="VoidRequestMessage">
+    <part name="VoidRequestMsg" element="armsg:VoidRequestMsg" />
+  </message>
+  <message name="PaymentResultMessage">
+    <part name="PaymentResultMsg" element="armsg:PaymentResultMsg" />
+  </message>
+  <message name="BatchPaymentResultMessage">
+    <part name="BatchPaymentResultMsg" element="armsg:BatchPaymentResultMsg" />
+  </message>
+  <message name="BatchPaymentRequestMessage">
+    <part name="BatchPaymentRequestMsg" element="armsg:BatchPaymentRequestMsg" />
+  </message>
+  <message name="AdjustmentResultMessage">
+    <part name="AdjustmentResultMsg" element="armsg:AdjustmentResultMsg" />
+  </message>
+  <message name="PaymentRequestMessage">
+    <part name="PaymentRequestMsg" element="armsg:PaymentRequestMsg" />
+  </message>
+  <message name="AdjustmentRequestMessage">
+    <part name="AdjustmentRequestMsg" element="armsg:AdjustmentRequestMsg" />
+  </message>
+  <portType name="AR4BMPInterfaceMgr">
+    <operation name="billing2ar">
+      <input message="ar:Billing2arRequestMessage" />
+      <output message="ar:Billing2arResultMessage" />
+    </operation>
+    <operation name="forfeit">
+      <input message="ar:ForfeitRequestMessage" />
+      <output message="ar:ForfeitResultMessage" />
+    </operation>
+    <operation name="payment">
+      <input message="ar:PaymentRequestMessage" />
+      <output message="ar:PaymentResultMessage" />
+    </operation>
+    <operation name="batchPayment">
+      <input message="ar:BatchPaymentRequestMessage" />
+      <output message="ar:BatchPaymentResultMessage" />
+    </operation>
+    <operation name="adjustment">
+      <input message="ar:AdjustmentRequestMessage" />
+      <output message="ar:AdjustmentResultMessage" />
+    </operation>
+    <operation name="queryBalance">
+      <input message="ar:QueryBalanceRequestMessage" />
+      <output message="ar:QueryBalanceResultMessage" />
+    </operation>
+    <operation name="voidPayment">
+      <input message="ar:VoidRequestMessage" />
+      <output message="ar:VoidResultMessage" />
+    </operation>
+    <operation name="queryInvoiceInfo">
+      <input message="ar:QueryInvoiceInfoRequestMessage" />
+      <output message="ar:QueryInvoiceInfoResultMessage" />
+    </operation>
+    <operation name="queryTranDenomination">
+      <input message="ar:QueryTranDenominationRequestMessage" />
+      <output message="ar:QueryTranDenominationResultMessage" />
+    </operation>
+  </portType>
+  <binding name="AR4BMPInterfaceMgrBinding" type="ar:AR4BMPInterfaceMgr">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="billing2ar">
+      <soap:operation soapAction="billing2ar" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="forfeit">
+      <soap:operation soapAction="forfeit" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="payment">
+      <soap:operation soapAction="payment" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="batchPayment">
+      <soap:operation soapAction="batchPayment" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="adjustment">
+      <soap:operation soapAction="adjustment" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryBalance">
+      <soap:operation soapAction="queryBalance" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="voidPayment">
+      <soap:operation soapAction="voidPayment" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryInvoiceInfo">
+      <soap:operation soapAction="queryInvoiceInfo" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryTranDenomination">
+      <soap:operation soapAction="queryTranDenomination" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="AR4BMPInterfaceMgrSoap12Binding" type="ar:AR4BMPInterfaceMgr">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="billing2ar">
+      <soap12:operation soapAction="billing2ar" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="forfeit">
+      <soap12:operation soapAction="forfeit" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="payment">
+      <soap12:operation soapAction="payment" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="batchPayment">
+      <soap12:operation soapAction="batchPayment" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="adjustment">
+      <soap12:operation soapAction="adjustment" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="queryBalance">
+      <soap12:operation soapAction="queryBalance" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="voidPayment">
+      <soap12:operation soapAction="voidPayment" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="queryInvoiceInfo">
+      <soap12:operation soapAction="queryInvoiceInfo" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="queryTranDenomination">
+      <soap12:operation soapAction="queryTranDenomination" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+  </binding>
+  <service name="AR4BMPInterfaceService">
+    <port name="AR4BMPInterfaceServicePort" binding="ar:AR4BMPInterfaceMgrBinding">
+      <soap:address location="http://cbs.huawei.com/ar/bmpinterface/wsdl/AR4BMPInterfaceService.wsdl" />
+    </port>
+    <port name="AR4BMPInterfaceServiceSoap12Port" binding="ar:AR4BMPInterfaceMgrSoap12Binding">
+      <soap12:address location="http://cbs.huawei.com/ar/bmpinterface/wsdl/AR4BMPInterfaceService.wsdl" />
+    </port>
+  </service>
+</definitions>

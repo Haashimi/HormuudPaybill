@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:transferaccount="http://www.huawei.com/bme/cbsinterface/transferaccount" xmlns:common="http://www.huawei.com/bme/cbsinterface/common" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.huawei.com/bme/cbsinterface/transferaccount" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="TransferAccountMgrService?xsd=CBSInterface_Common.xsd" namespace="http://www.huawei.com/bme/cbsinterface/common" />
+  <xs:complexType name="TransferAccountRequest">
+    <xs:all>
+      <xs:element minOccurs="0" name="LogID">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="40" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="TransfereeNo" type="common:SubscriberNo" />
+      <xs:element minOccurs="0" name="TransferorNo" type="common:SubscriberNo" />
+      <xs:element minOccurs="0" name="TransferType" type="xs:int" />
+      <xs:element name="AccountType" type="common:AccountType">
+        <xs:annotation>
+          <xs:documentation>???CrossPPSPOSFlag?????????0?????????</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TransferAmt" type="common:Balance">
+        <xs:annotation>
+          <xs:documentation>????????????</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="HandleChargeFlag" type="common:HandleChargeFlag" />
+      <xs:element minOccurs="0" name="Password" type="common:Password" />
+      <xs:element minOccurs="0" name="TransferHandlingCharge" type="common:Balance" />
+      <xs:element minOccurs="0" name="TransfereeAccountCode" type="common:AccountCode">
+        <xs:annotation>
+          <xs:documentation>????????????Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TransferorAccountCode" type="common:AccountCode">
+        <xs:annotation>
+          <xs:documentation>????????????Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="CrossPPSPOSFlag" type="xs:int">
+        <xs:annotation>
+          <xs:documentation>0-????????????????????????????????????1-PPS??????POS???2-POS??????PPS</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Channel" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>???????????????????????????????????????????????????</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="TransferAccountResult">
+    <xs:all>
+      <xs:element minOccurs="0" name="TransfereeHandlingCharge" nillable="true" type="common:Balance" />
+      <xs:element minOccurs="0" name="TransferorHandlingCharge" nillable="true" type="common:Balance" />
+      <xs:element minOccurs="0" name="TransfereeAcctChgList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="AcctChgRec" type="common:AcctChgRecType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="TransferorAcctChgList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="AcctChgRec" type="common:AcctChgRecType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="TransfereeOldActiveStop" type="common:Date" />
+      <xs:element minOccurs="0" name="TransfereeNewActiveStop" type="common:Date" />
+      <xs:element minOccurs="0" name="TransferorOldActiveStop" type="common:Date" />
+      <xs:element minOccurs="0" name="TransferorNewActiveStop" type="common:Date" />
+      <xs:element minOccurs="0" name="LoanAmount" nillable="true" type="common:Balance" />
+      <xs:element minOccurs="0" name="LoanPoundage" nillable="true" type="common:Balance" />
+      <xs:element minOccurs="0" name="TransferorBalanceValidity" type="common:Date" />
+      <xs:element minOccurs="0" name="TransferorBalanceValidityPeriod" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TransfereeBalanceValidity" type="common:Date" />
+      <xs:element minOccurs="0" name="TransfereeBalanceValidityPeriod" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="BalanceActiveDate" type="common:Date" />
+      <xs:element minOccurs="0" name="UserDays" nillable="true" type="xs:int" />
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="QueryTransferLogRequest">
+    <xs:sequence>
+      <xs:element name="SubscriberNo" type="common:SubscriberNo" />
+      <xs:element minOccurs="0" name="LogID">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="40" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="StartTime" type="common:DateTime" />
+      <xs:element minOccurs="0" name="EndTime" type="common:DateTime" />
+      <xs:element minOccurs="0" name="QueryType" type="xs:int" />
+      <xs:element minOccurs="0" name="AccountCode" type="common:AccountCode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryTransferLogResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TransferLog">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="LogID">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="40" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" name="InternalSerialNo">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="23" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" name="ErrorCode" type="xs:integer" />
+            <xs:element minOccurs="0" name="PeerPartyNo" type="common:SubscriberNo">
+              <xs:annotation>
+                <xs:documentation>????????????</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="TradeTime" type="common:DateTime" />
+            <xs:element minOccurs="0" name="OperatorID">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="24" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" name="HandlingCharge" nillable="true" type="common:Balance" />
+            <xs:element name="OldActiveStop" type="common:Date" />
+            <xs:element name="NewActiveStop" type="common:Date" />
+            <xs:element name="OldSuspendStop" type="common:Date" />
+            <xs:element name="NewSuspendStop" type="common:Date" />
+            <xs:element name="OldDisableStop" type="common:Date" />
+            <xs:element name="NewDisableStop" type="common:Date" />
+            <xs:element minOccurs="0" name="OperationDes">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="63" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element maxOccurs="unbounded" name="TransferAcctItem">
+              <xs:complexType>
+                <xs:all>
+                  <xs:element name="AccountType" nillable="true" type="common:AccountType" />
+                  <xs:element name="TransferAmt" nillable="true" type="common:Balance" />
+                  <xs:element name="CurrBalance" nillable="true" type="common:Balance" />
+                  <xs:element minOccurs="0" name="AccountTypeDescription">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="64" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="MinMeasureId" nillable="true" type="xs:int" />
+                </xs:all>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="LoanAmount" nillable="true" type="common:Balance" />
+            <xs:element minOccurs="0" name="LoanPoundage" nillable="true" type="common:Balance" />
+            <xs:element minOccurs="0" name="AccountCode" type="common:AccountCode" />
+            <xs:element minOccurs="0" name="SubscriberNo" type="common:SubscriberNo">
+              <xs:annotation>
+                <xs:documentation>?????????????????????</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="OldMainBalance" type="common:Balance">
+              <xs:annotation>
+                <xs:documentation>??????????????????????????????</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="Channel" type="xs:int">
+              <xs:annotation>
+                <xs:documentation>???????????????????????????????????????????????????????????????CBS???????????????????????????</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="AddedValidDays" type="xs:int">
+              <xs:annotation>
+                <xs:documentation>?????????????????????????????????????????????????????????????????????0</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="TransferRuleID" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>????????????ID?????????????????????CBS?????????productID???????????????-1???????????????????????????</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="ResultFileName">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="256" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CancelTransferRequest">
+    <xs:all>
+      <xs:element name="SubscriberNo" type="common:SubscriberNo" />
+      <xs:element name="TransactionID">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="23" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="CancelTransferResult">
+    <xs:all>
+      <xs:element minOccurs="0" name="TransfereeAcctChgList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="AcctChgRec" type="common:AcctChgRecType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="TransferorAcctChgList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="AcctChgRec" type="common:AcctChgRecType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="TransfereeOldActiveStop" type="common:Date">
+        <xs:annotation>
+          <xs:documentation>Reserved</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TransfereeNewActiveStop" type="common:Date">
+        <xs:annotation>
+          <xs:documentation>Reserved</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TransferorOldActiveStop" type="common:Date">
+        <xs:annotation>
+          <xs:documentation>Reserved</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TransferorNewActiveStop" type="common:Date">
+        <xs:annotation>
+          <xs:documentation>Reserved</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="QueryBalanceToValidityLogRequest">
+    <xs:sequence>
+      <xs:element name="SubscriberNo" type="common:SubscriberNo" />
+      <xs:element minOccurs="0" name="StartTime" type="common:DateTime" />
+      <xs:element minOccurs="0" name="EndTime" type="common:DateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryBalanceToValidityLogResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BalanceToValidityLog">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="NewActiveStop" type="common:Date" />
+            <xs:element minOccurs="0" name="NewSuspendStop" type="common:Date" />
+            <xs:element minOccurs="0" name="NewDisableStop" type="common:Date" />
+            <xs:element maxOccurs="unbounded" name="AcctChgRec" type="common:AcctChgRecType" />
+            <xs:element name="TradeTime" type="common:DateTime" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BalanceTrsRequestRequest">
+    <xs:sequence>
+      <xs:element name="RequestNo" type="common:SubscriberNo" />
+      <xs:element name="ReceiveNo" type="common:SubscriberNo" />
+      <xs:element minOccurs="0" name="Remark" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BalanceTrsRequestResult" />
+  <xs:complexType name="PeriodRechRequest">
+    <xs:sequence>
+      <xs:element name="MainSubscriber" type="common:SubscriberNo" />
+      <xs:element name="SubSubscriber" type="common:SubscriberNo" />
+      <xs:element name="RechType" type="xs:string" />
+      <xs:element name="RechDay" type="xs:int" />
+      <xs:element name="OperateType" type="xs:string" />
+      <xs:element name="RechAmount" type="common:Balance" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PeriodRechResult" />
+</xs:schema>

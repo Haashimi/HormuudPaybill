@@ -1,0 +1,923 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:newsubscriber="http://www.huawei.com/bme/cbsinterface/newsubscriber" xmlns:common="http://www.huawei.com/bme/cbsinterface/common" xmlns:acctcredit="http://www.huawei.com/bme/cbsinterface/acctcredit" xmlns:subscribe="http://www.huawei.com/bme/cbsinterface/subscribe" xmlns:query="http://www.huawei.com/bme/cbsinterface/query" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.huawei.com/bme/cbsinterface/query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="QueryMgrService?xsd=CBSInterface_NewSubscriber.xsd" namespace="http://www.huawei.com/bme/cbsinterface/newsubscriber" />
+  <xs:import schemaLocation="QueryMgrService?xsd=CBSInterface_Subscribe.xsd" namespace="http://www.huawei.com/bme/cbsinterface/subscribe" />
+  <xs:import schemaLocation="QueryMgrService?xsd=CBSInterface_Common.xsd" namespace="http://www.huawei.com/bme/cbsinterface/common" />
+  <xs:import schemaLocation="QueryMgrService?xsd=CBSInterface_AcctCredit.xsd" namespace="http://www.huawei.com/bme/cbsinterface/acctcredit" />
+  <xs:complexType name="Accumulator">
+    <xs:sequence>
+      <xs:element name="CumulateID" type="xs:int" />
+      <xs:element name="CumulateBeginTime" type="common:DateTime" />
+      <xs:element name="CumulateEndTime" type="common:DateTime" />
+      <xs:element name="CumulativeAmt" type="common:Balance" />
+      <xs:element minOccurs="0" name="MinMeasureId" type="xs:int" />
+      <xs:element minOccurs="0" name="AccumulatorType" type="xs:int" />
+      <xs:element minOccurs="0" name="NextAllowanceAmt" type="common:Balance" />
+      <xs:element minOccurs="0" name="AccumulatorName" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BillingCycleDate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BillCycleOpenDate" type="common:DateTime" />
+      <xs:element minOccurs="0" name="BillCycleEndDate" type="common:DateTime" />
+      <xs:element minOccurs="0" name="BillCycleType" type="common:BillCycleType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UserGroup">
+    <xs:sequence>
+      <xs:element name="GroupID" type="xs:int" />
+      <xs:element name="GroupName">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="63" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ProductOrderInfo">
+    <xs:sequence>
+      <xs:element name="Id" type="common:ProductId" />
+      <xs:element name="ProductOrderKey" type="common:ProductOrderKey" />
+      <xs:element name="OfferId" type="common:OfferId" />
+      <xs:element name="OfferOrderKey" type="common:OfferOrderKey" />
+      <xs:element name="EffectiveTime" type="common:DateTime" />
+      <xs:element name="ExpireTime" type="common:DateTime" />
+      <xs:element name="Status">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="7" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SimpleProperty" type="common:SimpleProperty" />
+      <xs:element minOccurs="0" name="CurCycleStartTime" type="common:DateTime">
+        <xs:annotation>
+          <xs:documentation>?????????????????????????????????????????????????????????????????????????????????</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="CurCycleEndTime" type="common:DateTime">
+        <xs:annotation>
+          <xs:documentation>?????????????????????????????????????????????????????????????????????????????????</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="BillStatus" type="xs:int">
+        <xs:annotation>
+          <xs:documentation>???????????????????????????????????????????????????????????????????????????????????????</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SubscriberInfo">
+    <xs:sequence>
+      <xs:element name="PrimaryOfferId" type="common:OfferId" />
+      <xs:element name="PrimaryOfferOrderKey" type="common:OfferOrderKey" />
+      <xs:element name="MainProductId" type="common:ProductId" />
+      <xs:element name="NetworkType" type="xs:int" />
+      <xs:element name="BrandID" type="xs:int" />
+      <xs:element name="PaidMode" type="common:PaidMode" />
+      <xs:element minOccurs="0" name="IMSI" type="common:IMSI" />
+      <xs:element minOccurs="0" name="ComponentId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SubscriberCode" type="common:SubscriberCode" />
+      <xs:element name="AccountCode" type="common:AccountCode">
+        <xs:annotation>
+          <xs:documentation>???????????????????????????Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SimpleProperty" type="common:SimpleProperty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BalanceType">
+    <xs:sequence>
+      <xs:element name="BalanceId" type="xs:long" />
+      <xs:element name="AccountType" type="common:AccountType" />
+      <xs:element minOccurs="0" name="MinMeasureId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="AccountTypeDescription">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="64" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Amount" type="common:Balance" />
+      <xs:element name="AccountCredit" type="common:Balance" />
+      <xs:element minOccurs="0" name="ApplyTime" type="common:DateTime" />
+      <xs:element minOccurs="0" name="ExpireTime" type="common:DateTime" />
+      <xs:element minOccurs="0" name="RelatedType" type="xs:int" />
+      <xs:element minOccurs="0" name="RelatedObjectID" type="xs:long" />
+      <xs:element minOccurs="0" name="InitialAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="OfferOrderCode">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="23" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="ReserveAmount" type="common:Balance" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryCustomerRequest">
+    <xs:sequence>
+      <xs:choice>
+        <xs:element name="SubscriberNo" type="common:SubscriberNo" />
+        <xs:element name="AccountCode" type="common:AccountCode" />
+        <xs:element name="CustomerCode" type="common:CustomerCode" />
+        <xs:element name="SubId" type="common:SubscriberCode" />
+      </xs:choice>
+      <xs:element minOccurs="0" name="QueryType" type="xs:int" />
+      <xs:element minOccurs="0" name="CustomerMask">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="20" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="AccountMask">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="20" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="SubscriberMask">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="20" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="OfferIdStartRange1" type="common:OfferId" />
+      <xs:element minOccurs="0" name="OfferIdEndRange1" type="common:OfferId" />
+      <xs:element minOccurs="0" name="OfferIdStartRange2" type="common:OfferId" />
+      <xs:element minOccurs="0" name="OfferIdEndRange2" type="common:OfferId" />
+      <xs:element minOccurs="0" name="OfferIdStartRange3" type="common:OfferId" />
+      <xs:element minOccurs="0" name="OfferIdEndRange3" type="common:OfferId" />
+      <xs:element minOccurs="0" name="OfferIdStartRange4" type="common:OfferId" />
+      <xs:element minOccurs="0" name="OfferIdEndRange4" type="common:OfferId" />
+      <xs:element minOccurs="0" name="OfferIdStartRange5" type="common:OfferId" />
+      <xs:element minOccurs="0" name="OfferIdEndRange5" type="common:OfferId" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryCustomerResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Customer">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="CustomerInfo" type="common:Customer" />
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="Offer">
+              <xs:complexType>
+                <xs:complexContent mixed="false">
+                  <xs:extension base="subscribe:OfferOrderInfo">
+                    <xs:sequence>
+                      <xs:element name="LevelCode" type="common:OfferLevel" />
+                      <xs:element name="OfferType" type="common:OfferType" />
+                      <xs:element minOccurs="0" maxOccurs="unbounded" name="BundleSubscriber">
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:element name="SubscriberNo" type="common:SubscriberNo" />
+                          </xs:sequence>
+                        </xs:complexType>
+                      </xs:element>
+                      <xs:element minOccurs="0" name="PrimaryOfferOrderKey" type="common:OfferOrderKey">
+                        <xs:annotation>
+                          <xs:documentation>???????????????????????????????????????????????????????????????????????????ID</xs:documentation>
+                        </xs:annotation>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:extension>
+                </xs:complexContent>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="AccumulatorList">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" name="Accumulator" type="query:Accumulator" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Account">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="AccountKey" type="xs:long" />
+            <xs:element minOccurs="0" name="AccountInfo">
+              <xs:complexType>
+                <xs:complexContent mixed="false">
+                  <xs:extension base="common:Account">
+                    <xs:sequence>
+                      <xs:element minOccurs="0" name="IsCustShareAcct" type="xs:boolean" />
+                      <xs:element minOccurs="0" name="CashOnlyFlag" type="xs:boolean" />
+                    </xs:sequence>
+                  </xs:extension>
+                </xs:complexContent>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="BillingCycleDate" type="query:BillingCycleDate" />
+            <xs:element minOccurs="0" name="BalanceRecordList">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" maxOccurs="unbounded" name="Balance" type="query:BalanceType" />
+                  <xs:element minOccurs="0" name="BalanceValidity" type="common:Date" />
+                  <xs:element minOccurs="0" name="AvailableCredit" type="common:Balance" />
+                  <xs:element minOccurs="0" name="BalanceActiveDate" type="common:Date" />
+                  <xs:element minOccurs="0" name="AvailableQuota" type="common:Balance">
+                    <xs:annotation>
+                      <xs:documentation>??????????????????????????????</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="AccountState">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="ActiveStop" type="common:Date" />
+                  <xs:element minOccurs="0" name="SuspendStop" type="common:Date" />
+                  <xs:element minOccurs="0" name="DisableStop" type="common:Date" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="OfferList">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" name="Offer" type="subscribe:OfferOrderInfo" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="ProductList">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" name="Product" type="query:ProductOrderInfo" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="AccountCredit">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" maxOccurs="unbounded" name="InitialCredit" type="acctcredit:CreditType" />
+                  <xs:element minOccurs="0" maxOccurs="unbounded" name="BillCycleCredit" type="acctcredit:CreditType" />
+                  <xs:element minOccurs="0" maxOccurs="unbounded" name="TempCreditList" type="acctcredit:CreditType" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="HStryOweBillCycle">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="10" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Subscriber">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SubscriberNo" type="common:SubscriberNo" />
+            <xs:element minOccurs="0" name="SubscriberInfo" type="query:SubscriberInfo" />
+            <xs:element minOccurs="0" name="SubscriberState">
+              <xs:complexType>
+                <xs:all>
+                  <xs:element minOccurs="0" name="FirstActiveDate" type="common:DateTime" />
+                  <xs:element minOccurs="0" name="ActiveCAC">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="ActiveStop" type="common:Date" />
+                  <xs:element minOccurs="0" name="SuspendStop" type="common:Date" />
+                  <xs:element minOccurs="0" name="DisableStop" type="common:Date" />
+                  <xs:element minOccurs="0" name="LifeCycleState" nillable="true" type="xs:int" />
+                  <xs:element name="DPFlag" nillable="true" type="xs:int">
+                    <xs:annotation>
+                      <xs:documentation>??????????????????</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name="FraudState" nillable="true" type="xs:int" />
+                  <xs:element minOccurs="0" name="LossFlag" nillable="true" type="xs:int" />
+                  <xs:element minOccurs="0" name="DPEndDate" type="common:DateTime" />
+                  <xs:element minOccurs="0" name="DPFlag1" nillable="true" type="xs:int">
+                    <xs:annotation>
+                      <xs:documentation>??????????????????</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="DPFlag2" nillable="true" type="xs:int">
+                    <xs:annotation>
+                      <xs:documentation>??????????????????</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="LastActiveDate" type="common:Date" />
+                  <xs:element minOccurs="0" name="POSUserState" nillable="true" type="xs:int" />
+                  <xs:element minOccurs="0" name="ETUFraudState" nillable="true" type="xs:int" />
+                </xs:all>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="UserGroupList">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" maxOccurs="unbounded" name="UserGroup" type="query:UserGroup" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="AccumulatorList">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" name="Accumulator" type="query:Accumulator" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="Service">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Id" type="common:ServiceId" />
+                  <xs:element minOccurs="0" name="Status" type="xs:int" />
+                  <xs:element minOccurs="0" maxOccurs="unbounded" name="SimpleProperty" type="common:SimpleProperty" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="OfferList" nillable="true">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" maxOccurs="unbounded" name="Offer" type="subscribe:OfferOrderInfo" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="ProductList">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element maxOccurs="unbounded" name="Product" type="query:ProductOrderInfo" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="SubAttachedInfo">
+              <xs:complexType>
+                <xs:all>
+                  <xs:element minOccurs="0" name="ChgMainProductTimes" nillable="true" type="xs:int" />
+                  <xs:element minOccurs="0" name="ChgMainPackageTimes" nillable="true" type="xs:int" />
+                  <xs:element minOccurs="0" name="LoanAmout" nillable="true" type="common:Balance" />
+                  <xs:element minOccurs="0" name="LoanPoundage" nillable="true" type="common:Balance" />
+                  <xs:element minOccurs="0" name="ETUReceiveAmt" nillable="true" type="common:Balance" />
+                  <xs:element minOccurs="0" name="ETUGracePeriod" type="common:DateTime" />
+                  <xs:element minOccurs="0" name="UnpaidFee" type="common:Balance" />
+                </xs:all>
+              </xs:complexType>
+            </xs:element>
+            <xs:element minOccurs="0" name="ReasonCode">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="30" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryBalanceRequest">
+    <xs:sequence>
+      <xs:element name="SubscriberNo" type="common:SubscriberNo" />
+      <xs:element minOccurs="0" name="HandleChargeFlag" type="common:HandleChargeFlag" />
+      <xs:element minOccurs="0" name="QueryType" type="xs:int" />
+      <xs:element minOccurs="0" name="ServiceType" type="xs:int">
+        <xs:annotation>
+          <xs:documentation>1: Voice
+2: SMS
+3: GPRS
+4: Money
+5: IDD
+</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryBalanceResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BalanceRecord" type="query:BalanceType" />
+      <xs:element minOccurs="0" name="BalanceValidity" type="common:Date" />
+      <xs:element minOccurs="0" name="AvailableCredit" type="common:Balance" />
+      <xs:element minOccurs="0" name="BalanceActiveDate" type="common:Date" />
+      <xs:element minOccurs="0" name="AvailableQuota" type="common:Balance">
+        <xs:annotation>
+          <xs:documentation>??????????????????????????????</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="UnpaidFee" type="common:Balance" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryProductOrderRequest">
+    <xs:sequence>
+      <xs:element name="SubscriberNo" type="common:SubscriberNo" />
+      <xs:choice>
+        <xs:element name="ProductID" type="common:ProductId" />
+        <xs:element name="ProductCode" type="common:ProductCode" />
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryProductOrderResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ServiceTariff">
+        <xs:annotation>
+          <xs:documentation>?????????????????????????????????????????????????????????</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:choice>
+            <xs:element name="FavoriteCountry">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" maxOccurs="unbounded" name="CountryRate">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="CountryCode" type="common:Country">
+                          <xs:annotation>
+                            <xs:documentation>?????????</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                        <xs:element name="VoiceRate" type="xs:string">
+                          <xs:annotation>
+                            <xs:documentation>??????????????????</xs:documentation>
+                          </xs:annotation>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="LoyaltyNumber">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="DiscountRate" type="xs:string">
+                    <xs:annotation>
+                      <xs:documentation>?????????</xs:documentation>
+                    </xs:annotation>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="FreeResource">
+        <xs:annotation>
+          <xs:documentation>??????????????????</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="BalanceRecord" type="query:BalanceType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="RecurringCharge" type="common:Balance">
+        <xs:annotation>
+          <xs:documentation>??????</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SimpleProperty" type="common:SimpleProperty">
+        <xs:annotation>
+          <xs:documentation>??????</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CumulateEnquiryRequest">
+    <xs:all>
+      <xs:element name="SubscriberNo" type="xs:string" />
+      <xs:element name="EnquiryType" type="xs:int" />
+      <xs:element minOccurs="0" name="CustID" type="xs:string" />
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="CumulateEnquiryResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CumulativeItem">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="CumulateID" nillable="true" type="xs:int" />
+            <xs:element name="CumulateBeginTime" type="xs:string" />
+            <xs:element name="CumulateEndTime" type="xs:string" />
+            <xs:element name="CumulativeAmt" nillable="true" type="xs:long" />
+            <xs:element minOccurs="0" name="MeasureId" type="xs:int" />
+            <xs:element minOccurs="0" name="CumulateName" type="xs:string" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryLastTranInfoRequest">
+    <xs:sequence>
+      <xs:element name="SubscriberNo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryLastTranInfoResult">
+    <xs:annotation>
+      <xs:documentation>only for NTS</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChargeEvent" type="xs:int" />
+      <xs:element minOccurs="0" name="SubChargeEvent" type="xs:int" />
+      <xs:element minOccurs="0" name="ServiceType" type="xs:string" />
+      <xs:element minOccurs="0" name="IsVideoCall" type="xs:int" />
+      <xs:element minOccurs="0" name="ChargeBeginTime" type="xs:string" />
+      <xs:element minOccurs="0" name="OrigPartyNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="DestPartyNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="ChargeInfo">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="UsedDuration" type="xs:int" />
+            <xs:element name="UsedVolume" type="xs:int" />
+            <xs:element name="ChgOfItemsAcc" type="xs:int" />
+            <xs:element name="ChgOfDurationAcc" type="xs:int" />
+            <xs:element name="ChgOfMFundAcc" type="xs:int" />
+            <xs:element name="ChgOfPFundAcc" type="xs:int" />
+            <xs:element name="TotalChargeFlux" type="xs:int" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MutiTransInfo">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="ChargeEvent" type="xs:int" />
+            <xs:element name="SubChargeEvent" type="xs:int" />
+            <xs:element name="ServiceType" type="xs:string" />
+            <xs:element name="IsVideoCall" type="xs:int" />
+            <xs:element name="ChargeBeginTime" type="xs:string" />
+            <xs:element name="OrigPartyNumber" type="xs:string" />
+            <xs:element name="DestPartyNumber" type="xs:string" />
+            <xs:element name="ChargeInfo">
+              <xs:complexType>
+                <xs:all>
+                  <xs:element name="UsedDuration" type="xs:int" />
+                  <xs:element name="UsedVolume" type="xs:int" />
+                  <xs:element name="ChgOfItemsAcc" type="xs:int" />
+                  <xs:element name="ChgOfDurationAcc" type="xs:int" />
+                  <xs:element name="ChgOfMFundAcc" type="xs:int" />
+                  <xs:element name="ChgOfPFundAcc" type="xs:int" />
+                  <xs:element name="TotalChargeFlux" type="xs:int" />
+                </xs:all>
+              </xs:complexType>
+            </xs:element>
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryBalanceTransferInfoRequest">
+    <xs:sequence>
+      <xs:element name="SubscriberNo" type="xs:string" />
+      <xs:element minOccurs="0" name="HandleChargeFlag" type="common:HandleChargeFlag" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryBalanceTransferInfoResult">
+    <xs:sequence>
+      <xs:element name="MostTimesPerDay" type="xs:int" />
+      <xs:element name="MostSumPerDay" type="xs:int" />
+      <xs:element name="MostTimesPerMonth" type="xs:int" />
+      <xs:element name="MostSumPerMonth" type="xs:int" />
+      <xs:element name="TranTimesCurDay" type="xs:int" />
+      <xs:element name="TransumCurDay" type="xs:int" />
+      <xs:element name="TranTimesCurMonth" type="xs:int" />
+      <xs:element name="TranSumCurMonth" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryDefaultBillCycleRequest">
+    <xs:sequence>
+      <xs:element name="ActivateDate" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerGrade" type="xs:string" />
+      <xs:element minOccurs="0" name="ZipCode" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryDefaultBillCycleResult">
+    <xs:sequence>
+      <xs:element name="BillCycleType" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryBillCycleInfoRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BillCycleType" type="xs:string" />
+      <xs:element minOccurs="0" name="BillCycleID" type="xs:string" />
+      <xs:element name="EffType" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryBillCycleInfoResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BillCycleID" type="xs:string" />
+      <xs:element minOccurs="0" name="BeginDate" type="xs:string" />
+      <xs:element minOccurs="0" name="EndDate" type="xs:string" />
+      <xs:element name="EffetiveDate" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryBillCycleTypeDetailRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BillCycleType" type="xs:integer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryBillCycleTypeDetailResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QueryBillCycleTypeList" type="query:BillCycleTypeDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BillCycleTypeDetail">
+    <xs:all>
+      <xs:element minOccurs="0" name="BillCycleType" type="xs:integer" />
+      <xs:element minOccurs="0" name="BillRunFlag" type="xs:integer" />
+      <xs:element minOccurs="0" name="BillConfirmFlag" type="xs:integer" />
+      <xs:element minOccurs="0" name="CycleType" type="xs:integer" />
+      <xs:element minOccurs="0" name="RunDay" type="xs:integer" />
+      <xs:element minOccurs="0" name="PaidMode" type="xs:integer" />
+      <xs:element minOccurs="0" name="DueDay" type="xs:integer" />
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="SubRchLogQueryRequest">
+    <xs:all>
+      <xs:element minOccurs="0" name="SubscriberNo" type="common:SubscriberNo" />
+      <xs:element minOccurs="0" name="SubId" type="common:SubscriberCode" />
+      <xs:element minOccurs="0" name="RechargeType" type="xs:int">
+        <xs:annotation>
+          <xs:documentation>??????????????????????????????
+0:???????????????
+1:????????????
+???????????????????????????</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="StartTime" type="common:DateTime" />
+      <xs:element minOccurs="0" name="EndTime" type="common:DateTime" />
+    </xs:all>
+  </xs:complexType>
+  <xs:complexType name="SubRchLogQueryResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SubRchLog">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SubscriberNo" type="common:SubscriberNo" />
+            <xs:element name="SubscriberID" nillable="true" type="xs:string" />
+            <xs:element name="RechargeType">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="10" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element name="TradeTime" type="common:DateTime" />
+            <xs:element name="PaymentAmt" nillable="true" type="common:Balance" />
+            <xs:element name="OldActiveStop" type="common:Date" />
+            <xs:element name="NewActiveStop" type="common:Date" />
+            <xs:element name="OldSuspendStop" type="common:Date" />
+            <xs:element name="NewSuspendStop" type="common:Date" />
+            <xs:element name="OldDisableStop" type="common:Date" />
+            <xs:element name="NewDisableStop" type="common:Date" />
+            <xs:element name="OldBalance" nillable="true" type="common:Balance" />
+            <xs:element name="NewBalance" nillable="true" type="common:Balance" />
+            <xs:element minOccurs="0" name="CardSerialNo" type="xs:string" />
+            <xs:element minOccurs="0" name="ChannelID" type="xs:int" />
+            <xs:element minOccurs="0" name="PaymentMethod" type="xs:string" />
+            <xs:element minOccurs="0" name="LoanAmount" type="common:Balance" />
+            <xs:element minOccurs="0" name="ServiceFee" type="common:Balance" />
+            <xs:element minOccurs="0" name="Purpose" type="xs:string" />
+            <xs:element minOccurs="0" name="SerialNo" type="xs:string" />
+            <xs:element minOccurs="0" name="Batch" type="xs:string" />
+            <xs:element minOccurs="0" name="OperatorID">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="24" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" name="AdditiontalInfo">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="256" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" name="AgentName">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:maxLength value="64" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryAccumulatorRequest">
+    <xs:sequence>
+      <xs:element name="SubscriberNo" type="common:SubscriberNo" />
+      <xs:element minOccurs="0" name="HandleChargeFlag" type="common:HandleChargeFlag" />
+      <xs:element minOccurs="0" name="ServiceType" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryAccumulatorResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccumulatorList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="Accumulator" type="query:Accumulator" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OfferQueryRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OfferName">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="64" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="OfferType" type="xs:int" />
+      <xs:element minOccurs="0" name="PaymentFlag" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OfferQueryResult">
+    <xs:sequence>
+      <xs:element name="OfferList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="Offer">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Id" type="common:OfferId" />
+                  <xs:element name="OfferName" type="xs:string" />
+                  <xs:element name="OfferType" type="common:OfferType" />
+                  <xs:element minOccurs="0" name="PaymentFlag" type="xs:integer" />
+                  <xs:element name="Remark" type="xs:string" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryLastCallCostRequest">
+    <xs:sequence>
+      <xs:element name="SubscriberNo" type="common:SubscriberNo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryLastCallCostResult">
+    <xs:sequence>
+      <xs:element name="IsFnF" type="xs:int" />
+      <xs:element name="Amount" type="common:Balance" />
+      <xs:element name="StartDate" type="common:DateTime" />
+      <xs:element name="EndDate" type="common:DateTime" />
+      <xs:element name="Duration" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryFeeItemRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Operationtype">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="64" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryFeeItemResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FeeItemList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="FeeType" type="xs:string" />
+            <xs:element minOccurs="0" name="ItemId" type="xs:string" />
+            <xs:element minOccurs="0" name="Name" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryFraudTimesRequest">
+    <xs:sequence>
+      <xs:element name="SubscriberNo" type="common:SubscriberNo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryFraudTimesResult">
+    <xs:sequence>
+      <xs:element name="SubscriberNo" type="common:SubscriberNo" />
+      <xs:element name="FraudTimes" type="xs:int" />
+      <xs:element minOccurs="0" name="FraudDate" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QuerySubServiceQuatoRequest">
+    <xs:sequence>
+      <xs:element name="SubscriberNo" type="common:SubscriberNo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QuerySubServiceQuatoResult">
+    <xs:sequence>
+      <xs:element name="SubscriberNo" type="common:SubscriberNo" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ServiceFeeList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ServiceType" type="xs:string" />
+            <xs:element minOccurs="0" name="QuotaAmount" type="common:Balance" />
+            <xs:element minOccurs="0" name="UageAmount" type="common:Balance" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryTrnCountRequest">
+    <xs:sequence>
+      <xs:element name="SubscriberNo" type="common:SubscriberNo" />
+      <xs:element name="OperateType" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryTrnCountResult">
+    <xs:sequence>
+      <xs:element name="SubscriberNo" type="common:SubscriberNo" />
+      <xs:element name="TotalCount" type="xs:integer" />
+      <xs:element name="UsedCount" type="xs:integer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryDenominationRequest">
+    <xs:sequence>
+      <xs:element name="SubscriberNo" type="common:SubscriberNo" />
+      <xs:element name="DenominationType" type="xs:int" />
+      <xs:element name="ChannelID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryDenominationResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DenominationList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Index" type="xs:int" />
+            <xs:element name="Amount" type="common:Balance" />
+            <xs:element name="ValidityDays" type="xs:int" />
+            <xs:element minOccurs="0" name="Surcharge1" type="common:Balance" />
+            <xs:element minOccurs="0" name="Surcharge2" type="common:Balance" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="TotalAmountForDay" type="common:Balance" />
+      <xs:element minOccurs="0" name="TotalAmountForMonth" type="common:Balance" />
+      <xs:element minOccurs="0" name="TimesForDay" type="xs:int" />
+      <xs:element minOccurs="0" name="TimesForMonth" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryOfferingCycleTimeRequest">
+    <xs:sequence>
+      <xs:element name="SubscriberNo">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="64" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="OfferId" type="common:OfferId" />
+      <xs:element minOccurs="0" name="OfferOrderKey" type="common:OfferOrderKey" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryOfferingCycleTimeResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Offer">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="OfferId" type="common:OfferId" />
+            <xs:element name="OfferOrderKey" type="common:OfferOrderKey" />
+            <xs:element name="EffectiveDate" type="common:DateTime" />
+            <xs:element name="ExpireDate" type="common:DateTime" />
+            <xs:element name="NextRentTime" type="common:DateTime" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QuerySubscriberBasicInfoRequest">
+    <xs:sequence>
+      <xs:element name="SubscriberNo" type="common:SubscriberNo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QuerySubscriberBasicInfoResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LangType" type="xs:int" />
+      <xs:element minOccurs="0" name="PaidMode" type="common:PaidMode" />
+      <xs:element minOccurs="0" name="PrimaryOfferId" type="common:OfferId" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryOnlineBusinessRequest">
+    <xs:sequence>
+      <xs:element name="SubscriberNo">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="64" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" name="BusinessType" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QueryOnlineBusinessResult">
+    <xs:sequence />
+  </xs:complexType>
+</xs:schema>

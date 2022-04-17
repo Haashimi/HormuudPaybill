@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns="http://www.huawei.com/bme/cbsinterface/acctcredit" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:common="http://www.huawei.com/bme/cbsinterface/common" xmlns:acctcreditmgr="http://www.huawei.com/bme/cbsinterface/acctcreditmgr" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.huawei.com/bme/cbsinterface/acctcreditmgr" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:acctcredit="http://www.huawei.com/bme/cbsinterface/acctcredit" targetNamespace="http://www.huawei.com/bme/cbsinterface/acctcreditmgr">
+      <xs:import schemaLocation="AcctcreditMgrService?xsd=CBSInterface_AcctCredit.xsd" namespace="http://www.huawei.com/bme/cbsinterface/acctcredit" />
+      <xs:element name="ManAcctCreditRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="ManAcctCreditRequest" type="acctcredit:ManAcctCreditRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ManAcctCreditResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ManAcctSubCreditSwitchRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="ManAcctSubCreditSwitchRequest" type="acctcredit:ManAcctSubCreditSwitchRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ManAcctSubCreditSwitchResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ManSubCreditRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="ManSubCreditRequest" type="acctcredit:ManSubCreditRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ManSubCreditResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryAcctSubCreditRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="QueryAcctSubCreditRequest" type="acctcredit:QueryAcctSubCreditRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryAcctSubCreditResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="QueryAcctSubCreditResult" type="acctcredit:QueryAcctSubCreditResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryAcctCreditRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="QueryAcctCreditRequest" type="acctcredit:QueryAcctCreditRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="QueryAcctCreditResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+            <xs:element name="QueryAcctCreditResult" type="acctcredit:QueryAcctCreditResult" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BatchModifyInitCreditRequestMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RequestHeader" type="common:RequestHeader" />
+            <xs:element name="BatchModifyInitCreditRequest" type="acctcredit:BatchModifyInitCreditRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BatchModifyInitCreditResultMsg">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ResultHeader" type="common:ResultHeader" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </types>
+  <message name="ManSubCreditResultMessage">
+    <part name="ManSubCreditResultMsg" element="acctcreditmgr:ManSubCreditResultMsg" />
+  </message>
+  <message name="QueryAcctSubCreditRequestMessage">
+    <part name="QueryAcctSubCreditRequestMsg" element="acctcreditmgr:QueryAcctSubCreditRequestMsg" />
+  </message>
+  <message name="ManAcctCreditResultMessage">
+    <part name="ManAcctCreditResultMsg" element="acctcreditmgr:ManAcctCreditResultMsg" />
+  </message>
+  <message name="QueryAcctCreditRequestMessage">
+    <part name="QueryAcctCreditRequestMsg" element="acctcreditmgr:QueryAcctCreditRequestMsg" />
+  </message>
+  <message name="QueryAcctCreditResultMessage">
+    <part name="QueryAcctCreditResultMsg" element="acctcreditmgr:QueryAcctCreditResultMsg" />
+  </message>
+  <message name="BatchModifyInitCreditResultMessage">
+    <part name="BatchModifyInitCreditResultMsg" element="acctcreditmgr:BatchModifyInitCreditResultMsg" />
+  </message>
+  <message name="ManAcctSubCreditSwitchResultMessage">
+    <part name="ManAcctSubCreditSwitchResultMsg" element="acctcreditmgr:ManAcctSubCreditSwitchResultMsg" />
+  </message>
+  <message name="QueryAcctSubCreditResultMessage">
+    <part name="QueryAcctSubCreditResultMsg" element="acctcreditmgr:QueryAcctSubCreditResultMsg" />
+  </message>
+  <message name="BatchModifyInitCreditRequestMessage">
+    <part name="BatchModifyInitCreditRequestMsg" element="acctcreditmgr:BatchModifyInitCreditRequestMsg" />
+  </message>
+  <message name="ManAcctSubCreditSwitchRequestMessage">
+    <part name="ManAcctSubCreditSwitchRequestMsg" element="acctcreditmgr:ManAcctSubCreditSwitchRequestMsg" />
+  </message>
+  <message name="ManSubCreditRequestMessage">
+    <part name="ManSubCreditRequestMsg" element="acctcreditmgr:ManSubCreditRequestMsg" />
+  </message>
+  <message name="ManAcctCreditRequestMessage">
+    <part name="ManAcctCreditRequestMsg" element="acctcreditmgr:ManAcctCreditRequestMsg" />
+  </message>
+  <portType name="Acctcredit">
+    <operation name="manAcctCredit">
+      <input message="acctcreditmgr:ManAcctCreditRequestMessage" />
+      <output message="acctcreditmgr:ManAcctCreditResultMessage" />
+    </operation>
+    <operation name="ManAcctSubCreditSwitch">
+      <input message="acctcreditmgr:ManAcctSubCreditSwitchRequestMessage" />
+      <output message="acctcreditmgr:ManAcctSubCreditSwitchResultMessage" />
+    </operation>
+    <operation name="ManSubCredit">
+      <input message="acctcreditmgr:ManSubCreditRequestMessage" />
+      <output message="acctcreditmgr:ManSubCreditResultMessage" />
+    </operation>
+    <operation name="queryAcctCredit">
+      <input message="acctcreditmgr:QueryAcctCreditRequestMessage" />
+      <output message="acctcreditmgr:QueryAcctCreditResultMessage" />
+    </operation>
+    <operation name="QueryAcctSubCredit">
+      <input message="acctcreditmgr:QueryAcctSubCreditRequestMessage" />
+      <output message="acctcreditmgr:QueryAcctSubCreditResultMessage" />
+    </operation>
+    <operation name="batchModifyInitCredit">
+      <input message="acctcreditmgr:BatchModifyInitCreditRequestMessage" />
+      <output message="acctcreditmgr:BatchModifyInitCreditResultMessage" />
+    </operation>
+  </portType>
+  <binding name="AcctcreditSoap12Binding" type="acctcreditmgr:Acctcredit">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="manAcctCredit">
+      <soap12:operation soapAction="manAcctCredit" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="ManAcctSubCreditSwitch">
+      <soap12:operation soapAction="ManAcctSubCreditSwitch" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="ManSubCredit">
+      <soap12:operation soapAction="ManSubCredit" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="queryAcctCredit">
+      <soap12:operation soapAction="queryAcctCredit" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="QueryAcctSubCredit">
+      <soap12:operation soapAction="QueryAcctSubCredit" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+    <operation name="batchModifyInitCredit">
+      <soap12:operation soapAction="batchModifyInitCredit" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output />
+    </operation>
+  </binding>
+  <binding name="AcctcreditBinding" type="acctcreditmgr:Acctcredit">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="manAcctCredit">
+      <soap:operation soapAction="manAcctCredit" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ManAcctSubCreditSwitch">
+      <soap:operation soapAction="ManAcctSubCreditSwitch" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ManSubCredit">
+      <soap:operation soapAction="ManSubCredit" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="queryAcctCredit">
+      <soap:operation soapAction="queryAcctCredit" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="QueryAcctSubCredit">
+      <soap:operation soapAction="QueryAcctSubCredit" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="batchModifyInitCredit">
+      <soap:operation soapAction="batchModifyInitCredit" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="AcctcreditMgrService">
+    <port name="AcctcreditMgrServiceSoap12Port" binding="acctcreditmgr:AcctcreditSoap12Binding">
+      <soap12:address location="http://http://10.13.231.97:8080/services/AcctcreditMgrService.AcctcreditMgrServiceSoap12Port/" />
+    </port>
+    <port name="AcctcreditServicePort" binding="acctcreditmgr:AcctcreditBinding">
+      <soap:address location="http://http://10.13.231.97:8080/services/AcctcreditMgrService.AcctcreditServicePort/" />
+    </port>
+  </service>
+</definitions>
