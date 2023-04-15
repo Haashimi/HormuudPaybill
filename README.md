@@ -201,8 +201,8 @@ Response if transaction doesn’t exist in your database </br>
 "timestamp": "20210623133607", </br>
 "resultCode": 401, </br>
 "resultMessage": "not found" </br>
-}
-}
+} </br>
+} </br>
 **NOTE** </br>
 "apiPassword" in requestHeader is hashed using md5 hashing algorithm, please hash your password using formula: </br>
 md5(timestamp+password+partnercode)  </br>
