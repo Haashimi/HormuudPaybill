@@ -1,8 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-
-const apiroute = require('./src/routes/Routes');
-const authserver = require('./src/middleware/authServer')
 const cors = require('cors');
 const app = express();
 const port = process.env.port || 80;
@@ -12,10 +9,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse request data content type application/json
 app.use(bodyParser.json());
 
-// app.get('/', (req, res) => {
-
-//     res.send("Hello World Garaad")
-// })
 
 // enable cors
 app.use(cors({
@@ -26,8 +19,13 @@ app.use(cors({
 
 app.use(authserver)
 
+const express = require('express');
+const billRoutes = require('./routes/billRoutes');
+
+
+
 // import peronal route
-app.use('/api/values/', apiroute);
+app.use('/api/values/', billRoutes);
 app.use(function (req, res, next) {
     res.header('Content-Type', 'application/json');
     next();
