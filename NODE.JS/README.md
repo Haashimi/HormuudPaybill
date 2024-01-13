@@ -13,25 +13,6 @@
     Then Define Routes for Handling all CRUD operations
     Finally, go to test the Rest APIs using Postman
 
-**Folder Structure**                                                        
-├───config                                                                          
-│       connection.js                                       
-│                                                                       
-│───src                                                                                             
-│    ├───controller                                                                                       
-│    │       controller.js                                                      
-│    │                                                                              
-│    ├───models                                                                                     
-│    │       Models.js                                                                              
-│    │                                                                                                    
-│    └───routes                                                                                           
-│            Routes.js                                                                          
-│                                                                                                   
-│─── .env                                                                                                
-│─── package-lock.json                                                                               
-│─── package.json                                                                                
-│─── README.MD                                                                                       
-│─── server.js                                                                                           
 
 
 **Nodejs**                                                      
